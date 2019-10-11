@@ -1,2 +1,2 @@
 # THOR
-Triage HUD of Resources 
+Triage HUD Operational Resources 
