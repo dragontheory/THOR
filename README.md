@@ -25,7 +25,7 @@ ADVANCED:
 
 PURPOSE:
 *  To support analysts by providing a faster, more efficient, and intuitive workflow and user interface (UI) triage tool.
-*  Save time and money by reducing duplicative efforts and "time to market" with premade search/profile/details workflow and UI that satisfied targeting and triage requirements "out-of-the-box".
+*  Save time and money by reducing duplicative efforts and "time to market" with pre-made search/profile/details workflow and UI that satisfied targeting and triage requirements "out-of-the-box".
 *  Update front-end UI tech stack to avoid deprecation and security vulnerabilities and allow for efficient web integration.
 *  Faster triage eliminates unnecessary navigation
 *  30%+ reduction in clicks over current version
@@ -146,9 +146,10 @@ LAYOUT:
 *  In Flex-box CSS, every HTML node is a box. Each box relies on the other. If one is removed, the others fill in the empty space.
 
 ANGULAR/VUE INTEGRATION:
-*  NESTING: The CSS Flex-box spec requires a direct relationship between a parent Flex-box element and it's children. Only directly nested children elements of a parent CSS Flex-box element will inherit flex attributes. This means that there cannot be HTML elements (dynamic or otherwise) between the parent and the child. The application layout **WILL FAIL** if this parent/child relationship is broken.
 
-*  Correct nesting:
+NESTING: The CSS Flex-box spec requires a direct relationship between a parent Flex-box element and it's children. Only directly nested children elements of a parent CSS Flex-box element will inherit flex attributes. This means that there cannot be HTML elements (dynamic or otherwise) between the parent and the child. The application layout **WILL FAIL** if this parent/child relationship is broken.
+
+Correct nesting:
 ```html
 <div class="d-flex results" id="app-results">
     <div class=""></div>
@@ -158,7 +159,7 @@ ANGULAR/VUE INTEGRATION:
 </div>
 ```
 
-*  Incorrect nesting:
+Incorrect nesting:
 ```html
 <div class="d-flex results">
     <app-results class="">
@@ -169,9 +170,10 @@ ANGULAR/VUE INTEGRATION:
     </app-results>
 </div>
 ```
-*  Several solutions are available but the most ideal and clean (least amount of extra code) is to combine the dynamic Angular/Vue element with the required Bootstrap classes.
+Several solutions are available but the most ideal and clean (least amount of extra code) is to combine the dynamic Angular/Vue element with the required Bootstrap classes.
 
-*  Ideal Solution 1: Combine the custom element app-results with the d-flex class in the associated Angular .ts/Vue .js file.
+Ideal Solution 1: 
+   * Combine the custom element app-results with the d-flex class in the associated Angular .ts/Vue .js file.
 ```html
 @Component ({
     selector: 'div.results.d-flex'
@@ -188,28 +190,32 @@ TODO:
 *  Fix icon menu at the top of each section
 
 REFERENCES:
-*  Design, inspiration, and CSS Flex-box ideas:
 
-   *  LAYOUT:
-      * https://codepen.io/dragontheory/pen/PVwGgp
-      * https://stackoverflow.com/questions/21515042/scrolling-a-flexbox-with-overflow-content
-      * https://webdesign.tutsplus.com/tutorials/how-to-make-responsive-panels-with-flexbox-cms-23269
-      * https://geon.github.io/programming/2016/02/24/flexbox-full-page-web-app-layout
-      * https://hydejack.com/projects/
+Design, inspiration, and CSS Flex-box ideas:
+
+LAYOUT:
+*  https://codepen.io/dragontheory/pen/PVwGgp
+*  https://stackoverflow.com/questions/21515042/scrolling-a-flexbox-with-overflow-content
+*  https://webdesign.tutsplus.com/tutorials/how-to-make-responsive-panels-with-flexbox-cms-23269
+*  https://geon.github.io/programming/2016/02/24/flexbox-full-page-web-app-layout
+*  https://hydejack.com/projects/
 
 BACKGROUND:
 *  The term "Holy Grail" is a client side design term in reference to the type of layout which, in it's simplest form, is three independent scrolling full-screen panels of content with a header and footer.
 
 HISTORY:
-*  The "Holy Grail" layout may seem basic and easy to implement but since the 1990's, when it was introduced, front-end designers/developers have been attempting and failing to solve how to adequately code it without the assistance of JavaScript. It has become an infamous ongoing challenge. The standard requirements for solving the "Holy Grail" layout puzzle are: 
-   * Cross/backward (modern) browser compatibility (IE11, Edge, FF 60+, Chrome 60+) 
-   * At least three (two fixed or % width side and one % width center) independent, scroll-able panels (columns)
-   * Full width header and footer that sticks to the top and bottom of the screen (without JS). Hint: the header and footer are actually PUSHED to the top and bottom of the browser window.
-   * No JavaScript (HTML and CSS only - languages all browsers speak natively)
-   * An updated modern requirement is that the "Holy Grail" must work with multiple platforms and associated resolutions such as mobile phones, tablets, and laptops in addition to traditional desktops resolutions. The design/development world calls this being "responsive". 
-*  So the label "Holy Grail" is well deserved. No one has been able to do it, as far as I know because the technology simply didn't exist until now. Using Bootstrap's built in advanced CSS Flex-box techniques, I have been able code a solution that satisfies all of the standard "Holy Grail" layout requirements as demonstrated in the links above. In fact, I have been able to extend the solution to include a dashboard in up to five modular, customization, skin-able, and theme-able panels. 
 
-The benefits are extensible! 
+The "Holy Grail" layout may seem basic and easy to implement but since the 1990's, when it was introduced, front-end designers/developers have been attempting and failing to solve how to adequately code it without the assistance of JavaScript. It has become an infamous ongoing challenge. The standard requirements for solving the "Holy Grail" layout puzzle are: 
+*  Cross/backward (modern) browser compatibility (IE11, Edge, FF 60+, Chrome 60+) 
+*  At least three (two fixed or % width side and one % width center) independent, scroll-able panels (columns)
+*  Full width header and footer that sticks to the top and bottom of the screen (without JS). Hint: the header and footer are actually PUSHED to the top and bottom of the browser window.
+*  No JavaScript (HTML and CSS only - languages all browsers speak natively)
+*  An updated modern requirement is that the "Holy Grail" must work with multiple platforms and associated resolutions such as mobile phones, tablets, and laptops in addition to traditional desktops resolutions. The design/development world calls this being "responsive". 
+
+So the label "Holy Grail" is well deserved. No one has been able to do it, as far as I know because the technology simply didn't exist until now. Using Bootstrap's built in advanced CSS Flex-box techniques, I have been able code a solution that satisfies all of the standard "Holy Grail" layout requirements as demonstrated in the links above. In fact, I have been able to extend the solution to include a dashboard in up to five modular, customization, skin-able, and theme-able panels. 
+
+
+EXTENSIBLE BENEFITS
 *  Bootstrap components are pre-built thus developers can simply copy/paste them into place, hook them up and they are ready to go! This also reduces design/development LoE by up to 50%.
 *  Bootstrap components are conventional thus end-users are already familiar with how to use them out-of-the-box (minimal training)!
 *  Vanilla Bootstrap is standards driven, ubiquitous, easy to develop, and has one of the largest (if not THE largest) developer base of support in the world.
