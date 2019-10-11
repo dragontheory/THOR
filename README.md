@@ -229,6 +229,43 @@ EXTENSIBLE BENEFITS
    * All changes are pushed to DEV and further tested by non-developers. 
    * . . .
 
+A new, better, faster way to do web development.
+1. Front to back design drives development
+   1. Developers have a "road map" of what they need to do.
+   2. Customers have a "big picture" visual of what to expect.
+   3. Mitigates miscommunications between management and developers
+   4. Developers/customers/SIs have a reference from which to negotiate/prioritize features/time frames and pick and choose (kitchen style), iterative/Agile sprint development. 
+2. Utilize templated W3C Standards compliant vanilla HTML/CSS/JS features/components
+   1. Fast copy/paste/plug/play assembly line like development workflow
+   2. Fast requirements to release "time to market" turnaround for customers
+   3. The more development done up front the faster the "time to market"
+   4. Lowers the cognitive load barrier of entry for developers
+   5. Saves time = money
+   6. Prevents the inevitable O&M slow down
+   7. Prevents scope creep
+   8. Establishes developer authority over web development thus customers dictating solutions. 
+   9. Promotes the idea that customers are experts at what they do and the developers are experts at what they do. Working together creates a perfect solution for them.
+3. Total separation of front-end and back-end development (leveraging CSS'  native reactive "listening" nature to detect and 'react' to new GUI stimuli.
+   1. Defines developer swim lines
+   2. Encourages teamwork
+   3. Allows for data agnostic development
+4. Minimal dependencies
+   1. No third party plug-ins with limited functionality/flexibility
+5. Automate where possible
+   1. 
+5. Convention, convention, convention
+   1. Use layouts, design patterns, widgets everyone knows or is stupid intuitive
+   2. Utilizes existing user expectations of how a web application works
+   3. Pre design/develop top 5/10 most common UI layouts/workflows and features
+6. Security
+   1. User roles
+   2. Encryption
+7. Metrics
+   1. Manager dashboard
+   2. Role based
+8. User customization where possible
+   1. Ideally customers shut down their browser and the next day they open their browser and continue where they left off. The app is identical to when they left off. 
+
 DEVELOPMENT LAYERS
 *  Front-End (FE)
    * Front-Front-End (FFE) - HTML/CSS/JS - what end-users actually see on the screen
