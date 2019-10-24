@@ -37,7 +37,7 @@ PURPOSE : :
 * To save time and money by reducing duplicative, redundant (unnecessary), rework efforts and "time to market" with pre-made search/profile/details workflow and UI that satisfied search/triage requirements "out-of-the-box".
 * To establish a clear, easy, and independent (separation fo concerns) update/upgrade path (SOP) front-end (FE) tech stack to avoid deprecation and security vulnerabilities and allow for efficient web integration. 
 * To create a web interface that is uper lightweight load and fast loading with minimal markup. **50%** reduction of HTML/CSS/JS client-side customer facing markup. 
-* NEW GUI PARADIGM **95%** of the scaffolding layout markup is loaded on first load, waithing off-canvas to be loaded when a component with the correct CSS selectoris load.
+* **NEW GUI PARADIGM **95%** of the scaffolding layout markup is loaded on first load, waithing off-canvas to be loaded when a component with the correct CSS selectoris load.
 * To allow for developers to more easily absorb the cost of management (or whomever) changing course midstream.
 * To "Future Proof" web applications by separations of concerns by NOT committing code to any JS framework if a non-js framework HTML/CSS standards will do. 
   * For example : :
@@ -47,58 +47,57 @@ PURPOSE : :
 
 FEATURES : :
 * W3C Standards Compliant
-* Faster triage eliminates unnecessary navigation
-* 30%+ reduction in clicks over current version
-* 50%+ reduction of HTML/CSS/JS client-side markup over current version
 * Cross/backward browser compatible and tested - FF60.530esr, IE11, Edge, Chrome65
-* Fully documented (Bootstrap)
+* Fully documented (Bootstrap + intuitive naming convention + commented)
+* **NEW GUI PARADIGM : :** Is actually the old paradigm that has been lost with the advent of ubiquitous JS framworks
+* **NEW GUI PARADIGM : : THOR** is a "HTML/CSS first" (GPU accelerated) paradigm vise the current ubiquitous slower scripting firt paradigm
+* **NEW GUI PARADIGM : :** CSS live deta detection (helps separate data logic from UI logic)
 * HTML5 Routing (with options) allows for bookmarking/sharing links of full layouts and data
 * HTML5 User Storage allows for preferences to be saved cross browser session
 * Non-cluttered, minimal, professional look and feel
 * Data agnostic (works with any data set or type)
-* Framework agnostic (works with any JS framework like Vue.js or Angular or none at all)
+* Framework agnostic (works with any JS framework like Vue.js, Angular, and React or none at all)
 * Resolution agnostic - (Responsive - works with any screen resolution)
-* Super lightweight (up to 50% less markup)
+* Super fast loading/lightweight (up to 50% less markup)
 * Minimal dependencies (minimizes upgrade coordination conflicts/dead-ends)
 * "Holy Grail" layout leverages full browser width/height for maximum data visibility
 * Independent scrolling panels
 * Light/dark themes
 * Keyboard navigable
 * Duplicate results indicators
-* Full-screen mode for each panel
-* Resizable panel widths
+* Independent Full-screen mode for each panel
+* End-user adjustable/resizable panel widths
 * Right click context menus with feature/component shortcuts
-* Scroll to top for each panel
-* Alerting (Toastr)/Web push notifications
-* CSS live data detection (helps separate data logic from UI logic)
-* Customize-able display density (Roomy/medium/compact)
+* "Scroll to top" for each panel
+* In application alerting (Toasts)
+* Web push notifications
+* Customize-able display density (Roomy/medium/compact/No Fluff! Just Stuff!)
 * Customize-able/rearrange-able sections
 * Sweep (keep the latest but delete the rest)
 * Favorite a profile
 * Watch a profile
 
-TECH STACK:
+TECH STACK : :
 * HTML5 (current major version of the HTML standard and subsumes XHTML)
 * HTML5 Routing (with options) allows for browser back/forward buttons and bookmarking/sharing links of full UI layout and customization and data.
 * HTML5 User storage allows for user preferences to be saved cross browser session.
-* CSS3 (Flex-box for layout)
-* jQuery (minimally used, fast, lightweight, mature feature rich JS library)
+* CSS3 (Flex-box specification for all layout)
+* jQuery (ubiquitous - but minimally used, fast, lightweight, mature, feature rich JS library)
 * Fontawesome 5.6.3 (enables icons to be easily/quickly styled/controlled as a font)
 * jQuery Data-tables (ubiquitous jQuery plug-in for for viewing tabular data)
-* Bootstrap 4.3.1 (open source, standards compliant, toolkit/library with extensive pre-built components and powerful plug-ins built on jQuery (for rapid [copy/paste] design and development).
+* Bootstrap 4.3.1 (open source, standards compliant, toolkit/library with extensive pre-built components and powerful plug-ins built on jQuery (for rapid [copy/paste] design and development)
   * Note: Bootstrap 5.+ will be jQuery free (coming soon)
 
-DEVELOPMENT:
-
+DEVELOPMENT : :
 The Bootstrap spec is followed without exception to preserve:
 * Full Bootstrap documentation
 * Easy/fast copy/paste development
-* Upgrade/support path
+* Upgrade/upgrade/support path
 * Cross/backward browser compatibility
 * Consistent/predictable look and feel and behavior
 * Structural/functional/theme integrity
 
-HTML/CSS Files:
+HTML/CSS Files : :
 * index.html
 * assets/css/styles.css
 * assets/css/layout.css
@@ -109,12 +108,11 @@ HTML/CSS Files:
 * vendors/simplebar/*
 * vendors/split-master
 
-Bootstrap Documentation:
+Bootstrap Documentation : :
 * The latest online Bootstrap documentation can be found here: https://getbootstrap.com/docs/
 
-IMPORTANT (PLEASE READ):
-
-* I spent months attempting to create this app without Bootstrap or any other dependency and found myself rewriting Bootstrap since Bootstrap is standards compliant. So to save time/effort/money I decided to leverage what they had already successfully done. Turns out they have done much better than I could have ever done. Bootstrap is vetted by thousands of the most hard-core client-side developers in the highly competitive commercial application development industry.
+IMPORTANT (PLEASE READ) : :
+* I spent months attempting to create this app without Bootstrap or any other dependency and found myself rewriting Bootstrap since Bootstrap is standards compliant. So to save time/effort/money I decided to leverage what they had already successfully done. Turns out they have done much better than I could have ever done. Bootstrap is vetted by thousands of commercially competitive developers building tens of thousands of websites and web applications.
 * The scaffolding (HTML) and interactivity (CSS/JS) is a component unto itself and should be kept independent from data logic. This preserves JS framework agnosticism, the ability to rapidly copy/past components, and Bootstrap spec integrity.
 * Data logic is only necessary where data is visible at the component level of each panel.  The rest is taken care of already by the UI.
 * Bootstrap "overflow-hidden" classes are used in the HTML to enable scrolling in panels. Do not remove them.
