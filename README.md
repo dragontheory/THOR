@@ -48,7 +48,7 @@ To create a web interface that is uper lightweight load and fast loading with mi
 To allow for developers to more easily absorb the cost of management (or whomever) changing course midstream.
 
 To "Future Proof" web applications by separations of concerns by NOT committing code to any JS framework if a non-js framework HTML/CSS standards will do.  
-For example : :
+FOR EXAMPLE : :
   * HTML5 Routing
   * HTML5 Storage (with options)
   * CSS live detection
@@ -131,7 +131,7 @@ The latest online Bootstrap documentation can be found here: https://getbootstra
 
 ---
 
-####FAQ : :  
+FAQ : :  
 
 QUESTION : : Why Bootstrap?  
 ANSWER : : I spent months attempting to create this app without Bootstrap or any other dependency and found myself rewriting Bootstrap since Bootstrap is standards compliant. So to save time/effort/money I decided to leverage what they had already successfully done. Turns out they have done much better than I could have ever done. Bootstrap is vetted by thousands of commercially competitive developers building tens of thousands of websites and web applications.
@@ -148,30 +148,37 @@ QUESTION : : Are the Bootstrap `overflow-hidden` classes really necessary?
 ANSWER : : Yes. Bootstrap `overflow-hidden` classes are necessary to enable scrolling in panels, components, and sub components. They should not be removed. 
 
 QUESTION : : Why are there so many classes in the HTML?  
-ANSWER : : Bootstrap 4 shifts from a majority global styles for look and feel, spacing, and layout to preferring inline UTILITY classes for faster more intuitive (for developers) rendering.  
-For example : : `padding-right: 5px;` = .pr-1, `margin-left: 10px;` = .ml-2. This technique results in less custom CSS having to be written. The more we get out-of-the-box the better. 
+ANSWER : : Bootstrap 4 shifts from a majority global styles for look and feel, spacing, and layout to preferring inline UTILITY classes for faster rendering, intuitive development, and to reduce the need for writing custom CSS.  
+FOR EXAMPLE : : `padding-right: 5px;` = .pr-1, `margin-left: 10px;` = .ml-2. 
 
 QUESTION : : Does the order of resources in the `<head>` matter?  
 ANSWER : : Yes. External file reference order in the `<head>` matters.
 * `styles.css` is a minimal and surgical OVERWRITE of vanilla Bootstrap and must come after `bootstrap.min.css`.
-* In turn, themes such as `dark.css` are minimal and surgical OVERWRITE of both `bootstrap.min.css` and `styles.css` and must come after `styles.css`.
+* In turn, themes such as `dark.css` are minimal and surgical OVERWRITEs of both `bootstrap.min.css` and `styles.css` and must come after `styles.css`.
 
-QUESTION : : This sounds complicated. Is this custom?  
-ANSWER : : No. To keep it as easy as possible to integrate and impliment for developers and preserve it for the future, every effort has been made to keep THOR as generic and standard as possible. 
 
 QUESTION : : How old is Flexbox?  
-ANSWER : : CSS Flexbox Specification’s first working draft was published on July 23rd, 2009. The original spec is based on XUL, the technology Firefox (the browser) uses to produce its UI (user interface).  
-[https://annairish.github.io/historicizing/history](https://annairish.github.io/historicizing/history)
+ANSWER : : The CSS Flexbox specification’s first working draft was published on July 23rd, 2009. The original spec is based on XUL, the technology the Firefox browser uses to produce its UI (user interface).  
 
 QUESTION : : If you don't use scripting to manipulate the UI, what do you use? 
 SHORT ANSWER : : Cascading Style Sheets (CSS)
-LONG ANSWER : : CSS rules are live states of layered, cascading, boolean logic. When a CSS state changes, the rule is executed instantaniously. No resource hungry script processing necessary.   
-For example : : When a button is clicked, a class is added to the `<body>`. A CSS rule exists that says when that class is in the `<body>`, open that panel. 
+LONG ANSWER : : UI behavior is purposely repetitive and predictable (read intuitive/conventional). Most UI features such as buttons, menus, panels, accordions, etc. have two states. Open/close, hide/show, on/off, in/out, down/up, true/false, checked/unchecked, etc. That's all they do regardless of the data they contain. 
 
-UI behavior is purposely repetitive and predictable (read intuitive/conventional). Most UI features such as buttons, menus, panels, accordions, etc. have two or three states. Open/close, hide/show, on/off, down/up etc. CSS rules are pre-writted So writing CSS rules that predetermines what happens is fairly easy as well. 
-CSS Live Detection: CSS is live all the time. No reason to ping the back-end to change the UI. Pre-written CSS rules are ready to fire if the right conditions are met. So all we need is a single class in the `<body>` to change anything.
+CSS rules are LIVE states of layered/cascading, boolean logic. When a CSS state changes, the rule is executed **instantaniously** and the UI is changed. No resource hungry script processing is necessary.   
+FOR EXAMPLE : : When a result item is clicked, the class `.open-profile` is added to the `<body>`. A CSS rule already exists that says, when `.open-profile` is in the `<body>` slide in the `.profile` panel. 
 
+All scaffolding/layout UI logic is handled in this manner. All we need is a single class or combination of classes in the `<body>` to change anything in the UI. This simple technique extends the intuitive/conventional UI to the development side. Not only is the UI repetitive and predictable for the end-user but the technique is old-school familiar for the developers as well. 
 
+This simple technique eliminates the need for third party plug-ins that adds complication and obfuscation, to the development process and bloat to the code base, thus shortening the application developement LoE while promoting application performance. Since this technique is executed only in the browser, network traffic is minimized. 
+
+As long as the UI logic is separate from the data logic, scripting is rarely necessary. 
+
+QUESTION : : What about loading dynamic data? How does the UI know when to show the data after it's loaded? 
+ANSWER : : Given the above technique, pre-written CSS rules can be written to check for any combination of classes and or conditions. CSS can LIVE detect anything from a generic `:notEmpty` to specific classes and conditions that are only true when the data is completely loaded. Additionally, CSS rules can be added to check end-user roles and permissions as well.  
+FOR EXAMPLE : : The profile section will remain closed until a pre-written CSS rule that requires says the `<body>` contains `open-profile`, is true.  remains closed until a CSS rule is true. Then and only then will it slide in and reveal its contents. The dynamic data that is loaded is the only way to make the CSS rule true. 
+
+QUESTION : : This sounds complicated. Is it custom?  
+ANSWER : : Depends on your definition of custom but no. To maintain ease of use for developers to integrate, end-users to use, and to preserve for the future, every effort has been made to keep THOR as generic, conventional, and standard as possible. 
 
 
 ---
@@ -209,16 +216,20 @@ Predefined generic naming conventions and hooks are provided for each section.
 * Profile section root = `.profile`
 * Details section root = `.details`
 
-Each section's content follows that naming convention. For example, each section has an identical ACTIONS dropdown menu BUTTON (and menu) with a unique class name because it has unique content. For example: The RESULTS section "ACTIONS" dropdown menu BUTTON class is `.resultsActionsDropdownMenuButton`. The PROFILE section's "ACTIONS" BUTTON class is `.profileActionsDropDownMenuButton`.
+Each section's content follows that naming convention.  
+FOR EXAMPLE : : Each section has an identical ACTIONS dropdown menu BUTTON (and menu) with a unique class name because it has unique content.  
+FOR EXAMPLE : : The RESULTS section "ACTIONS" dropdown menu BUTTON class is `.resultsActionsDropdownMenuButton`. The PROFILE section's "ACTIONS" BUTTON class is `.profileActionsDropDownMenuButton`.
 
 Sticky header and footer without absolute positioning via CSS Flex-box allows for accurate overflow scrolling for each section without the need for extra JS calculations.
 
-Bootstrap 3 to 4 **BREAKING CHANGE** : :
-Many Bootstrap 3 components are rewritten/replaced/not compatible in Bootstrap 4. For example, `<portlets></portlets>` are replaced with `<cards></cards>`.
+Bootstrap 3 to 4 **BREAKING CHANGE** : :  
+Many Bootstrap 3 components are rewritten/replaced/not compatible in Bootstrap 4.  
+FOR EXAMPLE : : `<portlets></portlets>` are replaced with `<cards></cards>`.
 
 This template leverages the full Bootstrap spec for its CSS Flex-box layout, spacing, and behavior. Thus is cross browser compatible and tested with the following default browser stack distribution. FF 60.5.0esr, IE11, Edge, and Chrome 65.
 
-All HTML and CSS patterns are repeated exactly the same wherever/whenever possible. Unique classes are given when there is unique data. For example, each component level `DIV` is given a unique class because it contains unique content.
+All HTML and CSS patterns are repeated exactly the same wherever/whenever possible. Unique classes are given when there is unique data.  
+FOR EXAMPLE : : Each component level `DIV` is given a unique class because it contains unique content.
 
 In Flex-box CSS, every HTML node is a box. Each box relies on the other. If one is removed, the others fill in the empty space.
 
@@ -325,7 +336,7 @@ Because of the front-to-back nature of the development process, stakeholders are
 Bootstrap is compatible with Vue, Angular, React, or any other JS framework or no JS framework at all.
 
 The separation of GUI logic and data logic naturally helps define and promote separate development team roles/responsibilities (AKA swim-lanes) for an efficient (conveyor belt like) team development workflow.  
-For example:
+FOR EXAMPLE : :
 * The front-front-end (FFE) designer/developer copy/pastes the designed component into place, tests, and pushes changes.
 * The front-back-end (FBE) developer hooks in the data provided by back-front-end services (BFE) to the new component, tests, and pushes changes.
 * All changes are pushed to DEV and further tested by non-developers. 
