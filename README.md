@@ -34,7 +34,7 @@ FULL : :
 
 ---
 
-PURPOSE : :
+PURPOSE : :  
 To support analysts by providing a faster, more efficient, and intuitive workflow and user interface (UI) triage tool.
 
 To save time and money by reducing duplicative, redundant (unnecessary), rework efforts and "time to market" with pre-made search/profile/details workflow and UI that satisfied search/triage requirements "out-of-the-box".
