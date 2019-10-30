@@ -199,6 +199,7 @@ In Flex-box CSS, every HTML node is a box. Each box relies on the other. If one 
 ---
 
 ANGULAR/VUE INTEGRATION : :  
+
 NESTING : : The CSS Flex-box spec requires a direct relationship between a parent Flex-box element and it's children. Only directly nested children elements of a parent CSS Flex-box element will inherit flex attributes. This means that there cannot be HTML elements (dynamic or otherwise) between the parent and the child. The application layout **WILL FAIL** if this parent/child relationship is broken.
 
 Correct nesting : :  
