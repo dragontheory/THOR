@@ -126,12 +126,12 @@ HTML/CSS Files : :
 
 ---
 
-Bootstrap Documentation : :
+Bootstrap Documentation : :  
 The latest online Bootstrap documentation can be found here: https://getbootstrap.com/docs/
 
 ---
 
-IMPORTANT (PLEASE READ) : :
+IMPORTANT (PLEASE READ) : :  
 I spent months attempting to create this app without Bootstrap or any other dependency and found myself rewriting Bootstrap since Bootstrap is standards compliant. So to save time/effort/money I decided to leverage what they had already successfully done. Turns out they have done much better than I could have ever done. Bootstrap is vetted by thousands of commercially competitive developers building tens of thousands of websites and web applications.
 
 The scaffolding (HTML) and interactivity (CSS/JS) is a component unto itself and should be kept independent from data logic. This preserves JS framework agnosticism, the ability to rapidly copy/past components, and Bootstrap spec integrity.
@@ -150,7 +150,7 @@ External file reference order in the `<head>` matters.
 
 ---
 
-LAYOUT : :
+LAYOUT : :  
 WARNING: As opposed to a seed or start-up Minimum Viable Product (MVP) application, this is a live client-side framework with working functionality already built in! **Just "mucking around with it" will most likely break or severely limit both obvious and non-obvious functionality/features!** Such as: (but not limited to) 
 * responsiveness, 
 * browser compatibility, 
