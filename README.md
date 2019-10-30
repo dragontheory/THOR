@@ -47,7 +47,7 @@ To create a web interface that is uper lightweight load and fast loading with mi
 
 To allow for developers to more easily absorb the cost of management (or whomever) changing course midstream.
 
-To "Future Proof" web applications by separations of concerns by NOT committing code to any JS framework if a non-js framework HTML/CSS standards will do. 
+To "Future Proof" web applications by separations of concerns by NOT committing code to any JS framework if a non-js framework HTML/CSS standards will do.  
 For example : :
   * HTML5 Routing
   * HTML5 Storage (with options)
