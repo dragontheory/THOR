@@ -179,7 +179,7 @@ ANSWER : : Depends on your definition of custom but no. To maintain ease of use 
 ---
 
 LAYOUT : :  
-WARNING: As opposed to a seed or start-up Minimum Viable Product (MVP) application, this is a live client-side framework with working functionality already built in! **Just "mucking around with it" will most likely break or severely limit both obvious and non-obvious functionality/features!** Such as: (but not limited to)  
+WARNING : : As opposed to a seed or start-up Minimum Viable Product (MVP) application, this is a live client-side framework with working functionality already built in! **Just "mucking around with it" will most likely break or severely limit both obvious and non-obvious functionality/features!** Such as: (but not limited to)  
 * responsiveness, 
 * browser compatibility, 
 * user preferences, 
