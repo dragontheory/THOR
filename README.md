@@ -1,11 +1,8 @@
 # THOR
-[ T ] riage 
-
-[ H ] UD 
-
-[ O ] perational 
-
-[ R ] esources
+[ T ] riage  
+[ H ] UD  
+[ O ] perational  
+[ R ] esources  
 
 Angular and Vue.js ingetrations coming soon. 
 
