@@ -7,17 +7,17 @@
 
 [R] esources
 
+Angular and Vue.js ingetrations coming soon. 
+
+---
+
 A professional front-end template for building fast, robust, and adaptable web applications and web sites. 
-
-Fast Triage Workflow UX
-
+Fast Triage Workflow UX  
 A better way for users and developers.
 
-Fron to back development
+Front to back development
 Roadmap for developers
-Agile (iteritive) roadmap for clients/shareholders
-
-There are two main versions in various states of development. 
+Agile (iteritive) roadmap for clients/shareholders  
 
 BASIC : :
 * Classic Holy Grail layout
@@ -25,33 +25,48 @@ BASIC : :
 * Two panels resizable
 * https://dragontheory.com/holygrail09
 
-ADVANCED : :
+FULL : :
 * Classic Holy Grail layout + **DASHBOARD**
 * Five layout panels total
 * Starts with **DASHBOARD** (Click on "Go somewhere" button)
 * Four panels resizable (WIP)
 * https://dragontheory.com/holygrail10
 
+---
+
 PURPOSE : :
-* To support analysts by providing a faster, more efficient, and intuitive workflow and user interface (UI) triage tool.
-* To save time and money by reducing duplicative, redundant (unnecessary), rework efforts and "time to market" with pre-made search/profile/details workflow and UI that satisfied search/triage requirements "out-of-the-box".
-* To establish a clear, easy, and independent (separation fo concerns) update/upgrade path (SOP) front-end (FE) tech stack to avoid deprecation and security vulnerabilities and allow for efficient web integration. 
-* To create a web interface that is uper lightweight load and fast loading with minimal markup. **50%** reduction of HTML/CSS/JS client-side customer facing markup. 
-* **NEW GUI PARADIGM **95%** of the scaffolding layout markup is loaded on first load, waithing off-canvas to be loaded when a component with the correct CSS selectoris load.
-* To allow for developers to more easily absorb the cost of management (or whomever) changing course midstream.
-* To "Future Proof" web applications by separations of concerns by NOT committing code to any JS framework if a non-js framework HTML/CSS standards will do. 
-  * For example : :
-    * HTML5 Routing,
-    * HTML5 Storage (with options)
-    * CSS live detection
+To support analysts by providing a faster, more efficient, and intuitive workflow and user interface (UI) triage tool.
+
+To save time and money by reducing duplicative, redundant (unnecessary), rework efforts and "time to market" with pre-made search/profile/details workflow and UI that satisfied search/triage requirements "out-of-the-box".
+
+To establish a clear, easy, and independent (separation fo concerns) update/upgrade path (SOP) front-end (FE) tech stack to avoid deprecation and security vulnerabilities and allow for efficient web integration.
+
+To create a web interface that is uper lightweight load and fast loading with minimal markup. **50%** reduction of HTML/CSS/JS client-side customer facing markup.
+
+**NEW GUI PARADIGM **95%** of the scaffolding layout markup is loaded on first load, waithing off-canvas to be loaded when a component with the correct CSS selectoris load.
+
+To allow for developers to more easily absorb the cost of management (or whomever) changing course midstream.
+
+To "Future Proof" web applications by separations of concerns by NOT committing code to any JS framework if a non-js framework HTML/CSS standards will do. 
+For example : :
+  * HTML5 Routing
+  * HTML5 Storage (with options)
+  * CSS live detection
+
+---
 
 FEATURES : :
-* W3C Standards Compliant
-* Cross/backward browser compatible and tested - FF60.530esr, IE11, Edge, Chrome65
-* Fully documented (Bootstrap + intuitive naming convention + commented)
-* **NEW GUI PARADIGM : :** Is actually the old paradigm that has been lost with the advent of ubiquitous JS framworks
-* **NEW GUI PARADIGM : : THOR** is a "HTML/CSS first" (GPU accelerated) paradigm vise the current ubiquitous slower scripting firt paradigm
-* **NEW GUI PARADIGM : :** CSS live deta detection (helps separate data logic from UI logic)
+W3C Standards Compliant
+
+Cross/backward browser compatible and tested - FF60.530esr, IE11, Edge, Chrome65
+
+Fully documented (Bootstrap + intuitive naming convention + commented)
+
+**NEW GUI PARADIGM : :** Is actually the old paradigm that has been lost with the advent of ubiquitous JS framworks
+
+**NEW GUI PARADIGM : : THOR** is a "HTML/CSS first" (GPU accelerated) paradigm vise the current ubiquitous slower scripting firt paradigm
+
+**NEW GUI PARADIGM : :** CSS live deta detection (helps separate data logic from UI logic)
 * HTML5 Routing (with options) allows for bookmarking/sharing links of full layouts and data
 * HTML5 User Storage allows for preferences to be saved cross browser session
 * Non-cluttered, minimal, professional look and feel
