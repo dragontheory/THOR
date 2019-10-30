@@ -57,7 +57,7 @@ FEATURES : :
 * Cross/backward browser compatible and tested - FF60.530esr, IE11, Edge, Chrome65
 * Fully documented (Bootstrap + intuitive naming convention + commented)
 * **NEW GUI PARADIGM : :** Is actually the old paradigm that has been lost with the advent of ubiquitous JS framworks
-* **NEW GUI PARADIGM : : THOR** is a "HTML/CSS first" (GPU accelerated) paradigm vise the current ubiquitous slower scripting firt paradigm
+* **NEW GUI PARADIGM : : THOR** is an "HTML/CSS first" (GPU accelerated) paradigm vise the current ubiquitous slower scripting firt paradigm (see FAQ for details)
 * **NEW GUI PARADIGM : :** CSS live deta detection (helps separate data logic from UI logic)
 * HTML5 Routing (with options) allows for bookmarking/sharing links of full layouts and data
 * HTML5 User Storage allows for preferences to be saved cross browser session
@@ -141,12 +141,12 @@ ANSWER : : The scaffolding (HTML) and interactivity (CSS) is a component unto it
 
 Data logic is only necessary where data is visible at the component level of each panel.  The rest is taken care of already by the UI.  
 
-QUESTION : : Are the Bootstrap `overflow-hidden` classes really necessary?  
+QUESTION : : Are the Bootstrap `overflow-hidden` classes in the HTML really necessary?  
 ANSWER : : Yes. Bootstrap `overflow-hidden` classes are necessary to enable scrolling in panels, components, and sub components. They should not be removed.  
 
 QUESTION : : Why are there so many classes in the HTML?  
 ANSWER : : Bootstrap 4 shifts from a majority global styles for look and feel, spacing, and layout to preferring inline UTILITY classes for faster rendering, intuitive development, and to reduce the need for writing custom CSS.  
-FOR EXAMPLE : : `padding-right: 5px;` = .pr-1, `margin-left: 10px;` = .ml-2. 
+FOR EXAMPLE : : `{padding-right: 5px;}` = .pr-1, `{margin-left: 10px;}` = .ml-2. 
 
 QUESTION : : Does the order of resources in the `<head>` matter?  
 ANSWER : : Yes. External file reference order in the `<head>` matters.  
@@ -170,7 +170,7 @@ This simple technique eliminates the need for third party plug-ins that adds com
 As long as the UI logic is separate from the data logic, scripting is rarely necessary. 
 
 QUESTION : : What about loading dynamic data? How does the UI know when to show the data after it's loaded?  
-ANSWER : : Given the above technique, pre-written CSS rules can be written to check for any combination of classes and or conditions. CSS can LIVE detect anything from a generic `:notEmpty` to specific classes and conditions that are only true when the data is completely loaded. Additionally, CSS rules can be added to check end-user roles and permissions as well.  
+ANSWER : : Given the above technique, pre-written CSS rules can be written to check for any combination of classes and or conditions. CSS can LIVE detect anything from a generic `:notEmpty{}` to specific classes and conditions that are only true when the data is completely loaded. Additionally, CSS rules can be added to check end-user roles and permissions as well.  
 FOR EXAMPLE : : The profile section will remain closed until a pre-written CSS rule that requires says the `<body>` contains `open-profile`, is true.  remains closed until a CSS rule is true. Then and only then will it slide in and reveal its contents. The dynamic data that is loaded is the only way to make the CSS rule true. 
 
 QUESTION : : This sounds complicated. Is it custom?  
@@ -224,7 +224,7 @@ FOR EXAMPLE : : `<portlets></portlets>` are replaced with `<cards></cards>`.
 This template leverages the full Bootstrap spec for its CSS Flex-box layout, spacing, and behavior. Thus is cross browser compatible and tested with the following default browser stack distribution. FF 60.5.0esr, IE11, Edge, and Chrome 65.  
 
 All HTML and CSS patterns are repeated exactly the same wherever/whenever possible. Unique classes are given when there is unique data.  
-FOR EXAMPLE : : Each component level `DIV` is given a unique class because it contains unique content.  
+FOR EXAMPLE : : Each component level `<div>` is given a unique class because it contains unique content.  
 
 In Flex-box CSS, every HTML node is a box. Each box relies on the other. If one is removed, the others fill in the empty space.
 
