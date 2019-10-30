@@ -1,11 +1,11 @@
 # THOR
-[T] riage 
+[ T ] riage 
 
-[H] UD 
+[ H ] UD 
 
-[O] perational 
+[ O ] perational 
 
-[R] esources
+[ R ] esources
 
 Angular and Vue.js ingetrations coming soon. 
 
@@ -56,17 +56,12 @@ For example : :
 ---
 
 FEATURES : :
-W3C Standards Compliant
-
-Cross/backward browser compatible and tested - FF60.530esr, IE11, Edge, Chrome65
-
-Fully documented (Bootstrap + intuitive naming convention + commented)
-
-**NEW GUI PARADIGM : :** Is actually the old paradigm that has been lost with the advent of ubiquitous JS framworks
-
-**NEW GUI PARADIGM : : THOR** is a "HTML/CSS first" (GPU accelerated) paradigm vise the current ubiquitous slower scripting firt paradigm
-
-**NEW GUI PARADIGM : :** CSS live deta detection (helps separate data logic from UI logic)
+* W3C Standards Compliant
+* Cross/backward browser compatible and tested - FF60.530esr, IE11, Edge, Chrome65
+* Fully documented (Bootstrap + intuitive naming convention + commented)
+* **NEW GUI PARADIGM : :** Is actually the old paradigm that has been lost with the advent of ubiquitous JS framworks
+* **NEW GUI PARADIGM : : THOR** is a "HTML/CSS first" (GPU accelerated) paradigm vise the current ubiquitous slower scripting firt paradigm
+* **NEW GUI PARADIGM : :** CSS live deta detection (helps separate data logic from UI logic)
 * HTML5 Routing (with options) allows for bookmarking/sharing links of full layouts and data
 * HTML5 User Storage allows for preferences to be saved cross browser session
 * Non-cluttered, minimal, professional look and feel
