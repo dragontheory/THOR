@@ -280,7 +280,7 @@ TODO : :
 ---
 
 REFERENCES : :  
-Design, and CSS Flex-box inspiration : :
+Design, and CSS Flex-box inspiration : :  
 
 LAYOUT : :  
 https://codepen.io/dragontheory/pen/PVwGgp  
