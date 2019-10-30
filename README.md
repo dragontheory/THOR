@@ -131,22 +131,48 @@ The latest online Bootstrap documentation can be found here: https://getbootstra
 
 ---
 
-IMPORTANT (PLEASE READ) : :  
-I spent months attempting to create this app without Bootstrap or any other dependency and found myself rewriting Bootstrap since Bootstrap is standards compliant. So to save time/effort/money I decided to leverage what they had already successfully done. Turns out they have done much better than I could have ever done. Bootstrap is vetted by thousands of commercially competitive developers building tens of thousands of websites and web applications.
+####FAQ : :  
 
-The scaffolding (HTML) and interactivity (CSS/JS) is a component unto itself and should be kept independent from data logic. This preserves JS framework agnosticism, the ability to rapidly copy/past components, and Bootstrap spec integrity.
+QUESTION : : Why Bootstrap?  
+ANSWER : : I spent months attempting to create this app without Bootstrap or any other dependency and found myself rewriting Bootstrap since Bootstrap is standards compliant. So to save time/effort/money I decided to leverage what they had already successfully done. Turns out they have done much better than I could have ever done. Bootstrap is vetted by thousands of commercially competitive developers building tens of thousands of websites and web applications.
+
+QUESTION : : Why do you prefer CSS solutions over scripting solutions?  
+ANSWER : : **THOR** is built in coordination and conjunction with Bootstrap's "HTML/CSS first" paradigm. CSS takes advantage of your computers Graphics Processing Unit (GPU) which creates a faster more smooth user experience. CSS executes faster than scripting solutions. 
+
+QUESTION : : How do I integrate the scaffolding (HTML)?  
+ANSWER : : The scaffolding (HTML) and interactivity (CSS) is a component unto itself and should be kept independent from data logic. This preserves JS framework agnosticism, the ability to rapidly copy/past components, and Bootstrap spec integrity.
 
 Data logic is only necessary where data is visible at the component level of each panel.  The rest is taken care of already by the UI.
 
-Bootstrap "overflow-hidden" classes are used in the HTML to enable scrolling in panels. Do not remove them.
+QUESTION : : Are the Bootstrap `overflow-hidden` classes really necessary?  
+ANSWER : : Yes. Bootstrap `overflow-hidden` classes are necessary to enable scrolling in panels, components, and sub components. They should not be removed. 
 
+QUESTION : : Why are there so many classes in the HTML?  
+ANSWER : : Bootstrap 4 shifts from a majority global styles for look and feel, spacing, and layout to preferring inline UTILITY classes for faster more intuitive (for developers) rendering.  
+For example : : `padding-right: 5px;` = .pr-1, `margin-left: 10px;` = .ml-2. This technique results in less custom CSS having to be written. The more we get out-of-the-box the better. 
+
+QUESTION : : Does the order of resources in the `<head>` matter?  
+ANSWER : : Yes. External file reference order in the `<head>` matters.
+* `styles.css` is a minimal and surgical OVERWRITE of vanilla Bootstrap and must come after `bootstrap.min.css`.
+* In turn, themes such as `dark.css` are minimal and surgical OVERWRITE of both `bootstrap.min.css` and `styles.css` and must come after `styles.css`.
+
+QUESTION : : This sounds complicated. Is this custom?  
+ANSWER : : No. To keep it as easy as possible to integrate and impliment for developers and preserve it for the future, every effort has been made to keep THOR as generic and standard as possible. 
+
+QUESTION : : How old is Flexbox?  
+ANSWER : : CSS Flexbox Specification’s first working draft was published on July 23rd, 2009. The original spec is based on XUL, the technology Firefox (the browser) uses to produce its UI (user interface).  
+[https://annairish.github.io/historicizing/history](https://annairish.github.io/historicizing/history)
+
+QUESTION : : If you don't use scripting to manipulate the UI, what do you use? 
+SHORT ANSWER : : Cascading Style Sheets (CSS)
+LONG ANSWER : : CSS rules are live states of layered, cascading, boolean logic. When a CSS state changes, the rule is executed instantaniously. No resource hungry script processing necessary.   
+For example : : When a button is clicked, a class is added to the `<body>`. A CSS rule exists that says when that class is in the `<body>`, open that panel. 
+
+UI behavior is purposely repetitive and predictable (read intuitive/conventional). Most UI features such as buttons, menus, panels, accordions, etc. have two or three states. Open/close, hide/show, on/off, down/up etc. CSS rules are pre-writted So writing CSS rules that predetermines what happens is fairly easy as well. 
 CSS Live Detection: CSS is live all the time. No reason to ping the back-end to change the UI. Pre-written CSS rules are ready to fire if the right conditions are met. So all we need is a single class in the `<body>` to change anything.
 
-Utility classes: Bootstrap 4 shifts from a majority global styles for look and feel, spacing, and layout to preferring inline UTILITY classes for faster more intuitive rendering. For example: `padding-right: 5px;` = `.pr-1` or `margin-left: 10px;` = `.ml-2`. This actually results in less custom CSS having to be written which is good. The more we get out-of-the-box, the better.
 
-External file reference order in the `<head>` matters.
-* styles.css is a minimal and surgical overwrite of vanilla Bootstrap and must come after bootstrap.min.css.
-* Themes such as dark.css are minimal and surgical overwrite of both vanilla Bootstrap and styles.css files and must come after styles.css.
+
 
 ---
 
