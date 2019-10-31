@@ -286,7 +286,7 @@ Vue.js : : [https://vuejs.org/v2/guide/components.html#ad](https://https://vuejs
 React.js : : [https://reactjs.org/docs/components-and-props.html](https://reactjs.org/docs/components-and-props.html)
 
 USABILITY : :  
-usability.gov : : [https://usability.gov](https://usability.gov)
+Usability.gov : : [https://usability.gov](https://usability.gov)
 
 FLEXBOX LAYOUT DESIGN : :  
 [https://codepen.io/dragontheory/pen/PVwGgp](https://codepen.io/dragontheory/pen/PVwGgp)  
