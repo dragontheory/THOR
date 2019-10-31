@@ -384,8 +384,8 @@ A new, better, faster way to do web development.
 
 DEVELOPMENT LAYERS : :  
 Front-End (FE)  
-* Front-Front-End (FFE) - HTML/CSS/JS - what end-users actually see on the screen  
-* Front-Back-End (FBE) - Vue.js - hooks services and or data into the FFE  
+* Front-Front-End (FFE) - HTML/CSS/JS - what end-users actually see on the screen
+* Front-Back-End (FBE) - Vue.js - hooks services and or data into the FFE
 Back-End (BE)  
-* Front-Back-End (FBE) - Services layer  
+* Front-Back-End (FBE) - Services layer
 * Back-Back-End (BBE) - Database layer  
