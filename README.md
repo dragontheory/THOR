@@ -165,16 +165,21 @@ FOR EXAMPLE : : When a result item is clicked, the class `.open-profile` is adde
 
 All scaffolding/layout UI logic is handled in this manner. All we need is a single class or combination of classes in the `<body>` to change anything in the UI. This simple technique extends the intuitive/conventional UI to the development side. Not only is the UI repetitive and predictable for the end-user but the technique is old-school familiar for the developers as well. 
 
-This simple technique eliminates the need for third party plug-ins that adds complication and obfuscation, to the development process and bloat to the code base, thus shortening the application developement LoE while promoting application performance. Since this technique is executed only in the browser, network traffic is minimized. 
+This simple technique eliminates the need for third party plug-ins that sometimes add complication and obfuscation, to the development process and bloat to the code base, thus shortening the application developement LoE while promoting application performance. Since this technique is executed only in the browser, network traffic is minimized. 
 
 As long as the UI logic is separate from the data logic, scripting is rarely necessary. 
 
 QUESTION : : What about loading dynamic data? How does the UI know when to show the data after it's loaded?  
-ANSWER : : Given the above technique, pre-written CSS rules can be written to check for any combination of classes and or conditions. CSS can LIVE detect anything from a generic `:notEmpty{}` to specific classes and conditions that are only true when the data is completely loaded. Additionally, CSS rules can be added to check end-user roles and permissions as well.  
-FOR EXAMPLE : : The profile section will remain closed until a pre-written CSS rule that requires says the `<body>` contains `open-profile`, is true.  remains closed until a CSS rule is true. Then and only then will it slide in and reveal its contents. The dynamic data that is loaded is the only way to make the CSS rule true. 
+ANSWER : : Given the above technique, pre-written CSS rules can check for any combination of classes and or conditions. CSS can LIVE detect anything from a generic `:notEmpty{}` to specific classes and conditions that are only true when the data is completely loaded.0 
+
+Additionally, CSS rules can be added to check end-user roles and permissions.  
+FOR EXAMPLE : : The profile section will remain closed until a pre-written CSS rule that requires the `<body>` to contain `open-profile` AND a class that only is loaded with the dynamica data `data-loaded` is true. Then and only then will the PROFILE panel slide in and reveal its content. The dynamic data that is loaded is the only way to make the CSS rule true. 
 
 QUESTION : : This sounds complicated. Is it custom?  
-ANSWER : : Depends on your definition of custom but no. To maintain ease of use for developers to integrate, end-users to use, and to preserve for the future, every effort has been made to keep THOR as generic, conventional, and standard as possible. 
+ANSWER : : Depends on your definition of custom but no. To maintain ease of use for developers to integrate, end-users to use, and to preserve for the future, every effort has been made to keep THOR as generic, conventional, and standard as possible. JS frameworks, for the most part, prefer slower but automated scripting over CSS simplicity and speed. 
+
+QUESTION : : How do I know the right data is loaded?  
+ANSWER : : The data itself is controlled and validated by the back-end. Only the right data is allowed to be loaded to the front-end. 
 
 ---
 
