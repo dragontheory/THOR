@@ -234,20 +234,10 @@ ANGULAR/VUE INTEGRATION : :
 
 NESTING : : The CSS Flex-box spec requires a direct relationship between a parent Flex-box element and it's children. Only directly nested children elements of a parent CSS Flex-box element will inherit flex attributes. This means that there cannot be HTML elements (dynamic or otherwise) between the parent and the child. The application layout **WILL FAIL** if this parent/child relationship is broken.  
 
-Correct nesting : :  
-```html
-<div class="d-flex results" id="app-results">
-    <div class=""></div>
-    <div class=""></div>
-    <div class=""></div>
-    <div class=""></div>
-</div>
-```
-
-Incorrect nesting : :  
+INCORRECT NESTING : :  
 ```html
 <div class="d-flex results">
-    <app-results class="">
+    <app-results>  < --- Angular/Vue custom component wrapper element breaks CSS Flexbox parent/child relationship
         <div class=""></div>
         <div class=""></div>
         <div class=""></div>
@@ -256,10 +246,20 @@ Incorrect nesting : :
 </div>
 ```
 
+CORRECT NESTING : :  
+```html
+<app-restults class="d-flex results">  <--- Angular/Vue custom component wrapper element is combined with the Bootstrap classes preserving the required CSS Flexbox parent/child relationship
+    <div class=""></div>
+    <div class=""></div>
+    <div class=""></div>
+    <div class=""></div>
+</div>
+```
+
 Several solutions are available but the most ideal and clean (least amount of extra code) is to combine the dynamic Angular/Vue element with the required Bootstrap classes.  
 
 Ideal Solution 1 : :  
-Combine the custom element app-results with the d-flex class in the associated Angular .ts/Vue .js file.
+Combine the custom element app-results with the d-flex class in the associated Angular `.ts/Vue .js` file.
 ```html
 @Component ({
     selector: 'div.results.d-flex'
@@ -280,14 +280,20 @@ TODO : :
 ---
 
 REFERENCES : :  
-Design, and CSS Flex-box inspiration : :  
+COMPONENTS : :  
+Angular : : [https://angular.io/guide/architecture-components](https://angular.io/guide/architecture-components)  
+Vue.js : : [https://vuejs.org/v2/guide/components.html#ad](https://https://vuejs.org/v2/guide/components.html#ad)  
+React.js : : [https://reactjs.org/docs/components-and-props.html](https://reactjs.org/docs/components-and-props.html)
 
-LAYOUT : :  
-https://codepen.io/dragontheory/pen/PVwGgp  
-https://stackoverflow.com/questions/21515042/scrolling-a-flexbox-with-overflow-content  
-https://webdesign.tutsplus.com/tutorials/how-to-make-responsive-panels-with-flexbox-cms-23269  
-https://geon.github.io/programming/2016/02/24/flexbox-full-page-web-app-layout  
-https://hydejack.com/projects/  
+USABILITY : :  
+usability.gov : : [https://usability.gov](https://usability.gov)
+
+FLEXBOX LAYOUT DESIGN : :  
+[https://codepen.io/dragontheory/pen/PVwGgp](https://codepen.io/dragontheory/pen/PVwGgp)  
+[https://stackoverflow.com/questions/21515042/scrolling-a-flexbox-with-overflow-content](https://stackoverflow.com/questions/21515042/scrolling-a-flexbox-with-overflow-content)  
+[https://webdesign.tutsplus.com/tutorials/how-to-make-responsive-panels-with-flexbox-cms-23269](https://webdesign.tutsplus.com/tutorials/how-to-make-responsive-panels-with-flexbox-cms-23269)  
+[https://geon.github.io/programming/2016/02/24/flexbox-full-page-web-app-layout](https://geon.github.io/programming/2016/02/24/flexbox-full-page-web-app-layout)  
+[https://hydejack.com/projects/](https://hydejack.com/projects/)  
 
 ---
 
