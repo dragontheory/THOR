@@ -37,7 +37,7 @@ $(document).ready(function () {
 // handle toggle PROFILE panel width 100%-0%
 $(".toggle-profile").click(function(){
     $("body").toggleClass("show-profile"); /* open/close profile panel */
-    $("body").removeClass("show-filter");
+    $("body").removeClass("show-details");
     $(".results table tbody tr").toggleClass("selected"); /* highlight selected row */
     $(".profile").removeAttr("style"); /* remove inline style width put there dynamically by resizer */
     $(".results").removeAttr("style"); /* remove inline style width put there dynamically by resizer */
