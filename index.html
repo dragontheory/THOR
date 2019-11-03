@@ -1,0 +1,2253 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--
+        Bootstrap 4.3.2 HTML/SCSS layout/component/feature scaffolding/class conventions must be followed to maintain
+        cross/backward browser compatibility, responsiveness, look and feel and structural/functional/theme integrity.
+        Please see readme.txt
+        Full documentation: https://getbootstrap.com/docs/
+        -->
+        <!-- Required meta tags -->
+        <meta http-equiv="Content-Type" content="text/html" />
+        <meta charset="UTF-8" />
+        <title>THOR | Triage HUD Operational Resources</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- W3C Validator for IE 8-10 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Data/platform/resolution agnostic, Master/detail, fast triage, Holy Grail work-flow layout" />
+        <meta name="author" content="[)4@6()|\|" />
+        <link type="image/x-icon" rel="shortcut icon" href="images/tri-thor64x64_white.png" />
+        <link type="image/x-icon" rel="mask-icon" href="images/tri-thor64x64_white.png" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+        <link rel="stylesheet" type="text/css" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
+        <link rel="stylesheet" type="text/css" href="css/layout.css" />
+        <!-- <link rel="stylesheet" type="text/css" href="vendors/jquery/DataTables/DataTables-1.10.18/css/datatables-custom.css" /> -->
+        <link rel="stylesheet" type="text/css" href="css/styles.css" />
+        <link rel="stylesheet" type="text/css" href="css/themes/dark.css" disabled="true" id="lightsOut" />
+        <link rel="stylesheet" type="text/css" href="css/fonts.css" />
+        <link rel="stylesheet" type="text/css" href="css/animations.css"  /><!-- temp required for plug-in -->
+        <link rel="stylesheet" type="text/css" href="css/click-effects.css" /><!-- temp required for plug-in -->
+        <script src="https://kit.fontawesome.com/e628637c5b.js" crossorigin="anonymous"></script>
+        <noscript>
+            <style>
+                [data-simplebar] {
+                    overflow: auto;
+                }
+            </style>
+        </noscript>
+    </head>
+    <body class="container-fluid d-flex flex-column px-0" id="thor">
+        <!-- BEGIN PAGE-HEADER -->
+        <div class="d-flex justify-content-between page-header p-0"> <!--  navbar-dark bg-dark -->
+            <!-- BEGIN NAV -->
+            <ul class="nav">
+                <li class="nav-item">
+                    <!--img src="images/THOR02c_white.png" style="height: 30px;" alt="THOR" />-->
+                    <a class="navbar-brand alert-toast px-2 bgm" style="margin-right: 10px; min-width: 182px;" href="#" title="T.H.O.R.">
+                        T.H.O.R.
+                        <small class="text-muted">[  ]</small>
+                    </a>
+                </li>
+                <li class="nav-item" title="Toggle Dashboard">
+                    <a class="nav-link toggle-hide-dashboard pr-1" href="#" title="Toggle Dashboard">
+                        <i class="far fa-window-maximize fa-rotate-270"></i>
+                        <span class="sr-only">Toggle Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item" title="Toggle Filter">
+                    <a class="nav-link toggle-hide-filter px-1" href="#" title="Toggle Filter">
+                        <i class="far fa-window-maximize fa-rotate-270"></i>
+                        <span class="sr-only">Toggle Filter</span>
+                    </a>
+                </li>
+                <li class="nav-item" title="Toogle Lights">
+                    <a class="nav-link toggle-lights pl-1" href="#" title="Toggle Lights">
+                        <i class="fas fa-adjust"></i>
+                        <span class="sr-only">Toggle Lights</span>
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link px-4" href="#" title="Dashboard">
+                        DASHBOARD
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item"><a class="nav-link px-4" href="#" title="Reports">REPORTS <span class="sr-only">Reports Tab</span></a></li>
+                <li class="nav-item"><a class="nav-link px-4" href="#" title="Admin">ADMIN <span class="sr-only">Admin Tab</span></a></li>
+                <!-- <li class="nav-item">
+                    <div class="custom-control custom-switch">
+                        <input class="custom-control-input container_toggle" type="checkbox" id="lightSwitch" name="mode">
+                        <label class="custom-control-label" for="lightSwitch">Light Switch</label>
+                    </div>
+                </li> -->
+            </ul>
+            <!-- END NAV -->
+            <div class="text-muted p-2">middle text</div>
+            <!-- BEGIN NAV -->
+            <ul class="nav">
+                <!-- BEGIN NAV-ITEM -->
+                <li class="nav-item">
+                    <!-- BEGIN FORM -->
+                    <form class="form-inline">
+                        <!-- BEGIN GLOBAL-SEARCH-FORM -->
+                        <div class="global-search-form">
+                            <!-- BEGIN GLOBAL-SEARCH-FORM -->
+                            <div class="input-group input-group-sm">
+                                <input class="form-control form-control-sm" placeholder="Search..." type="text" aria-label="Text input with segmented dropdown button" />
+                                <!-- BEGIN INPUT-GROUP-APPEND -->
+                                <div class="input-group-append dropdown">
+                                    <button class="btn btn-outline-primary glow" type="button"></button>
+                                    <button class="btn btn-outline-primary glow dropdown-toggle dropdown-toggle-split" type="button"></button>
+                                </div>
+                                <!-- END INPUT-GROUP-APPEND -->
+                            </div>
+                            <!-- END GLOBAL-SEARCH-FORM -->
+                        </div>
+                        <!-- END GLOBAL-SEARCH-FORM -->
+                    </form>
+                    <!-- END FORM -->
+                </li>
+                <!-- END NAV-ITEM -->
+                <!-- BEGIN NAV-ITEM -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle"
+                       href="#"
+                       id="userName01"
+                       role="button"
+                       id="userDropdownMenuLink"
+                       data-toggle="dropdown"
+                       aria-haspopup="true"
+                       aria-expanded="false">First Lastname
+                    </a>
+                    <!-- BEGIN DROPDOWN-MENU -->
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdownMenuLink">
+                        <a class="dropdown-item toggle-lights" href="#" title="Dark Theme">Dark Theme</a>
+                        <a class="dropdown-item toggle-lights" href="#" title="Light Theme">Light Theme</a>
+                        <a class="dropdown-item" href="#" title="Watching">Watching</a>
+                        <a class="dropdown-item" href="#" title="Favorites">Favorites</a>
+                    </div>
+                    <!-- END DROPDOWN-MENU -->
+                </li>
+                <!-- END NAV-ITEM -->
+            </ul>
+            <!-- END NAV -->
+        </div>
+        <!-- END PAGE-HEADER -->
+        <!-- BEGIN MAIN -->
+        <main class="d-flex flex-row overflow-hidden">
+            <!-- BEGIN DASHBOARD -->
+            <div class="d-flex flex-column dashboard">
+                <!-- BEGIN NAVBAR -->
+                <nav class="navbar">
+                    <h6 class="section-header p-2 mr-auto" id="userName02">Welcome [ First Lastname ]</h6>
+                    <!-- BEGIN NAV -->
+                    <ul class="nav">
+                        <!-- BEGIN NAV-ITEM -->
+                        <li class="nav-item"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            data-html="true"
+                            data-container="body"
+                            data-trigger="hover"
+                            title="Watch">
+                            <a class="nav-link py-0 px-1 glow toggle-watch" href="#"><i class="far fa-bell fa-sm"></i></a>
+                        </li>
+                        <!-- END NAV-ITEM -->
+                        <!-- BEGIN NAV-ITEM -->
+                        <li class="nav-item"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            data-html="true"
+                            data-container="body"
+                            data-trigger="hover"
+                            title="Favorite">
+                            <a class="nav-link toggle-favorite py-0 px-1 glow" href="#"><i class="far fa-star fa-sm"></i></a>
+                        </li>
+                        <!-- END NAV-ITEM -->
+                        <!-- BEGIN NAV-ITEM -->
+                        <li class="nav-item">
+                            <a class="nav-link disabled px-2 pt-0" href="#" tabindex="-1" aria-disabled="true"><span class="text-muted"> | </span></a>
+                        </li>
+                        <!-- END NAV-ITEM -->
+                        <!-- BEGIN NAV-ITEM -->
+                        <li class="nav-item"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            data-html="true"
+                            data-container="body"
+                            data-trigger="hover"
+                            title="Settings">
+                            <a class="nav-link toggle-settings py-0 px-1 glow" href="#"><i class="far fa-sun"></i></a>
+                        </li>
+                        <!-- END NAV-ITEM -->
+                        <!-- BEGIN NAV-ITEM -->
+                        <li class="nav-item"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            data-html="true"
+                            data-container="body"
+                            data-trigger="hover"
+                            title="Refresh">
+                            <a class="nav-link toggle-refresh py-0 px-1 glow" href="#"><i class="fas fa-sync-alt"></i></a>
+                        </li>
+                        <!-- END NAV-ITEM -->
+                        <!-- BEGIN NAV-ITEM -->
+                        <li class="nav-item"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            data-html="true"
+                            data-container="body"
+                            data-trigger="hover"
+                            title="Fullscreen">
+                            <a class="nav-link toggle-dashboard-fullscreen py-0 px-1 glow" href="#"><i class="fas fa-arrows-alt-v fa-rotate-45"></i></a>
+                        </li>
+                        <!-- END NAV-ITEM -->
+                        <!-- BEGIN NAV-ITEM -->
+                        <li class="nav-item"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            data-html="true"
+                            data-container="body"
+                            data-trigger="hover"
+                            title="Fullscreen">
+                            <a class="nav-link toggle-dashboard-fullscreen py-0 px-1 glow" href="#"><i class="far fa-times-circle"></i></a>
+                        </li>
+                        <!-- END NAV-ITEM -->
+                        <!-- BEGIN NAV-ITEM -->
+                        <li class="nav-item dropdowm">
+                            <button class="btn btn-sm btn-outline-primary dropdown-toggle ml-2 glow"
+                                    type="button"
+                                    role="button"
+                                    data-toggle="dropdown"
+                                    data-container="body"
+                                    aria-haspopup="true"
+                                    aria-expanded="false"
+                                    id="dashboardActionsDropDownMenuButton">ACTIONS
+                            </button>
+                            <!-- BEGIN DROPDOWN-MENU -->
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dashboardActionsDropDownMenuButton">
+                                <a class="dropdown-item" href="#"><i class="far fa-check-square"></i> Dashboard Action Item 00</a>
+                                <a class="dropdown-item" href="#"><i class="far fa-square"></i> Dashboard Action Item 01</a>
+                                <div class="dropdown-devider"></div>
+                                <a class="dropdown-item" href="#"><i class="far fa-save"></i> Dashboard Action Item 02</a>
+                                <a class="dropdown-item" href="#"><i class="far fa-share-square"></i> Dashboard Action Item 03</a>
+                                <div class="dropdown-devider"></div>
+                                <a class="dropdown-item" href="#"><i class="far fa-star"></i> Dashboard Action Item 04</a>
+                            </div>
+                            <!-- END DROPDOWN-MENU -->
+                        </li>
+                        <!-- END NAV-ITEM -->
+                    </ul>
+                    <!-- END NAV -->
+                </nav>
+                <!-- END NAVBAR -->
+                <!-- BEGIN ROW -->
+                <div class="container-fluid">
+                <div class="row">
+                    <!-- BEGIN COL -->
+                    <div class="col-md mb-md-3">
+                        <!-- BEGIN CARD -->
+                        <div class="card">
+                            <div class="card-header p-2">
+                                <h6>NEWS ::
+                                    <small class="text-muted float-right">[ 6 ]</small>
+                                </h6>
+                            </div>
+                            <!-- BEGIN CARD-BODY -->
+                            <div class="card-body">
+                                <h6 class="card-title">Special title treatment</h6>
+                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                <a href="#" class="btn btn-sm btn-outline-primary toggle-dash-open">Go somewhere</a>
+                                <p><button type="button" class="btn btn-sm btn-outline-primary mt-3 toggle-results">OPEN/CLOSE FILTER and RESULTS</button></p>
+                                <p class="pt-3">
+                                    <button class="cbutton cbutton--effect-simo cbutton--click">
+                                        <i class="cbutton__icon fa fa-fw fa-heart"></i>
+                                        <span class="cbutton__text">Heart</span>
+                                    </button>
+                                </p>
+                            </div>
+                            <!-- END CARD-BODY -->
+                        </div>
+                        <!-- END CARD -->
+                    </div>
+                    <!-- END COL -->
+                    <!-- BEGIN COL -->
+                    <div class="col-md mb-md-3">
+                        <!-- BEGIN CARD -->
+                        <div class="card">
+                            <div class="card-header p-2">
+                                <h6>HISTORY ::
+                                    <small class="text-muted float-right">[ 6 ]</small>
+                                </h6>
+                            </div>
+                            <!-- BEGIN CARD-BODY -->
+                            <div class="card-body">
+                                <h6 class="card-title">Special title treatment</h6>
+                                <p class="card-text"><span class="small text-muted">It has been [ 10 ] days, [ 5 ] hours, [ 37 ] minutes, and [ 12 ] seconds since you last logged on.</span></p>
+                                <p class="card-text" id="sayHello">Good evening David. How are you this evening?</p>
+                                <a href="#" class="btn btn-sm btn-outline-primary toggle-dash-open">Go somewhere</a>
+                                <p><button type="button" class="btn btn-sm btn-outline-primary mt-3 toggle-results">OPEN/CLOSE FILTER and RESULTS</button></p>
+                                <p class="pt-3">
+                                    <button class="cbutton cbutton--effect-simo cbutton--click">
+                                        <i class="cbutton__icon fa fa-fw fa-heart"></i>
+                                        <span class="cbutton__text">Heart</span>
+                                    </button>
+                                </p>
+                            </div>
+                            <!-- END CARD-BODY -->
+                        </div>
+                        <!-- END CARD -->
+                    </div>
+                    <!-- END COL -->
+                    <!-- BEGIN COL -->
+                    <div class="col-md mb-md-3">
+                        <!-- BEGIN CARD -->
+                        <div class="card">
+                            <div class="card-header p-2">
+                                <h6>FAVORITES ::
+                                    <small class="text-muted float-right">[ 6 ]</small>
+                                </h6>
+                            </div>
+                            <!-- BEGIN CARD-BODY -->
+                            <div class="card-body">
+                                <h6 class="card-title">Special title treatment</h6>
+                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                <a href="#" class="btn btn-sm btn-outline-primary toggle-dash-open">Go somewhere</a>
+                            </div>
+                            <!-- END CARD-BODY -->
+                        </div>
+                        <!-- END CARD -->
+                    </div>
+                    <!-- END COL -->
+                    <!-- BEGIN COL -->
+                    <div class="col-md mb-md-3">
+                        <!-- BEGIN CARD -->
+                        <div class="card">
+                            <div class="card-header p-2">
+                                <h6>WATCHING ::
+                                    <small class="text-muted float-right">[ 6 ]</small>
+                                </h6>
+                            </div>
+                            <!-- BEGIN CARD-BODY -->
+                            <div class="card-body flex-item p-0">
+                                <!-- BEGIN LIST-GROUP -->
+                                <ul class="list-group list-group-flush" data-simplebar="">
+                                    <li class="list-group-item bg-transparent">
+                                        <a href="#" class="toggle-dash-open">Lorem ipsum dolor sit amet</a>
+                                        <span class="float-right text-muted">[ Jan. 29, 2019 ]</span>
+                                        <div class="custom-control custom-switch">
+                                            <input type="checkbox" class="custom-control-input" id="customSwitch01">
+                                            <label class="custom-control-label" for="customSwitch01">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at sodales nisl. Donec malesuada orci ornare risus finibus feugiat.</label>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item bg-transparent">
+                                        <a href="#" class="toggle-dash-open">Lorem ipsum dolor sit amet</a>
+                                        <span class="float-right text-muted">[ Jan. 29, 2019 ]</span>
+                                        <div class="custom-control custom-switch">
+                                            <input type="checkbox" class="custom-control-input" id="customSwitch02">
+                                            <label class="custom-control-label" for="customSwitch02">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at sodales nisl. Donec malesuada orci ornare risus finibus feugiat.</label>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item bg-transparent">
+                                        <a href="#" class="toggle-dash-open">Lorem ipsum dolor sit amet</a><span class="float-right text-muted">[ Jan. 29, 2019 ]</span>
+                                        <div class="custom-control custom-switch">
+                                            <input type="checkbox" class="custom-control-input" id="customSwitch03">
+                                            <label class="custom-control-label" for="customSwitch03">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at sodales nisl. Donec malesuada orci ornare risus finibus feugiat.</label>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item bg-transparent">
+                                        <a href="#" class="toggle-dash-open">Lorem ipsum dolor sit amet</a><span class="float-right text-muted">[ Jan. 29, 2019 ]</span>
+                                        <div class="custom-control custom-switch">
+                                            <input type="checkbox" class="custom-control-input" id="customSwitch04">
+                                            <label class="custom-control-label" for="customSwitch04">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at sodales nisl. Donec malesuada orci ornare risus finibus feugiat.</label>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item bg-transparent">
+                                        <a href="#" class="toggle-dash-open">Lorem ipsum dolor sit amet</a><span class="float-right text-muted">[ Jan. 29, 2019 ]</span>
+                                        <div class="custom-control custom-switch">
+                                            <input type="checkbox" class="custom-control-input" id="customSwitch05">
+                                            <label class="custom-control-label" for="customSwitch05">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at sodales nisl. Donec malesuada orci ornare risus finibus feugiat.</label>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item bg-transparent">
+                                        <a href="#" class="toggle-dash-open">Lorem ipsum dolor sit amet</a><span class="float-right text-muted">[ Jan. 29, 2019 ]</span>
+                                        <div class="custom-control custom-switch">
+                                            <input type="checkbox" class="custom-control-input" id="customSwitch06">
+                                            <label class="custom-control-label" for="customSwitch06">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at sodales nisl. Donec malesuada orci ornare risus finibus feugiat.</label>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <!-- END LIST-GROUP -->
+                            </div>
+                            <!-- END CARD-BODY -->
+                        </div>
+                        <!-- END CARD -->
+                    </div>
+                    <!-- END COL -->
+                </div>
+                </div>
+                <!-- END ROW -->
+            </div>
+            <!-- END DASHBOARD -->
+            <!-- BEGIN FILTER -->
+            <div class="d-flex flex-column filter">
+                <!-- BEGIN NAVBAR -->
+                <nav class="navbar pl-1">
+                    <h6 class="section-header p-2 mr-auto">FILTER : :</h6>
+                    <!-- BEGIN NAV -->
+                    <ul class="nav">
+                        <!-- BEGIN NAV-ITEM -->
+                        <li class="nav-item dropdown">
+                            <button class="btn btn-sm btn-outline-primary dropdown-toggle glow"
+                                    type="button"
+                                    role="button"
+                                    data-toggle="dropdown"
+                                    data-container="body"
+                                    aria-haspopup="true"
+                                    aria-expanded="false"
+                                    id="filterActionsDropDownMenuButton">ACTIONS
+                            </button>
+                            <!-- BEGIN DROPDOWN-MENU -->
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="filterActionsDropDownMenuButton">
+                                <a class="dropdown-item" href="#" title="Select All"><i class="far fa-check-square"></i> Select All</a>
+                                <a class="dropdown-item" href="#" title="Deselect All"><i class="far fa-square"></i> Deselect All</a>
+                                <div class="dropdown-devider"></div>
+                                <a class="dropdown-item" href="#" title="Save Filter"><i class="far fa-save"></i> Save Filter</a>
+                                <a class="dropdown-item" href="#" title="Load Filter"><i class="far fa-share-square"></i> Load Filter</a>
+                                <div class="dropdown-devider"></div>
+                                <a class="dropdown-item" href="#" title="Favorite Filter"><i class="far fa-star"></i> Favorite Filter</a>
+                            </div>
+                            <!-- END DROPDOWN-MENU -->
+                        </li>
+                        <!-- END NAV-ITEM -->
+                    </ul>
+                    <!-- END NAV -->
+                </nav>
+                <!-- END NAVBAR -->
+                <p class="px-3 pt-3">Filter content</p>
+                <!-- BEGIN NAV -->
+                <ul class="nav flex-column flex-nowrap">
+                    <!-- BEGIN NAV-ITEM -->
+                    <li class="nav-item panel" id="filterMenuLink00">
+                        <a href="#filterMenu00"
+                           class="nav-link"
+                           data-toggle="collapse"
+                           aria-labelledby="filterMenu00"
+                           aria-expanded="false">
+                            Menu 00
+                            <small class="text-muted text-nowrap float-right small">[ 1439 ]</small>
+                        </a>
+                        <!-- BEGIN PANEL -->
+                        <div id="filterMenu00" class="panel collapse show">
+                            <!-- BEGIN PANEL-BODY -->
+                            <div class="panel-body">
+                                <!-- BEGIN BEGIN LIST-GROUP -->
+                                <div class="list-group list-group-flush">
+                                    <label for="filterMenu00CustomCheck00" class="list-group-item list-group-item-action d-flex custom-control custom-checkbox pr-3">
+                                        <input type="checkbox" class="custom-control-input" id="filterMenu00CustomCheck00" checked>
+                                        <span class="custom-control-label flex-fill">Menu 00 Item 00</span>
+                                        <small class="text-muted text-nowrap">[ 7 ]</small>
+                                    </label>
+                                    <label for="filterMenu00CustomCheck01" class="list-group-item list-group-item-action d-flex custom-control custom-checkbox pr-3">
+                                        <input type="checkbox" class="custom-control-input" id="filterMenu00CustomCheck01">
+                                        <span class="custom-control-label flex-fill">Menu 00 Item 01</span>
+                                        <small class="text-muted text-nowrap">[ 1348 ]</small>
+                                    </label>
+                                    <label for="filterMenu00CustomCheck02" class="list-group-item list-group-item-action d-flex custom-control custom-checkbox pr-3">
+                                        <input type="checkbox" class="custom-control-input" id="filterMenu00CustomCheck02">
+                                        <span class="custom-control-label flex-fill">Menu 00 Item 02</span>
+                                        <small class="text-muted text-nowrap">[ 5 ]</small>
+                                    </label>
+                                    <label for="filterMenu00CustomCheck03" class="list-group-item list-group-item-action d-flex custom-control custom-checkbox pr-3">
+                                        <input type="checkbox" class="custom-control-input" id="filterMenu00CustomCheck03">
+                                        <span class="custom-control-label flex-fill">Menu 00 Item 03</span>
+                                        <small class="text-muted text-nowrap">[ 36 ]</small>
+                                    </label>
+                                    <label for="filterMenu00CustomCheck04" class="list-group-item list-group-item-action d-flex custom-control custom-checkbox pr-3">
+                                        <input type="checkbox" class="custom-control-input" id="filterMenu00CustomCheck04">
+                                        <span class="custom-control-label flex-fill">Menu 00 Item 04</span>
+                                        <small class="text-muted text-nowrap">[ 43 ]</small>
+                                    </label>
+                                </div>
+                                <!-- END LIST-GROUP -->
+                            </div>
+                            <!-- END PANEL-BODY -->
+                        </div>
+                        <!-- END PANEL -->
+                    </li>
+                    <!-- END NAV-ITEM -->
+                    <!-- BEGIN NAV-ITEM -->
+                    <li class="nav-item panel" id="filterMenuLink01">
+                        <a href="#filterMenu01"
+                           class="nav-link"
+                           data-toggle="collapse"
+                           aria-labelledby="filterMenu01"
+                           aria-expanded="false"
+                           title="Menue 01">Menu 01
+                            <small class="text-muted text-nowrap float-right">[ 523 ]</small>
+                        </a>
+                        <!-- BEGIN PANEL -->
+                        <div id="filterMenu01" class="panel collapse show">
+                            <!-- BEGIN PANEL-BODY -->
+                            <div class="panel-body">
+                                <!-- BEGIN BEGIN LIST-GROUP -->
+                                <div class="list-group list-group-flush">
+                                    <label for="filterMenu01CustomCheck00" class="list-group-item list-group-item-action d-flex custom-control custom-checkbox pr-3">
+                                        <input type="checkbox" class="custom-control-input" id="filterMenu01CustomCheck00">
+                                        <span class="custom-control-label flex-fill">Menu 01 Item 00</span>
+                                        <small class="text-muted text-nowrap small">[ 468 ]</small>
+                                    </label>
+                                    <label for="filterMenu01CustomCheck01" class="list-group-item list-group-item-action d-flex custom-control custom-checkbox pr-3">
+                                        <input type="checkbox" class="custom-control-input" id="filterMenu01CustomCheck01" checked>
+                                        <span class="custom-control-label flex-fill">Menu 01 Item 01</span>
+                                        <small class="text-muted text-nowrap small">[ 5 ]</small>
+                                    </label>
+                                    <label for="filterMenu01CustomCheck02" class="list-group-item list-group-item-action d-flex custom-control custom-checkbox pr-3">
+                                        <input type="checkbox" class="custom-control-input" id="filterMenu01CustomCheck02">
+                                        <span class="custom-control-label flex-fill">Menu 01 Item 02</span>
+                                        <small class="text-muted text-nowrap small">[ 48 ]</small>
+                                    </label>
+                                    <label for="filterMenu01CustomCheck03" class="list-group-item list-group-item-action d-flex custom-control custom-checkbox pr-3">
+                                        <input type="checkbox" class="custom-control-input" id="filterMenu01CustomCheck03">
+                                        <span class="custom-control-label flex-fill">Menu 01 Item 03</span>
+                                        <small class="text-muted text-nowrap small">[ 1 ]</small>
+                                    </label>
+                                    <label for="filterMenu01CustomCheck04" class="list-group-item list-group-item-action d-flex custom-control custom-checkbox pr-3">
+                                        <input type="checkbox" class="custom-control-input" id="filterMenu01CustomCheck04">
+                                        <span class="custom-control-label flex-fill">Menu 01 Item 04</span>
+                                        <small class="text-muted text-nowrap small">[ 1 ]</small>
+                                    </label>
+                                </div>
+                                <!-- END LIST-GROUP -->
+                            </div>
+                            <!-- END PANEL-BODY -->
+                        </div>
+                        <!-- END PANEL -->
+                    </li>
+                    <!-- END NAV-ITEM -->
+                    <!-- BEGIN NAV-ITEM -->
+                    <li class="nav-item panel" id="filterMenuLink02">
+                        <a href="#filterMenu02"
+                           class="nav-link"
+                           data-toggle="collapse"
+                           aria-labelledby="filterMenu02"
+                           aria-expanded="false"
+                           title="Menu 02">Menu 02
+                            <small class="text-muted text-nowrap float-right small">[ 969 ]</small>
+                        </a>
+                        <!-- BEGIN PANEL -->
+                        <div id="filterMenu02" class="panel collapse">
+                            <!-- BEGIN PANEL-BODY -->
+                            <div class="panel-body">
+                                <!-- BEGIN BEGIN LIST-GROUP -->
+                                <div class="list-group list-group-flush">
+                                    <label for="filterMenu02CustomCheck00" class="list-group-item list-group-item-action d-flex custom-control custom-checkbox pr-3">
+                                        <input type="checkbox" class="custom-control-input" id="filterMenu02CustomCheck00">
+                                        <span class="custom-control-label flex-fill">Menu 02 Item 00</span>
+                                        <small class="text-muted text-nowrap small">[ 4 ]</small>
+                                    </label>
+                                    <label for="filterMenu02CustomCheck01" class="list-group-item list-group-item-action d-flex custom-control custom-checkbox pr-3">
+                                        <input type="checkbox" class="custom-control-input" id="filterMenu02CustomCheck01">
+                                        <span class="custom-control-label flex-fill">Menu 02 Item 01</span>
+                                        <small class="text-muted text-nowrap small">[ 57 ]</small>
+                                    </label>
+                                    <label for="filterMenu02CustomCheck02" class="list-group-item list-group-item-action d-flex custom-control custom-checkbox pr-3">
+                                        <input type="checkbox" class="custom-control-input" id="filterMenu02CustomCheck02" checked>
+                                        <span class="custom-control-label flex-fill">Menu 02 Item 02</span>
+                                        <small class="text-muted text-nowrap small">[ 846 ]</small>
+                                    </label>
+                                    <label for="filterMenu02CustomCheck03" class="list-group-item list-group-item-action d-flex custom-control custom-checkbox pr-3">
+                                        <input type="checkbox" class="custom-control-input" id="filterMenu02CustomCheck03">
+                                        <span class="custom-control-label flex-fill">Menu 02 Item 03</span>
+                                        <small class="text-muted text-nowrap small">[ 57 ]</small>
+                                    </label>
+                                    <label for="filterMenu02CustomCheck04" class="list-group-item list-group-item-action d-flex custom-control custom-checkbox pr-3">
+                                        <input type="checkbox" class="custom-control-input" id="filterMenu02CustomCheck04">
+                                        <span class="custom-control-label flex-fill">Menu 02 Item 04</span>
+                                        <small class="text-muted text-nowrap small">[ 5 ]</small>
+                                    </label>
+                                </div>
+                                <!-- END LIST-GROUP -->
+                            </div>
+                            <!-- END PANEL-BODY -->
+                        </div>
+                        <!-- END PANEL -->
+                    </li>
+                    <!-- END NAV-ITEM -->
+                    <!-- BEGIN NAV-ITEM -->
+                    <li class="nav-item panel" id="filterMenuLink03">
+                        <a href="#filterMenu03"
+                           class="nav-link"
+                           data-toggle="collapse"
+                           aria-labelledby="filterMenu03"
+                           aria-expanded="false"
+                           title="Menu 03">Menu 03
+                            <small class="text-muted text-nowrap float-right small">[ 622 ]</small>
+                        </a>
+                        <!-- BEGIN PANEL -->
+                        <div id="filterMenu03" class="panel collapse">
+                            <!-- BEGIN PANEL-BODY -->
+                            <div class="panel-body">
+                                <!-- BEGIN BEGIN LIST-GROUP -->
+                                <div class="list-group list-group-flush">
+                                    <label for="filterMenu03CustomCheck00" class="list-group-item list-group-item-action d-flex custom-control custom-checkbox pr-3">
+                                        <input type="checkbox" class="custom-control-input" id="filterMenu03CustomCheck00">
+                                        <span class="custom-control-label flex-fill">Menu 03 Item 00</span>
+                                        <small class="text-muted text-nowrap small">[ 43 ]</small>
+                                    </label>
+                                    <label for="filterMenu03CustomCheck01" class="list-group-item list-group-item-action d-flex custom-control custom-checkbox pr-3">
+                                        <input type="checkbox" class="custom-control-input" id="filterMenu03CustomCheck01">
+                                        <span class="custom-control-label flex-fill">Menu 03 Item 01</span>
+                                        <small class="text-muted text-nowrap small">[ 546 ]</small>
+                                    </label>
+                                    <label for="filterMenu03CustomCheck02" class="list-group-item list-group-item-action d-flex custom-control custom-checkbox pr-3">
+                                        <input type="checkbox" class="custom-control-input" id="filterMenu03CustomCheck02">
+                                        <span class="custom-control-label flex-fill">Menu 03 Item 02</span>
+                                        <small class="text-muted text-nowrap small">[ 24 ]</small>
+                                    </label>
+                                    <label for="filterMenu03CustomCheck03" class="list-group-item list-group-item-action d-flex custom-control custom-checkbox pr-3">
+                                        <input type="checkbox" class="custom-control-input" id="filterMenu03CustomCheck03" checked>
+                                        <span class="custom-control-label flex-fill">Menu 03 Item 03</span>
+                                        <small class="text-muted text-nowrap small">[ 5 ]</small>
+                                    </label>
+                                    <label for="filterMenu03CustomCheck04" class="list-group-item list-group-item-action d-flex custom-control custom-checkbox pr-3">
+                                        <input type="checkbox" class="custom-control-input" id="filterMenu03CustomCheck04">
+                                        <span class="custom-control-label flex-fill">Menu 03 Item 04</span>
+                                        <small class="text-muted text-nowrap small">[ 4 ]</small>
+                                    </label>
+                                </div>
+                                <!-- END LIST-GROUP -->
+                            </div>
+                            <!-- END PANEL-BODY -->
+                        </div>
+                        <!-- END PANEL -->
+                    </li>
+                    <!-- END NAV-ITEM -->
+                    <!-- BEGIN NAV-ITEM -->
+                    <li class="nav-item panel" id="filterMenuLink04">
+                        <a href="#filterMenu04"
+                           class="nav-link"
+                           data-toggle="collapse"
+                           aria-labelledby="filterMenu04"
+                           aria-expanded="false"
+                           title="Menu 04">Menu 04
+                            <small class="text-muted text-nowrap float-right small">[ 1741 ]</small>
+                        </a>
+                        <!-- BEGIN PANEL -->
+                        <div id="filterMenu04" class="panel collapse">
+                            <!-- BEGIN PANEL-BODY -->
+                            <div class="panel-body">
+                                <!-- BEGIN BEGIN LIST-GROUP -->
+                                <div class="list-group list-group-flush">
+                                    <label for="filterMenu04CustomCheck00" class="list-group-item list-group-item-action d-flex custom-control custom-checkbox pr-3">
+                                        <input type="checkbox" class="custom-control-input" id="filterMenu04CustomCheck00">
+                                        <span class="custom-control-label flex-fill">Menu 04 Item 00</span>
+                                        <small class="text-muted text-nowrap small">[ 843 ]</small>
+                                    </label>
+                                    <label for="filterMenu04CustomCheck01" class="list-group-item list-group-item-action d-flex custom-control custom-checkbox pr-3">
+                                        <input type="checkbox" class="custom-control-input" id="filterMenu04CustomCheck01">
+                                        <span class="custom-control-label flex-fill">Menu 04 Item 01</span>
+                                        <small class="text-muted text-nowrap small">[ 846 ]</small>
+                                    </label>
+                                    <label for="filterMenu04CustomCheck02" class="list-group-item list-group-item-action d-flex custom-control custom-checkbox pr-3">
+                                        <input type="checkbox" class="custom-control-input" id="filterMenu04CustomCheck02">
+                                        <span class="custom-control-label flex-fill">Menu 04 Item 02</span>
+                                        <small class="text-muted text-nowrap small">[ 4 ]</small>
+                                    </label>
+                                    <label for="filterMenu04CustomCheck03" class="list-group-item list-group-item-action d-flex custom-control custom-checkbox pr-3">
+                                        <input type="checkbox" class="custom-control-input" id="filterMenu04CustomCheck03">
+                                        <span class="custom-control-label flex-fill">Menu 04 Item 03</span>
+                                        <small class="text-muted text-nowrap small">[ 43 ]</small>
+                                    </label>
+                                    <label for="filterMenu04CustomCheck04" class="list-group-item list-group-item-action d-flex custom-control custom-checkbox pr-3">
+                                        <input type="checkbox" class="custom-control-input" id="filterMenu04CustomCheck04" checked>
+                                        <span class="custom-control-label flex-fill">Menu 04 Item 04</span>
+                                        <small class="text-muted text-nowrap small">[ 5 ]</small>
+                                    </label>
+                                </div>
+                                <!-- END LIST-GROUP -->
+                            </div>
+                            <!-- END PANEL-BODY -->
+                        </div>
+                        <!-- END PANEL -->
+                    </li>
+                    <!-- END NAV-ITEM -->
+                </ul>
+                <!-- END NAV -->
+            </div>
+            <!-- END FILTER -->
+            <!-- BEGIN RESULTS -->
+            <div class="d-flex flex-column results">
+                <!-- BEGIN NAVBAR -->
+                <nav class="navbar pl-1">
+                    <h6 class="section-header p-2 mr-auto">RESULTS : :</h6>
+                    <!-- BEGIN NAV -->
+                    <ul class="nav">
+                        <!-- BEGIN NAV-ITEM -->
+                        <li class="nav-item"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            data-html="true"
+                            data-container="body"
+                            data-trigger="hover">
+                            <a class="nav-link py-0 px-1 glow toggle-watch" href="#" title="Watch">
+                                <i class="far fa-bell fa-sm"></i>
+                            </a>
+                        </li>
+                        <!-- END NAV-ITEM -->
+                        <!-- BEGIN NAV-ITEM -->
+                        <li class="nav-item"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            data-html="true"
+                            data-container="body"
+                            data-trigger="hover">
+                            <a class="nav-link toggle-favorite py-0 px-1 glow" href="#" title="Favorite">
+                                <i class="far fa-star fa-sm"></i>
+                            </a>
+                        </li>
+                        <!-- END NAV-ITEM -->
+                        <!-- BEGIN NAV-ITEM -->
+                        <li class="nav-item">
+                            <a class="nav-link disabled px-2 pt-0"
+                               href="#" tabindex="-1"
+                               aria-disabled="true">
+                                <span class="text-muted"> | </span>
+                            </a>
+                        </li>
+                        <!-- END NAV-ITEM -->
+                        <!-- BEGIN NAV-ITEM -->
+                        <li class="nav-item"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            data-html="true"
+                            data-container="body"
+                            data-trigger="hover">
+                            <a class="nav-link toggle-settings py-0 px-1 glow" href="#" title="Settings">
+                                <i class="far fa-sun"></i>
+                            </a>
+                        </li>
+                        <!-- END NAV-ITEM -->
+                        <!-- BEGIN NAV-ITEM -->
+                        <li class="nav-item"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            data-html="true"
+                            data-container="body"
+                            data-trigger="hover">
+                            <a class="nav-link toggle-refresh py-0 px-1 glow" href="#" title="Refresh">
+                                <i class="fas fa-sync-alt"></i>
+                            </a>
+                        </li>
+                        <!-- END NAV-ITEM -->
+                        <!-- BEGIN NAV-ITEM -->
+                        <li class="nav-item"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            data-html="true"
+                            data-container="body"
+                            data-trigger="hover">
+                            <a class="nav-link toggle-results-fullscreen py-0 px-1 glow" href="#" title="Fullscreen">
+                                <i class="fas fa-arrows-alt-v fa-rotate-45"></i>
+                            </a>
+                        </li>
+                        <!-- END NAV-ITEM -->
+                        <!-- BEGIN NAV-ITEM -->
+                        <li class="nav-item"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            data-html="true"
+                            data-container="body"
+                            data-trigger="hover">
+                            <a class="nav-link toggle-dash-fullscreen py-0 px-1 glow" href="#" title="Close/Cancel">
+                                <i class="fas fa-times"></i>
+                            </a>
+                        </li>
+                        <!-- END NAV-ITEM -->
+                        <!-- BEGIN NAV-ITEM -->
+                        <li class="nav-item dropdown">
+                            <button class="btn btn-sm btn-outline-primary dropdown-toggle ml-2 glow"
+                                    type="button"
+                                    role="button"
+                                    data-toggle="dropdown"
+                                    data-container="body"
+                                    aria-haspopup="true"
+                                    aria-expanded="false"
+                                    id="resultsActionsDropDownMenuButton" title="Actions">ACTIONS
+                            </button>
+                            <!-- BEGIN DROPDOWN-MENU -->
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="resultsActionsDropDownMenuButton">
+                                <a class="dropdown-item" href="#" title="Results Action Item 00"><i class="far fa-check-square"></i> Results Action Item 00</a>
+                                <a class="dropdown-item" href="#" title="Results Action Item 01"><i class="far fa-square"></i> Results Action Item 01</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" title="Results Action Item 02"><i class="far fa-save"></i> Results Action Item 02</a>
+                                <a class="dropdown-item" href="#" title="Results Action Item 03"><i class="far fa-share-square"></i> Results Action Item 03</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" title="Results Action Item 04"><i class="far fa-star"></i> Results Action Item 04</a>
+                            </div>
+                            <!-- END DROPDOWN-MENU -->
+                        </li>
+                        <!-- END NAV-ITEM -->
+                    </ul>
+                    <!-- END NAV -->
+                </nav>
+                <!-- END NAVBAR -->
+                <p class="px-3 pt-3">Results content</p>
+
+                <!-- BEGIN TABLE-->
+                <div id="table" class="h-100 table-editable" data-simplebar>
+                    <span class="table-add glyphicon glyphicon-plus"></span>
+                    <table class="table table-borderless"><!-- id="resultsTable" for jquery datatables -->
+                        <thead>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-000" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-000"></label>
+                                </div>
+                            </th>
+                            <th>Position</th>
+                            <th>Office</th>
+                            <th>Age</th>
+                            <th>Start date</th>
+                            <th>Salary</th>
+                            <th>Date</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-01" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-01"></label>
+                                </div>
+                            </th>
+                            <td class=""><a href="#" class="toggle-profile" title="Tiger Nixon">Tiger Nixon</a></td>
+                            <td>System Architect</td>
+                            <td>Edinburgh</td>
+                            <td>61</td>
+                            <td><span class="badge badge-outlined-success">item01</span></td>
+                            <td>$320,800</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-02" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-02"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Tiger Nixon">Garrett Winters</a></td>
+                            <td>Accountant</td>
+                            <td>Tokyo</td>
+                            <td>63</td>
+                            <td>2011/07/25</td>
+                            <td>$170,750</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-03" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-03"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Tiger Nixon">Ashton Cox</a></td>
+                            <td>Junior Technical Author</td>
+                            <td>San Francisco</td>
+                            <td>66</td>
+                            <td>2009/01/12</td>
+                            <td>$86,000</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-04" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-04"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Tiger Nixon">Cedric Kelly</a></td>
+                            <td>Senior Javascript Developer</td>
+                            <td>Edinburgh</td>
+                            <td>22</td>
+                            <td>2012/03/29</td>
+                            <td>$433,060</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-05" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-05"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Tiger Nixon">Airi Satou</a></td>
+                            <td>Accountant</td>
+                            <td>Tokyo</td>
+                            <td>33</td>
+                            <td>2008/11/28</td>
+                            <td>$162,700</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-06" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-06"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Tiger Nixon">Brielle Williamson</a></td>
+                            <td>Integration Specialist</td>
+                            <td>New York</td>
+                            <td>61</td>
+                            <td>2012/12/02</td>
+                            <td>$372,000</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-07" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-07"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Tiger Nixon">Herrod Chandler</a></td>
+                            <td>Sales Assistant</td>
+                            <td>San Francisco</td>
+                            <td>59</td>
+                            <td>2012/08/06</td>
+                            <td>$137,500</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-08" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-08"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Tiger Nixon">Rhona Davidson</a></td>
+                            <td>Integration Specialist</td>
+                            <td>Tokyo</td>
+                            <td>55</td>
+                            <td>2010/10/14</td>
+                            <td>$327,900</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-09" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-09"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Tiger Nixon">Colleen Hurst</a></td>
+                            <td>Javascript Developer</td>
+                            <td>San Francisco</td>
+                            <td>39</td>
+                            <td>2009/09/15</td>
+                            <td>$205,500</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-10" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-10"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Tiger Nixon">Sonya Frost</a></td>
+                            <td>Software Engineer</td>
+                            <td>Edinburgh</td>
+                            <td>23</td>
+                            <td>2008/12/13</td>
+                            <td>$103,600</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-11" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-11"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Tiger Nixon">Jena Gaines</a></td>
+                            <td>Office Manager</td>
+                            <td>London</td>
+                            <td>30</td>
+                            <td>2008/12/19</td>
+                            <td>$90,560</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-12" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-12"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Tiger Nixon">Quinn Flynn</a></td>
+                            <td>Support Lead</td>
+                            <td>Edinburgh</td>
+                            <td>22</td>
+                            <td>2013/03/03</td>
+                            <td>$342,000</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-13" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-13"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Tiger Nixon">Charde Marshall</a></td>
+                            <td>Regional Director</td>
+                            <td>San Francisco</td>
+                            <td>36</td>
+                            <td>2008/10/16</td>
+                            <td>$470,600</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-14" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-14"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Tiger Nixon">Haley Kennedy</a></td>
+                            <td>Senior Marketing Designer</td>
+                            <td>London</td>
+                            <td>43</td>
+                            <td>2012/12/18</td>
+                            <td>$313,500</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-15" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-15"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Tiger Nixon">Tatyana Fitzpatrick</a></td>
+                            <td>Regional Director</td>
+                            <td>London</td>
+                            <td>19</td>
+                            <td>2010/03/17</td>
+                            <td>$385,750</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-16" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-16"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Tiger Nixon">Michael Silva</a></td>
+                            <td>Marketing Designer</td>
+                            <td>London</td>
+                            <td>66</td>
+                            <td>2012/11/27</td>
+                            <td>$198,500</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-17" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-17"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Tiger Nixon">Paul Byrd</a></td>
+                            <td>Chief Financial Officer (CFO)</td>
+                            <td>New York</td>
+                            <td>64</td>
+                            <td>2010/06/09</td>
+                            <td>$725,000</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-18" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-18"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Tiger Nixon">Gloria Little</a></td>
+                            <td>Systems Administrator</td>
+                            <td>New York</td>
+                            <td>59</td>
+                            <td>2009/04/10</td>
+                            <td>$237,500</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-19" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-19"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Tiger Nixon">Bradley Greer</a></td>
+                            <td>Software Engineer</td>
+                            <td>London</td>
+                            <td>41</td>
+                            <td>2012/10/13</td>
+                            <td>$132,000</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-20" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-20"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Tiger Nixon">Dai Rios</a></td>
+                            <td>Personnel Lead</td>
+                            <td>Edinburgh</td>
+                            <td>35</td>
+                            <td>2012/09/26</td>
+                            <td>$217,500</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-21" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-21"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Tiger Nixon">Jenette Caldwell</a></td>
+                            <td>Development Lead</td>
+                            <td>New York</td>
+                            <td>30</td>
+                            <td>2011/09/03</td>
+                            <td>$345,000</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-22" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-22"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Tiger Nixon">Yuri Berry</a></td>
+                            <td>Chief Marketing Officer (CMO)</td>
+                            <td>New York</td>
+                            <td>40</td>
+                            <td>2009/06/25</td>
+                            <td>$675,000</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-23" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-23"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Tiger Nixon">Caesar Vance</a></td>
+                            <td>Pre-Sales Support</td>
+                            <td>New York</td>
+                            <td>21</td>
+                            <td>2011/12/12</td>
+                            <td>$106,450</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-24" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-24"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Tiger Nixon">Doris Wilder</a></td>
+                            <td>Sales Assistant</td>
+                            <td>Sidney</td>
+                            <td>23</td>
+                            <td>2010/09/20</td>
+                            <td>$85,600</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-25" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-25"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Tiger Nixon">Angelica Ramos</a></td>
+                            <td>Chief Executive Officer (CEO)</td>
+                            <td>London</td>
+                            <td>47</td>
+                            <td>2009/10/09</td>
+                            <td>$1,200,000</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-26" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-26"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Tiger Nixon">Gavin Joyce</a></td>
+                            <td>Developer</td>
+                            <td>Edinburgh</td>
+                            <td>42</td>
+                            <td>2010/12/22</td>
+                            <td>$92,575</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-27" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-27"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Jennifer Chang">Jennifer Chang</a></td>
+                            <td>Regional Director</td>
+                            <td>Singapore</td>
+                            <td>28</td>
+                            <td>2010/11/14</td>
+                            <td>$357,650</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-28" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-28"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Brenden Wagner">Brenden Wagner</a></td>
+                            <td>Software Engineer</td>
+                            <td>San Francisco</td>
+                            <td>28</td>
+                            <td>2011/06/07</td>
+                            <td>$206,850</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-29" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-29"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Brenden Wagner">Brenden Wagner</a></td>
+                            <td>Software Engineer</td>
+                            <td>San Francisco</td>
+                            <td>28</td>
+                            <td>2011/06/07</td>
+                            <td>$206,850</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-30" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-30"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Fiona Green">Fiona Green</a></td>
+                            <td>Chief Operating Officer (COO)</td>
+                            <td>San Francisco</td>
+                            <td>48</td>
+                            <td>2010/03/11</td>
+                            <td>$850,000</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-31" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-31"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Tiger Nixon">Shou Itou</a></td>
+                            <td>Regional Marketing</td>
+                            <td>Tokyo</td>
+                            <td>20</td>
+                            <td>2011/08/14</td>
+                            <td>$163,000</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-32" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-32"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Tiger Nixon">Michelle House</a></td>
+                            <td>Integration Specialist</td>
+                            <td>Sidney</td>
+                            <td>37</td>
+                            <td>2011/06/02</td>
+                            <td>$95,400</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-33" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-33"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Tiger Nixon">Suki Burks</a></td>
+                            <td>Developer</td>
+                            <td>London</td>
+                            <td>53</td>
+                            <td>2009/10/22</td>
+                            <td>$114,500</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-34" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-34"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Tiger Nixon">Prescott Bartlett</a></td>
+                            <td>Technical Author</td>
+                            <td>London</td>
+                            <td>27</td>
+                            <td>2011/05/07</td>
+                            <td>$145,000</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-35" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-35"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Tiger Nixon">Gavin Cortez</a></td>
+                            <td>Team Leader</td>
+                            <td>San Francisco</td>
+                            <td>22</td>
+                            <td>2008/10/26</td>
+                            <td>$235,500</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-36" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-36"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Tiger Nixon">Martena Mccray</a></td>
+                            <td>Post-Sales support</td>
+                            <td>Edinburgh</td>
+                            <td>46</td>
+                            <td>2011/03/09</td>
+                            <td>$324,050</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-37" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-37"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Tiger Nixon">Unity Butler</a></td>
+                            <td>Marketing Designer</td>
+                            <td>San Francisco</td>
+                            <td>47</td>
+                            <td>2009/12/09</td>
+                            <td>$85,675</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-38" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-38"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Tiger Nixon">Howard Hatfield</a></td>
+                            <td>Office Manager</td>
+                            <td>San Francisco</td>
+                            <td>51</td>
+                            <td>2008/12/16</td>
+                            <td>$164,500</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-39" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-39"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Tiger Nixon">Hope Fuentes</a></td>
+                            <td>Secretary</td>
+                            <td>San Francisco</td>
+                            <td>41</td>
+                            <td>2010/02/12</td>
+                            <td>$109,850</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-40" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-40"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Tiger Nixon">Vivian Harrell</a></td>
+                            <td>Financial Controller</td>
+                            <td>San Francisco</td>
+                            <td>62</td>
+                            <td>2009/02/14</td>
+                            <td>$452,500</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-41" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-41"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Tiger Nixon">Timothy Mooney</a></td>
+                            <td>Office Manager</td>
+                            <td>London</td>
+                            <td>37</td>
+                            <td>2008/12/11</td>
+                            <td>$136,200</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-42" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-42"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Tiger Nixon">Jackson Bradshaw</a></td>
+                            <td>Director</td>
+                            <td>New York</td>
+                            <td>65</td>
+                            <td>2008/09/26</td>
+                            <td>$645,750</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-43" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-43"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Tiger Nixon">Olivia Liang</a></td>
+                            <td>Support Engineer</td>
+                            <td>Singapore</td>
+                            <td>64</td>
+                            <td>2011/02/03</td>
+                            <td>$234,500</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-44" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-44"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Tiger Nixon">Bruno Nash</a></td>
+                            <td>Software Engineer</td>
+                            <td>London</td>
+                            <td>38</td>
+                            <td>2011/05/03</td>
+                            <td>$163,500</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-45" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-45"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Tiger Nixon">Sakura Yamamoto</a></td>
+                            <td>Support Engineer</td>
+                            <td>Tokyo</td>
+                            <td>37</td>
+                            <td>2009/08/19</td>
+                            <td>$139,575</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-46" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-46"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Tiger Nixon">Thor Walton</a></td>
+                            <td>Developer</td>
+                            <td>New York</td>
+                            <td>61</td>
+                            <td>2013/08/11</td>
+                            <td>$98,540</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-47" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-47"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Tiger Nixon">Finn Camacho</a></td>
+                            <td>Support Engineer</td>
+                            <td>San Francisco</td>
+                            <td>47</td>
+                            <td>2009/07/07</td>
+                            <td>$87,500</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-48" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-48"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Tiger Nixon">Serge Baldwin</a></td>
+                            <td>Data Coordinator</td>
+                            <td>Singapore</td>
+                            <td>64</td>
+                            <td>2012/04/09</td>
+                            <td>$138,575</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-49" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-49"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Tiger Nixon">Zenaida Frank</a></td>
+                            <td>Software Engineer</td>
+                            <td>New York</td>
+                            <td>63</td>
+                            <td>2010/01/04</td>
+                            <td>$125,250</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-50" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-50"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Tiger Nixon">Zorita Serrano</a></td>
+                            <td>Software Engineer</td>
+                            <td>San Francisco</td>
+                            <td>56</td>
+                            <td>2012/06/01</td>
+                            <td>$115,000</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-51" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-51"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Tiger Nixon">Jennifer Acosta</a></td>
+                            <td>Junior Javascript Developer</td>
+                            <td>Edinburgh</td>
+                            <td>43</td>
+                            <td>2013/02/01</td>
+                            <td>$75,650</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-52" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-52"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Tiger Nixon">Cara Stevens</a></td>
+                            <td>Sales Assistant</td>
+                            <td>New York</td>
+                            <td>46</td>
+                            <td>2011/12/06</td>
+                            <td>$145,600</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-53" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-53"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Tiger Nixon">Hermione Butler</a></td>
+                            <td>Regional Director</td>
+                            <td>London</td>
+                            <td>47</td>
+                            <td>2011/03/21</td>
+                            <td>$356,250</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-54" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-54"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Tiger Nixon">Lael Greer</a></td>
+                            <td>Systems Administrator</td>
+                            <td>London</td>
+                            <td>21</td>
+                            <td>2009/02/27</td>
+                            <td>$103,500</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-55" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-55"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Tiger Nixon">Jonas Alexander</a></td>
+                            <td>Developer</td>
+                            <td>San Francisco</td>
+                            <td>30</td>
+                            <td>2010/07/14</td>
+                            <td>$86,500</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-56" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-56"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Tiger Nixon">Shad Decker</a></td>
+                            <td>Regional Director</td>
+                            <td>Edinburgh</td>
+                            <td>51</td>
+                            <td>2008/11/13</td>
+                            <td>$183,000</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-57" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-57"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Tiger Nixon">Michael Bruce</a></td>
+                            <td>Javascript Developer</td>
+                            <td>Singapore</td>
+                            <td>29</td>
+                            <td>2011/06/27</td>
+                            <td>$183,000</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input container_toggle" type="checkbox" id="custom-table-switch-58" name="mode">
+                                    <label class="custom-control-label" for="custom-table-switch-58"></label>
+                                </div>
+                            </th>
+                            <td><a href="#" class="toggle-profile" title="Tiger Nixon">Donna Snider</a></td>
+                            <td>Customer Support</td>
+                            <td>New York</td>
+                            <td>27</td>
+                            <td>2011/01/25</td>
+                            <td>$112,000</td>
+                        </tr>
+                        </tbody>
+                        <tfoot>
+                        <tr>
+                            <th>Name</th>
+                            <th>Position</th>
+                            <th>Office</th>
+                            <th>Age</th>
+                            <th>Start date</th>
+                            <th>Salary</th>
+                        </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <!-- END TABLE -->
+            </div>
+            <!-- END RESULTS -->
+            <!-- BEGIN SPLITTER -->
+            <div class="d-flex flex-column splitter" title="Click and drag to resize"></div>
+            <!-- END SPLITTER -->
+            <!-- BEGIN PROFILE -->
+            <div class="d-flex flex-column profile">
+                <!-- BEGIN NAVBAR -->
+                <nav class="navbar pl-1">
+                    <h6 class="section-header p-2 mr-auto userName">PROFILE : : [ <span>Person Name</span> | <span>Item Name</span> ]</h6>
+                    <!-- BEGIN NAV -->
+                    <ul class="nav">
+                        <!-- BEGIN NAV-ITEM -->
+                        <li class="nav-item"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            data-html="true"
+                            data-container="body"
+                            data-trigger="hover">
+                            <a class="nav-link py-0 px-1 glow toggle-watch" href="#" title="Watch">
+                                <i class="far fa-bell fa-sm"></i>
+                            </a>
+                        </li>
+                        <!-- END NAV-ITEM -->
+                        <!-- BEGIN NAV-ITEM -->
+                        <li class="nav-item"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            data-html="true"
+                            data-container="body"
+                            data-trigger="hover">
+                            <a class="nav-link toggle-favorite py-0 px-1 glow" href="#"title="Favorite">
+                                <i class="far fa-star fa-sm"></i>
+                            </a>
+                        </li>
+                        <!-- END NAV-ITEM -->
+                        <!-- BEGIN NAV-ITEM -->
+                        <li class="nav-item">
+                            <a class="nav-link disabled px-2 pt-0"
+                               href="#"
+                               tabindex="-1"
+                               aria-disabled="true">
+                                <span class="text-muted"> | </span>
+                            </a>
+                        </li>
+                        <!-- END NAV-ITEM -->
+                        <!-- BEGIN NAV-ITEM -->
+                        <li class="nav-item"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            data-html="true"
+                            data-container="body"
+                            data-trigger="hover">
+                            <a class="nav-link toggle-settings py-0 px-1 glow" href="#" title="Settings">
+                                <i class="far fa-sun"></i>
+                            </a>
+                        </li>
+                        <!-- END NAV-ITEM -->
+                        <!-- BEGIN NAV-ITEM -->
+                        <li class="nav-item"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            data-html="true"
+                            data-container="body"
+                            data-trigger="hover">
+                            <a class="nav-link toggle-refresh py-0 px-1 glow" href="#" title="Refresh">
+                                <i class="fas fa-sync-alt"></i>
+                            </a>
+                        </li>
+                        <!-- END NAV-ITEM -->
+                        <!-- BEGIN NAV-ITEM -->
+                        <li class="nav-item"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            data-html="true"
+                            data-container="body"
+                            data-trigger="hover">
+                            <a class="nav-link toggle-dash-fullscreen py-0 px-1 glow" href="#" title="Fullscreen">
+                                <i class="fas fa-arrows-alt-v fa-rotate-45"></i>
+                            </a>
+                        </li>
+                        <!-- END NAV-ITEM -->
+                        <!-- BEGIN NAV-ITEM -->
+                        <li class="nav-item"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            data-html="true"
+                            data-container="body"
+                            data-trigger="hover">
+                            <a class="nav-link toggle-dash-fullscreen py-0 px-1 glow" href="#" title="Close/Cancel">
+                                <i class="fas fa-times"></i>
+                            </a>
+                        </li>
+                        <!-- END NAV-ITEM -->
+                        <!-- BEGIN NAV-ITEM -->
+                        <li class="nav-item dropdown">
+                            <button class="btn btn-sm btn-outline-primary dropdown-toggle ml-2 glow"
+                                    type="button"
+                                    role="button"
+                                    data-toggle="dropdown"
+                                    data-container="body"
+                                    aria-haspopup="true"
+                                    aria-expanded="false"
+                                    id="profileActionsDropDownMenuButton">ACTIONS
+                            </button>
+                            <!-- BEGIN DROPDOWN-MENU -->
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="profileActionsDropDownMenuButton">
+                                <a class="dropdown-item" href="#" title="Profile Action Item 00"><i class="far fa-check-square"></i> Profile Action Item 00</a>
+                                <a class="dropdown-item" href="#" title="Profile Action Item 01"><i class="far fa-square"></i> Profile Action Item 01</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" title="Profile Action Item 02"><i class="far fa-save"></i> Profile Action Item 02</a>
+                                <a class="dropdown-item" href="#" title="Profile Action Item 03"><i class="far fa-share-square"></i> Profile Action Item 03</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" title="Profile Action Item 04"><i class="far fa-star"></i> Profile Action Item 04</a>
+                            </div>
+                            <!-- END DROPDOWN-MENU -->
+                        </li>
+                        <!-- END NAV-ITEM -->
+                    </ul>
+                    <!-- END NAV -->
+                </nav>
+                <!-- END NAVBAR -->
+                <p class="px-3 pt-3">
+                    <button type="button" class="btn btn-sm btn-outline-primary mt-3 toggle-details">OPEN/CLOSE DETAILS</button>
+                </p>
+                <!-- BEGIN ACCORDION -->
+                <div class="accordion" id="profileAccordion">
+                    <!-- BEGIN CARD -->
+                    <div class="card">
+                        <!-- BEGIN CARD HEADER -->
+                        <div class="card-header p-0" id="biographicalHeader">
+                            <div class="accordion-toggle cursor-pointer p-2" data-toggle="collapse" data-target="#biographicalAccordion" aria-expanded="true" aria-controls="biographicalAccordion" title="Click to expand/collapse">
+                                <i class="fas fa-sort-down rotate-icon"></i>
+                                <span class="header">&#160;BIOGRAPHICAL</span>
+                                <small class="small text-white-50" title="There are [ 169 ] items in this section">[ 169 ]</small>
+                            </div>
+                        </div>
+                        <!-- END CARD HEADER -->
+                        <!-- BEGIN BIOGRAPHICAL ACCORDION -->
+                        <div id="biographicalAccordion" class="collapse in show" aria-labelledby="biographicalHeader" data-parent="#profileAccordion">
+                            <!-- BEGIN CARD BODY -->
+                            <div class="card-body">
+                                <!-- BEGIN CONTAINER -->
+                                <div class="container">
+                                    <!-- BEGIN ROW -->
+                                    <div class="row">
+                                        <!-- BEGIN COL -->
+                                        <div class="col-3 p-0 profile-carousel">
+                                            <!-- BEGIN CAROUSEL -->
+                                            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                                                <ol class="carousel-indicators">
+                                                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                                </ol>
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active">
+                                                        <img class="d-block w-100" src="images/badbuy_01_400x400.png?auto=yes&bg=777&fg=555&text=First slide" alt="First slide" />
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img class="d-block w-100" src="images/badbuy_02_350x350.png?auto=yes&bg=777&fg=555&text=Second slide" alt="Second slide" />
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img class="d-block w-100" src="images/badbuy_03_667x667.png?auto=yes&bg=777&fg=555&text=Third slide" alt="Third slide" />
+                                                    </div>
+                                                </div>
+                                                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                    <span class="sr-only">Previous</span>
+                                                </a>
+                                                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                    <span class="sr-only">Next</span>
+                                                </a>
+                                            </div>
+                                            <!-- END CAROUSEL -->
+                                        </div>
+                                        <!-- END COL -->
+                                        <!-- BEGIN COL -->
+                                        <div class="col">
+                                            <h4>First name Last name</h4>
+                                            <span class="label">label:</span> <a href="#" class="value toggle-details" title="Click to toggle details">value</a><br />
+                                            <span class="label">label:</span> <a href="#" class="value toggle-details" title="Click to toggle details">value</a><br />
+                                            <span class="label">label:</span> <a href="#" class="value toggle-details" title="Click to toggle details">value</a><br />
+                                            <span class="label">label:</span> <a href="#" class="value toggle-details" title="Click to toggle details">value</a>
+                                        </div>
+                                        <!-- END COL -->
+                                    </div>
+                                    <!-- END ROW -->
+                                </div>
+                                <!-- END CONTAINER -->
+                                <p class="p-2 m-0">
+                                    Full name: <a href="#" class="toggle-details" title="Click to toggle details">First and last name</a> <br />
+                                    Second item: <a href="#" class="toggle-details" title="Click to toggle details">First and last name</a><br />
+                                    Third long item: <a href="#" class="toggle-details" title="Click to toggle details">First and last name</a>
+                                </p>
+                            </div>
+                            <!-- END CARD BODY -->
+                        </div>
+                        <!-- END BIO ACCORDION -->
+                    </div>
+                    <!-- END CARD -->
+                    <!-- BEGIN CARD -->
+                    <div class="card">
+                        <!-- BEGIN CARD HEADER -->
+                        <div class="card-header p-0" id="physicalHeader">
+                            <div class="accordion-toggle cursor-pointer p-2 collapsed" data-toggle="collapse" data-target="#physicalAccordion" title="Click to expand/collapse">
+                                <i class="fas fa-sort-down rotate-icon"></i>
+                                <span class="header">&#160;PHYSICAL</span>
+                                <span class="badge" title="There are [ 9 ] items in this section">[ 9 ]</span>
+                            </div>
+                        </div>
+                        <!-- END CARD HEADER -->
+                        <!-- BEGIN PHYSICAL ACCORDION -->
+                        <div id="physicalAccordion" class="collapse in" aria-labelledby="physicalHeader" data-parent="#profileAccordion">
+                            <!-- BEGIN CARD BODY -->
+                            <div class="card-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                            <!-- END CARD BODY -->
+                        </div>
+                        <!-- END PHYSICAL ACCORDION -->
+                    </div>
+                    <!-- END CARD -->
+                    <!-- BEGIN CARD -->
+                    <div class="card">
+                        <!-- BEGIN CARD HEADER -->
+                        <div class="card-header p-0" id="certificationsHeader">
+                            <div class="accordion-toggle cursor-pointer p-2 collapsed" data-toggle="collapse" data-target="#certificationsAccordion" title="Click to expand/collapse">
+                                <i class="fas fa-sort-down rotate-icon"></i>
+                                <span class="header">&#160;CERTIFICATIONS</span>
+                                <span class="badge" title="There are [ 1 ] items in this section">[ 1 ]</span>
+                            </div>
+                        </div>
+                        <!-- END CARD HEADER -->
+                        <!-- BEGIN CERTIFICATIONS ACCORDION -->
+                        <div id="certificationsAccordion" class="collapse in" aria-labelledby="certificationsHeader" data-parent="#profileAccordion">
+                            <!-- BEGIN CARD BODY -->
+                            <div class="card-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                            <!-- END CARD BODY -->
+                        </div>
+                        <!-- END CERTIFICATIONS ACCORDION -->
+                    </div>
+                    <!-- END CARD -->
+                    <!-- BEGIN CARD -->
+                    <div class="card">
+                        <!-- BEGIN CARD HEADER -->
+                        <div class="card-header p-0" id="occupationsHeader">
+                            <div class="accordion-toggle cursor-pointer p-2 collapsed" data-toggle="collapse" data-target="#occupationsAccordion" title="Click to expand/collapse">
+                                <i class="fas fa-sort-down rotate-icon"></i>
+                                <span class="header">&#160;OCCUPATIONS</span>
+                                <span class="badge" title="There are [ 15 ] items in this section">[ 15 ]</span>
+                            </div>
+                        </div>
+                        <!-- END CARD HEADER -->
+                        <!-- BEGIN OCCUPATIONS ACCORDION -->
+                        <div id="occupationsAccordion" class="collapse in" aria-labelledby="occupationsHeader" data-parent="#profileAccordion">
+                            <!-- BEGIN CARD BODY -->
+                            <div class="card-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                            <!-- END CARD BODY -->
+                        </div>
+                        <!-- END OCCUPATIONS ACCORDION -->
+                    </div>
+                    <!-- END CARD -->
+                    <!-- BEGIN CARD -->
+                    <div class="card">
+                        <!-- BEGIN CARD HEADER -->
+                        <div class="card-header p-0" id="relationshipsHeader">
+                            <div class="accordion-toggle cursor-pointer p-2 collapsed" data-toggle="collapse" data-target="#relationshipsAccordion" title="Click to expand/collapse">
+                                <i class="fas fa-sort-down rotate-icon"></i>
+                                <span class="header">&#160;RELATIONSHIPS</span>
+                                <span class="badge" title="There are [ 3 ] items in this section">[ 3 ]</span>
+                            </div>
+                        </div>
+                        <!-- END CARD -->
+                        <!-- END RELATIONSHIPS ACCORDION -->
+                        <div id="relationshipsAccordion" class="collapse in" aria-labelledby="relationshipsHeader" data-parent="#profileAccordion">
+                            <!-- BEGIN CARD BODY -->
+                            <div class="card-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                            <!-- END CARD BODY -->
+                        </div>
+                        <!-- END RELATIONSHIPS ACCORDION -->
+                    </div>
+                    <!-- END CARD -->
+                    <!-- BEGIN CARD -->
+                    <div class="card">
+                        <!-- BEGIN CARD HEADER -->
+                        <div class="card-header p-0" id="otherHeader">
+                            <div class="accordion-toggle cursor-pointer p-2 collapsed" data-toggle="collapse" data-target="#otherinfoAccordion" title="Click to expand/collapse">
+                                <i class="fas fa-sort-down rotate-icon"></i>
+                                <span class="header">&#160;OTHER INFORMATION</span>
+                                <span class="badge" title="There are [ 24 ] items in this section">[ 24 ]</span>
+                            </div>
+                        </div>
+                        <!-- END CARD HEADER -->
+                        <!-- END OTHER ACCORDION -->
+                        <div id="otherinfoAccordion" class="collapse in" aria-labelledby="otherHeader" data-parent="#profileAccordion">
+                            <!-- BEGIN CARD BODY -->
+                            <div class="card-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                            <!-- END CARD BODY -->
+                        </div>
+                        <!-- END OTHER ACCORDION -->
+                    </div>
+                    <!-- END CARD -->
+                </div>
+                <!-- END ACCORDION -->
+            </div>
+            <!-- END PROFILE -->
+            <!-- BEGIN DETAILS -->
+            <div class="d-flex flex-column details">
+                <!-- BEGIN NAVBAR-EXPAND -->
+                <nav class="navbar navbar-expand-sm pl-1">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#details-header-content" aria-controls="details-header-content" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="details-header-content">
+                        <h6 class="section-header p-2 mr-auto">DETAILS : :</h6>
+                        <ul class="navbar-nav">
+                            <li class="nav-item"
+                                data-toggle="tooltip"
+                                data-placement="top"
+                                data-html="true"
+                                data-container="body"
+                                data-trigger="hover"
+                                title="Settings">
+                                <a class="nav-link glow cbutton cbutton--effect-marin py-0 px-1 toggle-settings" href="#"><i class="far fa-cog fa-sm"></i></a>
+                            </li>
+                            <li class="nav-item"
+                                data-toggle="tooltip"
+                                data-placement="top"
+                                data-html="true"
+                                data-container="body"
+                                data-trigger="hover"
+                                title="Refresh">
+                                <a class="nav-link glow cbutton cbutton--effect-marin py-0 px-1 toggle-refresh" href="#"><i class="far fa-sync-alt fa-sm"></i></a>
+                            </li>
+                            <li class="nav-item"
+                                data-toggle="tooltip"
+                                data-placement="top"
+                                data-html="true"
+                                data-container="body"
+                                data-trigger="hover"
+                                title="Fullscreen">
+                                <a class="nav-link glow cbutton cbutton--effect-marin py-0 px-1 toggle-details-fullscreen" href="#"><i class="far fa-arrows-alt-v fa-sm" data-fa-transform="rotate-45"></i></a>
+                            </li>
+                            <li class="nav-item"
+                                data-toggle="tooltip"
+                                data-placement="top"
+                                data-html="true"
+                                data-container="body"
+                                data-trigger="hover"
+                                title="Close">
+                                <a class="nav-link glow cbutton cbutton--effect-marin py-0 px-1 close-details" href="#"><i class="far fa-times"></i></a>
+                            </li>
+                            <li class="nav-item px-2"></li>
+                            <li class="nav-item dropdown">
+                                <button class="btn btn-sm btn-outline-primary dropdown-toggle glow" type="button" role="button" id="profileActionsDropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ACTIONS</button>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="profileActionsDropdownMenuButton">
+                                    <a class="dropdown-item" href="#"><i class="fas fa-expand"></i>&#160;Expand All Panels</a>
+                                    <a class="dropdown-item" href="#"><i class="far fa-minus-square"></i>&#160;Collapse All Panels</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#"><i class="far fa-file-excel"></i>&#160;Save Profile</a>
+                                    <a class="dropdown-item" href="#"><i class="far fa-file-excel"></i>&#160;Favorite Profile</a>
+                                    <a class="dropdown-item" href="#"><i class="far fa-file-excel"></i>&#160;Watch Profile</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#"><i class="far fa-save"></i>&#160;Save Panel Order</a>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-sort"></i>&#160;Reset Panel Order</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#"><i class="far fa-file-excel"></i>&#160;Export to Excel</a>
+                                    <a class="dropdown-item" href="#"><i class="far fa-file-pdf"></i>&#160;Export to PDF</a>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-print"></i>&#160;Print</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- END NAVBAR-EXPAND -->
+                <p class="px-2">Some description</p>
+                <!-- BEGIN NAV-TABS -->
+                <ul class="nav nav-tabs">
+                    <li class="nav-item" data-toggle="tooltip" data-placement="top" data-html="true" data-container="body" data-trigger="hover" title="Comments"><a role="tab" data-toggle="tab" aria-selected="true" href="#tab_comments" aria-controls="tab_comments" class="nav-link glow active" id="comments_tab"><i class="far fa-comment-alt"></i></a></li>
+                    <li class="nav-item" data-toggle="tooltip" data-placement="top" data-html="true" data-container="body" data-trigger="hover" title="Notes"><a role="tab" data-toggle="tab" aria-selected="false" href="#tab_notes" aria-controls="tab_notes" class="nav-link glow" id="notes_tab"><i class="far fa-edit"></i></a></li>
+                    <li class="nav-item" data-toggle="tooltip" data-placement="top" data-html="true" data-container="body" data-trigger="hover" title="P&L"><a role="tab" data-toggle="tab" aria-selected="false" href="#tab_pl" aria-controls="tab_pl" class="nav-link glow" id="pl_tab"><i class="far fa-university"></i></a></li>
+                    <li class="nav-item" data-toggle="tooltip" data-placement="top" data-html="true" data-container="body" data-trigger="hover" title="History"><a role="tab" data-toggle="tab" aria-selected="false" href="#tab_history" aria-controls="tab_history" class="nav-link glow" id="history_tab"><i class="far fa-clock"></i></a></li>
+                    <li class="nav-item" data-toggle="tooltip" data-placement="top" data-html="true" data-container="body" data-trigger="hover" title="Favorites"><a role="tab" data-toggle="tab" aria-selected="false" href="#tab_favorites" aria-controls="tab_favorites" class="nav-link glow" id="favorites_tab"><i class="far fa-star"></i></a></li>
+                    <li class="nav-item" data-toggle="tooltip" data-placement="top" data-html="true" data-container="body" data-trigger="hover" title="Bookmarks"><a role="tab" data-toggle="tab" aria-selected="false" href="#tab_bookmarks" aria-controls="tab_bookmarks" class="nav-link glow" id="bookmarks_tab"><i class="far fa-bookmark"></i></a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"
+                           data-toggle="dropdown"
+                           href="#"
+                           role="button"
+                           aria-haspopup="true"
+                           aria-expanded="false">more</a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="#">Another Tab</a>
+                            <a class="dropdown-item" href="#">Yet Another Tab</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Room To Grow</a>
+                        </div>
+                    </li>
+                </ul>
+                <!-- END NAV-TABS -->
+                <!-- BEGIN TAB-CONTENT -->
+                <div class="tab-content">
+                    <!-- BEGIN TAB-PANE -->
+                    <div class="tab-pane fade active show" id="tab_comments" role="tabpanel" aria-labelledby="comments_tab">
+                        <h6 class="p-2 section-header">COMMENTS : : </h6>
+                        <!-- BEGIN LIST-GROUP -->
+                        <ul class="list-group list-group-flush" data-simplebar="init">
+                            <li class="list-group-item flex-column align-items-start px-2">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h6 class="mb-1">List group item heading</h6>
+                                    <small>3 days ago</small>
+                                </div>
+                                <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                                <small>Donec id elit non mi porta.</small>
+                            </li>
+                            <li class="list-group-item px-2">
+                                <a target="_blank" href="https://www.totoprayogo.com/#">New Web Design</a>
+                                <a href="#" class="float-right text-muted text-uppercase small">21 March, 2014</a>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non nisi semper, et elementum lorem ornare. Maecenas placerat facilisis mollis. Duis sagittis ligula in sodales vehicula....</p>
+                            </li>
+                            <li class="list-group-item flex-column align-items-start px-2">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">List group item heading</h5>
+                                    <small class="text-muted">3 days ago</small>
+                                </div>
+                                <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                                <small class="text-muted">Donec id elit non mi porta.</small>
+                            </li>
+                        </ul>
+                        <!-- END LIST-GROUP -->
+                        <!-- BEGIN INPUT-GROUP -->
+                        <div class="input-group">
+                            <input type="text" id="userComment" class="form-control input-sm chat-input" placeholder="Write your message here..." />
+                            <span class="input-group-btn" onclick="addComment()">
+							    <a href="#" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-comment"></span> Add Comment</a>
+						    </span>
+                        </div>
+                        <!-- END INPUT-GROUP -->
+                        <!-- BEGIN LIST-GROUP -->
+                        <ul class="list-group mb-3">
+                            <li class="list-group-item d-flex justify-content-between lh-condensed">
+                                <div>
+                                    <h6 class="my-0">User Name</h6>
+                                    <small class="text-muted">This is my comment about this record. Please advise about my comment about this record. Thank you in advance.</small>
+                                </div>
+                                <span class="text-muted">2019/01/15</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between lh-condensed">
+                                <div>
+                                    <h6 class="my-0">Second product</h6>
+                                    <small class="text-muted">Brief description</small>
+                                </div>
+                                <span class="text-muted">$8</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between lh-condensed">
+                                <div>
+                                    <h6 class="my-0">Third item</h6>
+                                    <small class="text-muted">Brief description</small>
+                                </div>
+                                <span class="text-muted">$5</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between bg-light">
+                                <div class="text-success">
+                                    <h6 class="my-0">Promo code</h6>
+                                    <small>EXAMPLECODE</small>
+                                </div>
+                                <span class="text-success">-$5</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between">
+                                <span>Total (USD)</span>
+                                <strong>$20</strong>
+                            </li>
+                        </ul>
+                        <!-- END LIST-GROUP -->
+                    </div>
+                    <!-- END TAB-PANE -->
+                    <!-- BEGIN TAB-PANE -->
+                    <div class="tab-pane fade" id="tab_notes" role="tabpanel" aria-labelledby="notes_tab">
+                        <h6 class="p-2 section-header">NOTES : : </h6>
+                        <h6 class="d-flex justify-content-between align-items-center p-2">
+                            <span class="text-muted">Your cart</span>
+                            <span class="badge badge-secondary badge-pill">3</span>
+                        </h6>
+                        <!-- BEGIN LIST-GROUP -->
+                        <ul class="list-group mb-3">
+                            <li class="list-group-item d-flex justify-content-between lh-condensed">
+                                <div>
+                                    <h6 class="my-0">Product name</h6>
+                                    <small class="text-muted">Brief description</small>
+                                </div>
+                                <span class="text-muted">$12</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between lh-condensed">
+                                <div>
+                                    <h6 class="my-0">Second product</h6>
+                                    <small class="text-muted">Brief description</small>
+                                </div>
+                                <span class="text-muted">$8</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between lh-condensed">
+                                <div>
+                                    <h6 class="my-0">Third item</h6>
+                                    <small class="text-muted">Brief description</small>
+                                </div>
+                                <span class="text-muted">$5</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between bg-light">
+                                <div class="text-success">
+                                    <h6 class="my-0">Promo code</h6>
+                                    <small>EXAMPLECODE</small>
+                                </div>
+                                <span class="text-success">-$5</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between">
+                                <span>Total (USD)</span>
+                                <strong>$20</strong>
+                            </li>
+                        </ul>
+                        <!-- END LIST-GROUP -->
+                        <form class="card p-2">
+                            <div class="input-group input-group-sm">
+                                <input type="text" class="form-control form-control-sm" placeholder="Promo code">
+                                <div class="input-group-append">
+                                    <button type="submit" class="btn btn-secondary">Redeem</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- END TAB-PANE -->
+                    <!-- BEGIN TAB-PANE -->
+                    <div class="tab-pane fade" id="tab_pl" role="tabpanel" aria-labelledby="pl_tab">
+                        <h6 class="p-2 section-header">P&L : : </h6>
+                        <p class="px-2"> Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+                            consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.
+                        </p>
+                    </div>
+                    <!-- END TAB-PANE -->
+                    <!-- BEGIN TAB-PANE -->
+                    <div class="tab-pane fade" id="tab_history" role="tabpanel" aria-labelledby="history_tab">
+                        <h6 class="p-2 section-header">HISTORY : : </h6>
+                        <p class="px-2"> Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+                            consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.
+                        </p>
+                    </div>
+                    <!-- END TAB-PANE -->
+                    <!-- BEGIN TAB-PANE -->
+                    <div class="tab-pane fade" id="tab_favorites" role="tabpanel" aria-labelledby="favorites_tab">
+                        <h6 class="p-2 section-header">FAVORITES : : </h6>
+                        <p class="px-2"> Duis autem vel eum iriure dolor in hendrerit in vulputate. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel
+                            eum iriure dolor in hendrerit in vulputate velit esse molestie consequat
+                        </p>
+                    </div>
+                    <!-- END TAB-PANE -->
+                    <!-- BEGIN TAB-PANE -->
+                    <div class="tab-pane fade" id="tab_bookmarks" role="tabpanel" aria-labelledby="bookmarks_tab">
+                        <h6 class="p-2 section-header">BOOKMARKS : : </h6>
+                        <p class="px-2"> Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
+                            consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation.
+                        </p>
+                    </div>
+                    <!-- END TAB-PANE -->
+                </div>
+                <!-- END TAB-CONTENT -->
+            </div>
+            <!-- END-DETAILS -->
+        </main>
+        <!-- END-MAIN -->
+        <!-- BEGIN FOOTER -->
+        <div class="d-flex justify-content-between page-footer">
+            <div class="text-muted p-2">Powered By: [ <a href="#">Company Name</a> ]</div>
+            <div class="text-muted p-2">middle text</div>
+            <!-- BEGIN NAV -->
+            <ul class="nav">
+                <!-- BEGIN NAV-ITEM -->
+                <li class="nav-item dropup">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="versionDropdownMenuLink" role="button" aria-expanded="true" aria-haspopup="true">Version 1.2.1</a>
+                    <!-- BEGIN DROPDOWN-MENU -->
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="versionDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Dark Theme</a>
+                        <a class="dropdown-item" href="#">Light Theme</a>
+                        <a class="dropdown-item" href="#">Watching</a>
+                        <a class="dropdown-item" href="#">Favorites</a>
+                    </div>
+                    <!-- END DROPDOWN-MENU -->
+                </li>
+                <!-- END NAV-ITEM -->
+            </ul>
+            <!-- END NAV -->
+        </div>
+        <!-- END FOOTER -->
+        <!-- BEGIN SCRIPTS -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+        <script type="text/javascript" src="https://viralpatel.net/blogs/demo/jquery.textarearesizer.compressed.js"></script>
+        <script type="text/javascript" src="https://rawgit.com/RickStrahl/jquery-resizable/master/src/jquery-resizable.js"></script>
+        <script type="text/javascript" src="js/layout.js"></script>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+/* CONTENT FADE IN/UP */
+@-webkit-keyframes fade-in-up {
+    0% { opacity: 0.0; -webkit-transform: translateY(15px); }
+    100% { opacity: 1.0; -webkit-transform: translateY(0); }
+}
+@-webkit-keyframes fade-in-up {
+    0% { opacity: 0.0; -moz-transform: translateY(15px); }
+    100% { opacity: 1.0; -moz-transform: translateY(0);	}
+}
+@-webkit-keyframes fade-in-up {
+    0% { opacity: 0.0; -o-transform: translateY(15px); }
+    100% { opacity: 1.0; -o-transform: translateY(0); }
+}
+@-webkit-keyframes fade-in-up {
+    0% { opacity: 0.0; transform: translateY(15px); }
+    100% { opacity: 1.0; transform: translateY(0); }
+}
+.fade-in-up { -webkit-animation: fade-in-up 500ms; animation: fade-in-up 500ms; }
+
+/* CIRCLE CLICK EFFECT */
+.click-circle {
+    display: block;
+    position: absolute;
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 50%;
+    opacity: 0;
+    -webkit-animation: scale(0);
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+}
+.click-circle {
+    -webkit-animation: click-effect 0.65s linear;
+    animation: click-effect 0.65s linear;
+}
+@-webkit-keyframes click-effect {
+    0% { opacity: 1.0; -webkit-transform: scale(0);	}
+    100% { opacity: 1.0 !important;	-webkit-transform: scale(2.5); }
+}
+@-webkit-keyframes click-effect {
+    0% { opacity: 1.0; -moz-transform: scale(0); }
+    100% { opacity: 1.0 !important; -moz-transform: scale(2.5); }
+}
+@-webkit-keyframes click-effect {
+    0% { opacity: 1.0; transform: scale(0); }
+    100% { opacity: 1.0 !important; transform: scale(2.5); }
+}

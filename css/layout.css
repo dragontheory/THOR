@@ -1,0 +1,195 @@
+/****************************************
+
+	LAYOUT
+
+*****************************************/
+html, body {
+    min-height: 100vh;/* force footer to bottom of browser */
+    height: 100%;/*for IE11*/
+}
+.gutter-horizontal {
+    background-repeat: no-repeat;
+    background-position: 50%;
+    flex: 0 0 10px;
+}
+.flex-item {/* Immediate child of .d-flex element */
+    flex: 1;
+    /*overflow: auto;*/
+}
+
+
+
+
+/****************************************
+
+	DASHBOARD
+
+*****************************************/
+/* DEFAULT STATE */
+.dashboard  {
+    flex: 0 0 auto; /* Allows resize to work without jumping. Originally flex: 1 1 auto */
+    min-width: 250px;
+    min-height: 1px;
+    width: 100%;
+    overflow: hidden;
+    transition: width 750ms ease, min-width 250ms ease-in-out;
+}
+/*Toggle collapsed .dashboard from page-header control */
+.hide-dashboard .dashboard {min-width: 0;}
+
+
+
+
+/****************************************
+
+	FILTER
+
+*****************************************/
+/* DEFAULT STATE */
+.filter  {
+    flex: 0 0 0;
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 1px;
+    overflow: hidden;
+    transition: min-width 250ms ease;
+}
+/* Toggle .filter from page-header control */
+.hide-filter .filter {min-width: 0;}
+
+
+
+
+/****************************************
+
+	RESULTS
+
+*****************************************/
+/* DEFAULT STATE */
+.results {
+    flex: 1 1 auto; /* Allows resize to work without jumping. Originally flex: 1 1 auto */
+    width: 100%;
+    min-width: 200px;
+    min-height: 1px;
+    overflow: hidden; /* required for table resize */
+    /* resize: horizontal; */
+    transition: width 250ms ease;
+}
+.show-results .dashboard {
+    width: 0;
+}
+
+
+
+
+/****************************************
+
+	SPLITTER
+
+*****************************************/
+.show-profile .splitter {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 10px; /* flex-basis px for IE11 */
+    flex: 0 0 10px;
+}
+
+
+
+
+/****************************************
+
+	PROFILE
+
+*****************************************/
+/* DEFAULT STATE */
+.profile {
+    flex: 1 1 auto; /* originally 1 1 auto; */
+    height: 100%;
+    width: 0;
+    min-width: 0;
+    min-height: 1px;
+    transition: width 550ms ease;
+}
+.show-results.show-profile .profile {
+    width: 100%; /* originally 100% */
+    min-width: 100px;
+}
+
+
+
+
+/****************************************
+
+	DETAILS
+
+*****************************************/
+/* DEFAULT STATE */
+.details {
+    flex: 0 0 auto;
+    height: 100%;
+    width: 300px;
+    margin-right: -300px;
+    transition: margin-right 250ms ease;
+}
+.show-details .details {margin-right: 0;}
+
+
+/* old? 2019.11.01 */
+.open .results,
+.open .profile {flex-basis: 50%;}
+
+.simplebar-scrollbar {width: 5px;}
+.simplebar-scrollbar::before {
+    background: rgba(102,175,233,0.5);
+    border-radius: 5px;
+}
+
+
+
+
+
+/****************************************
+
+	FULLSCREEN
+
+*****************************************/
+.fullscreen {
+    overflow: hidden;
+    z-index: 10060;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+.fullscreen > .table {
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0 10px;
+}
+.fullscreen > .section-header {padding: 0 10px;}
+.fullscreen .modal {z-index: 10060;}
+.fullscreen .modal-backdrop {z-index: 10059;}
+.fullscreen .close-profile-and-details {display: none;}
+
+
+
+/*.gutter::after {
+  content: "";
+  background: rgba(102,204,255,0.5);
+
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}*/
+
+
+
+
