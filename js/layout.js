@@ -37,8 +37,10 @@ $(document).ready(function () {
 // handle toggle PROFILE panel width 100%-0%
 $(".toggle-profile").click(function(){
     $("body").toggleClass("show-profile"); /* open/close profile panel */
+    $("body").removeClass("show-filter");
     $(".results table tbody tr").toggleClass("selected"); /* highlight selected row */
-    $(".profile").removeAttr("style"); /* remove inline style width put there by resizer */
+    $(".profile").removeAttr("style"); /* remove inline style width put there dynamically by resizer */
+    $(".results").removeAttr("style"); /* remove inline style width put there dynamically by resizer */
 });
 
 // handle open PROFILE panel button(s)
@@ -69,6 +71,7 @@ $(".toggle-hide-filter").click(function(){
 // handle close PROFILE panel
 $(".close-profile").click(function(){
     $("body").removeClass("show-filter");
+    $("body").removeClass("show-details");
     $(".profile").removeClass("fullscreen");
     $(".profile").removeAttr("style"); /* remove inline style width put there by resizer */
 });
@@ -95,17 +98,41 @@ $('iframe.resizable:not(.processed)').TextAreaResizer();
 var checkbox = document.querySelector('input[name=mode]');
 checkbox.addEventListener('change', function() {
     if(this.checked) {
-        trans()
+        trans();
         document.documentElement.setAttribute('data-theme', 'dark')
     } else {
-        trans()
+        trans();
         document.documentElement.setAttribute('data-theme', 'light')
     }
-})
+});
 
 let trans = () => {
     document.documentElement.classList.add('transition');
     window.setTimeout(() => {
         document.documentElement.classList.remove('transition');
     }, 1000)
+};
+
+// handle double clicking splitter to close
+var splitterTappedTwice = false;
+function toggleProfile(e) {
+
+    // handle double tap
+    if (e.type === "touchend" && !splitterTappedTwice) {
+        splitterTappedTwice = true;
+        setTimeout(function () { splitterTappedTwice = false; }, 300);
+        return false;
+    }
+    var profile = $(".profile");
+    var oldTrans = $profile.css("transition");
+    $profile.css("transition", "width 0.5s ease-in-out");
+    if ($profile.width() < 20) {
+        $profile.show();
+        $profile.width(400);
+    } else {
+        $profile.width(0);
+    }
+
+    setTimeout(function () { profile.css("transition", oldTrans) }, 700);
+    return true;
 }

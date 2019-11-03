@@ -67,8 +67,9 @@ html, body {
 *****************************************/
 /* DEFAULT STATE */
 .results {
-    flex: 1 1 auto; /* Allows resize to work without jumping. Originally flex: 1 1 auto */
+    flex: 0 0 auto; /* Allows resize to work without jumping. Originally flex: 1 1 auto */
     width: 100%;
+    max-width: 100%; /* from Rick Strahl's support.west.wind.com F12 source code 2019.11.03*/
     min-width: 200px;
     min-height: 1px;
     overflow: hidden; /* required for table resize */
@@ -77,6 +78,9 @@ html, body {
 }
 .show-results .dashboard {
     width: 0;
+}
+.show-results.show-profile .results {
+    width: 50%;
 }
 
 
@@ -90,7 +94,8 @@ html, body {
 .show-profile .splitter {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 10px; /* flex-basis px for IE11 */
-    flex: 0 0 10px;
+    flex: 0 0 auto; /* Originally 0 0 10px from Rick Strahl's support.west.wind.com F12 source code 2019.11.03*/
+    width: 10px; /* Use width rather than flex-basis. More backwards compatible with IE and smoother transitions */
 }
 
 
@@ -103,7 +108,7 @@ html, body {
 *****************************************/
 /* DEFAULT STATE */
 .profile {
-    flex: 1 1 auto; /* originally 1 1 auto; */
+    flex: 1 1 auto;
     height: 100%;
     width: 0;
     min-width: 0;
@@ -111,7 +116,6 @@ html, body {
     transition: width 550ms ease;
 }
 .show-results.show-profile .profile {
-    width: 100%; /* originally 100% */
     min-width: 100px;
 }
 
@@ -131,7 +135,7 @@ html, body {
     margin-right: -300px;
     transition: margin-right 250ms ease;
 }
-.show-details .details {margin-right: 0;}
+.show-results.show-profile.show-details .details {margin-right: 0;}
 
 
 /* old? 2019.11.01 */
