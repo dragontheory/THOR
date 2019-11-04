@@ -70,7 +70,7 @@ $(".toggle-hide-filter").click(function(){
 
 // handle close PROFILE panel
 $(".close-profile").click(function(){
-    $("body").removeClass("show-filter");
+    $("body").removeClass("show-profile");
     $("body").removeClass("show-details");
     $(".profile").removeClass("fullscreen");
     $(".profile").removeAttr("style"); /* remove inline style width put there by resizer */
