@@ -276,10 +276,10 @@ div.grippy {
 }
 .profile .carousel-indicators {bottom: 0;}
 .profile .list-group-item {background-color: rgba(255,255,255,0.0);} /* direct Bootstrap override */
+.profile .card,
 .profile .card-header:first-child {
     border-radius: 0 0; /* direct Bootstrap override */
 }
-
 
 
 
