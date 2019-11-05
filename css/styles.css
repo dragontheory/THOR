@@ -264,6 +264,17 @@ div.grippy {
     -webkit-filter: drop-shadow(0 1px 1px rgba(0,0,0,0.75)) drop-shadow(0 0 8px rgba(102,175,233,0.6));
     filter: drop-shadow(0 1px 1px rgba(0,0,0,0.75)) drop-shadow(0 0 8px rgba(102,175,233,0.6));
 }
+.accordion-toggle:hover:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    left: 0;
+    box-shadow: 5px 0 0 0 rgba(102,204,255,1.0) inset;
+    -webkit-filter: drop-shadow(0 1px 1px rgba(0,0,0,0.75)) drop-shadow(0 0 8px rgba(102,175,233,0.6));
+    filter: drop-shadow(0 1px 1px rgba(0,0,0,0.75)) drop-shadow(0 0 8px rgba(102,175,233,0.6));
+}
 .accordion-toggle:hover {
     background-color: rgba(0,0,0,0.05);
 }
@@ -469,8 +480,8 @@ div.grippy {
 	DUPLICATE INDICATORS (puree CSS triangles)
 
 ********************************************/
-table tbody > tr,
-table tbody > tr > td {
+.table tbody > tr,
+.table tbody > tr > td {
     position: relative; /* required for duplicate-indicator absolute positioning */
 }
 .results-table-record-duplicate-indicator {
@@ -752,6 +763,47 @@ table tbody > tr > td {
 .fa-rotate-45 {
     -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
     transform: rotate(45deg);
+}
+
+
+
+
+/****************************************
+
+    BADGES
+
+*****************************************/
+.badge {
+    border-left: solid 3px;
+    font-weight: normal;
+    border-radius: 0;
+}
+.badge.badge-outlined-default {
+    border-color: #B0BEC5;
+}
+.badge.badge-outlined-primary {
+    border-color: #007BFF;
+}
+.badge.badge-outlined-secondary {
+    border-color: #6C757D;
+}
+.badge.badge-outlined-success {
+    border-color: #28A745;
+}
+.badge.badge-outlined-danger {
+    border-color: #DC3545;
+}
+.badge.badge-outlined-warning {
+    border-color: #FFC107;
+}
+.badge.badge-outlined-info {
+    border-color: #17A2B8;
+}
+.badge.badge-outlined-default {
+    border-color: #F8F9FA;
+}
+.badge.badge-outlined-default {
+    border-color: #343A40;
 }
 
 
