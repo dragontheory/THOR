@@ -4,17 +4,17 @@
 
 *****************************************/
 html, body {
-    min-height: 100vh;/* force footer to bottom of browser */
-    height: 100%;/*for IE11*/
+    min-height: 100vh; /* force footer to bottom of browser */
+    height: 100%; /* for IE11 */
 }
 .gutter-horizontal {
     background-repeat: no-repeat;
     background-position: 50%;
     flex: 0 0 10px;
 }
-.flex-item {/* Immediate child of .d-flex element */
+.flex-item { /* Immediate child of .d-flex element */
     flex: 1;
-    /*overflow: auto;*/
+    /* overflow: auto; */
 }
 
 
@@ -26,7 +26,7 @@ html, body {
 
 *****************************************/
 /* DEFAULT STATE */
-.dashboard  {
+.dashboard {
     flex: 0 0 auto; /* Allows resize to work without jumping. Originally flex: 1 1 auto */
     min-width: 250px;
     min-height: 1px;
@@ -34,7 +34,7 @@ html, body {
     overflow: hidden;
     transition: width 750ms ease, min-width 250ms ease-in-out;
 }
-/*Toggle collapsed .dashboard from page-header control */
+/* Toggle collapsed .dashboard from page-header control */
 .hide-dashboard .dashboard {min-width: 0;}
 
 
@@ -137,7 +137,6 @@ html, body {
 }
 .show-results.show-profile.show-details .details {margin-right: 0;}
 
-
 /* old? 2019.11.01 */
 .open .results,
 .open .profile {flex-basis: 50%;}
@@ -193,7 +192,3 @@ html, body {
   position: absolute;
   z-index: -1;
 }*/
-
-
-
-
