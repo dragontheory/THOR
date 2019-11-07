@@ -173,6 +173,14 @@ a {
 .results table thead > tr > td:last-child {padding-left: 20px;}
 .results table tfoot > tr > td:first-child {padding-left: 20px;}
 .results table tfoot > tr > td:last-child {padding-left: 20px;}
+.show-results .close-profile {
+    opacity: 0.0;
+    pointer-events: none;
+}
+.show-results.show-profile .close-profile  {
+    opacity: 0.75;
+    pointer-events: auto;
+}
 
 
 
