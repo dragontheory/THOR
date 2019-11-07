@@ -102,8 +102,8 @@ a {
     padding: .5rem 2.3rem;
 }
 .filter .panel-body .list-group .list-group-item.active {
-    color: rgba(102,175,233,1.0);
-    box-shadow: 1px 0 0 0 rgba(102,175,233,1.0) inset;
+    color: rgba(102,204,255,1.0);
+    box-shadow: 1px 0 0 0 rgba(102,204,255,1.0) inset;
     border: 0; /* direct overide of Bootstrap .active */
 }
 /*.filter .nav .nav-link,
@@ -115,8 +115,24 @@ a {
 .filter .nav .nav-link.dropdown-toggle:hover,
 .filter .panel-body .list-group .list-group-item:hover{
     background-color: rgba(102,204,255,0.1);
-    color: rgba(102,175,233,1.0);
+    color: rgba(102,204,255,1.0);
     cursor: pointer;
+}
+.filter .panel-body .list-group .list-group-item:after {
+    content: "";
+    position: absolute;
+    transition: all 250ms;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: rgba(102,204,255,0.0);
+    -webkit-filter: drop-shadow(0 1px 1px rgba(0,0,0,0.75)) drop-shadow(0 0 8px rgba(102,204,255,0.6));
+    filter: drop-shadow(0 1px 1px rgba(0,0,0,0.75)) drop-shadow(0 0 8px rgba(102,204,255,0.6));
+}
+.filter .panel-body .list-group .list-group-item:after ,
+.filter .panel-body .list-group .list-group-item:hover:after {
+    background-color: rgba(102,204,255,1.0);
 }
 .filter .panel-body .list-group .custom-checkbox .custom-control-label::after {
     top: .1rem;
@@ -124,7 +140,7 @@ a {
 .filter .panel-body .list-group .custom-checkbox .custom-control-label::before {
     top: .1rem;
     background-color: rgba(255,255,255,0.0);
-    border: solid 1px rgba(102,175,233,0.3); /* rgba(255,255,255,0.3) */
+    border: solid 1px rgba(102,204,255,0.3); /* rgba(255,255,255,0.3) */
 }
 /*.filter .panel-body .list-group .list-group-item:has(> [checked]) {
 	background-color: rgba(102,204,255,0.1);
@@ -134,9 +150,9 @@ a {
 .filter .panel-body .list-group .list-group-item:hover .custom-control-label::before,
 .filter .panel-body .list-group .custom-control-input:checked~.custom-control-label,
 .filter .panel-body .list-group .custom-control-input:checked~.custom-control-label::before {
-    color: rgba(102,175,233,1.0);
-    border-color: rgba(102,175,233,1.0);
-    background-color: rgba(102,175,233,0.0);
+    color: rgba(102,204,255,1.0);
+    border-color: rgba(102,204,255,1.0);
+    background-color: rgba(102,204,255,0.0);
 }
 
 
@@ -181,7 +197,7 @@ a {
 .splitter:hover,
 .splitter:focus,
 .splitter:active {
-    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==') center center no-repeat rgba(102,175,233,0.1);
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==') center center no-repeat rgba(102,204,255,0.1);
 }
 div.grippy {
     background: #EEEEEE url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==') no-repeat scroll center 2px;
@@ -261,8 +277,8 @@ div.grippy {
     width: 1px;
     left: 0;
     box-shadow: 5px 0 0 0 rgba(102,204,255,1.0) inset;
-    -webkit-filter: drop-shadow(0 1px 1px rgba(0,0,0,0.75)) drop-shadow(0 0 8px rgba(102,175,233,0.6));
-    filter: drop-shadow(0 1px 1px rgba(0,0,0,0.75)) drop-shadow(0 0 8px rgba(102,175,233,0.6));
+    -webkit-filter: drop-shadow(0 1px 1px rgba(0,0,0,0.75)) drop-shadow(0 0 8px rgba(102,204,255,0.6));
+    filter: drop-shadow(0 1px 1px rgba(0,0,0,0.75)) drop-shadow(0 0 8px rgba(102,204,255,0.6));
 }
 .accordion-toggle:hover:before {
     content: "";
@@ -272,8 +288,8 @@ div.grippy {
     width: 1px;
     left: 0;
     box-shadow: 5px 0 0 0 rgba(102,204,255,1.0) inset;
-    -webkit-filter: drop-shadow(0 1px 1px rgba(0,0,0,0.75)) drop-shadow(0 0 8px rgba(102,175,233,0.6));
-    filter: drop-shadow(0 1px 1px rgba(0,0,0,0.75)) drop-shadow(0 0 8px rgba(102,175,233,0.6));
+    -webkit-filter: drop-shadow(0 1px 1px rgba(0,0,0,0.75)) drop-shadow(0 0 8px rgba(102,204,255,0.6));
+    filter: drop-shadow(0 1px 1px rgba(0,0,0,0.75)) drop-shadow(0 0 8px rgba(102,204,255,0.6));
 }
 .accordion-toggle:hover {
     background-color: rgba(0,0,0,0.05);
@@ -326,13 +342,13 @@ div.grippy {
 }
 .details .nav-tabs .nav-item.show .nav-link,
 .details .nav-tabs .nav-link.active {
-    color: rgba(102,175,233,1.0);;
+    color: rgba(102,204,255,1.0);;
     background-color: rgba(255,255,255,0.0);
-    border-color: transparent transparent rgba(102,175,233,1.0);
+    border-color: transparent transparent rgba(102,204,255,1.0);
 }
 .details .nav-tabs .nav-link:focus,
 .details .nav-tabs .nav-link:hover {
-    border-color: transparent transparent rgba(102,175,233,1.0);
+    border-color: transparent transparent rgba(102,204,255,1.0);
 }
 
 
@@ -438,7 +454,7 @@ div.grippy {
 .table tbody tr:hover {
     background-color: rgba(0,0,0,0.05);
 }
-.table tbody tr td:first-child:after {
+.table tbody > tr > td:first-child:after {
     content: "";
     position: absolute;
     transition: all 250ms;
@@ -446,30 +462,29 @@ div.grippy {
     top: 0;
     bottom: 0;
     width: 1px;
-    background-color: rgba(102,175,233,0.0);
-    -webkit-filter: drop-shadow(0 1px 1px rgba(0,0,0,0.75)) drop-shadow(0 0 8px rgba(102,175,233,0.6));
-    filter: drop-shadow(0 1px 1px rgba(0,0,0,0.75)) drop-shadow(0 0 8px rgba(102,175,233,0.6));
+    background-color: rgba(102,204,255,0.0);
+    -webkit-filter: drop-shadow(0 1px 1px rgba(0,0,0,0.75)) drop-shadow(0 0 8px rgba(102,204,255,0.6));
+    filter: drop-shadow(0 1px 1px rgba(0,0,0,0.75)) drop-shadow(0 0 8px rgba(102,204,255,0.6));
 }
-.table tbody tr:hover td:first-child:after {
-    background-color: rgba(102,175,233,1.0);
+.table tbody > tr:hover > td:first-child:after {
+    background-color: rgba(102,204,255,1.0);
 }
 /* ROWS HOVER and SELECTED */
 .table.dataTable tbody > tr.selected,
 .table.dataTable tbody > tr > .selected {
     background-color: rgba(0,0,0,0.2); /* Bootstrap override */
 }
-.table.dataTable tbody > tr.selected > td:first-child:after,
+.table tbody > tr.selected > td:first-child:after,
 .table-hover tbody > tr > td:first-child:hover:after {
     content: "";
     position: absolute;
-    transition: all 250ms;
     left: 0;
     top: 0;
     bottom: 0;
     width: 1px;
-    background-color: rgba(102,175,233,1.0);
-    -webkit-filter: drop-shadow(0 1px 1px rgba(0,0,0,0.75)) drop-shadow(0 0 8px rgba(102,175,233,0.6));
-    filter: drop-shadow(0 1px 1px rgba(0,0,0,0.75)) drop-shadow(0 0 8px rgba(102,175,233,0.6));
+    background-color: rgba(102,204,255,1.0);
+    -webkit-filter: drop-shadow(0 1px 1px rgba(0,0,0,0.75)) drop-shadow(0 0 8px rgba(102,204,255,0.6));
+    filter: drop-shadow(0 1px 1px rgba(0,0,0,0.75)) drop-shadow(0 0 8px rgba(102,204,255,0.6));
 }
 
 

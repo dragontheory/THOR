@@ -70,10 +70,11 @@ $(".toggle-hide-filter").click(function(){
 
 // handle close PROFILE panel
 $(".close-profile").click(function(){
-    $("body").removeClass("show-profile");
+    $("body").toggleClass("show-profile"); /* open/close profile panel */
     $("body").removeClass("show-details");
-    $(".profile").removeClass("fullscreen");
-    $(".profile").removeAttr("style"); /* remove inline style width put there by resizer */
+    $(".results table tbody tr").removeClass("selected"); /* highlight selected row */
+    $(".profile").removeAttr("style"); /* remove inline style width put there dynamically by resizer */
+    $(".results").removeAttr("style"); /* remove inline style width put there dynamically by resizer */
 });
 
 // handle toggle RESULTS fullscreen
