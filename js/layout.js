@@ -1,12 +1,12 @@
-// handle toggle .show-dashboard width 100%-0%
-//$(".toggle-dashboard").click(function(){
-//	$("body").toggleClass("show-dashboard");
+// handle toggle .show-home width 100%-0%
+//$(".toggle-home").click(function(){
+//	$("body").toggleClass("show-home");
 //});
 
 // handle toggle RESULTS panel width 100%-0%
 $(".toggle-results").click(function(){
     $("body").toggleClass("show-results");
-    $("body").removeClass("hide-dashboard hide-filter show-profile show-details");
+    $("body").removeClass("hide-home hide-filter show-profile show-details");
 });
 
 // handle flex box splitter
@@ -58,9 +58,9 @@ $(".toggle-lights").click(function(){
     $('#lightsOut').prop('disabled', function(i, v) { return !v; }); /* hash is required to work vs class */
 });
 
-// handle toggle DASHBOARD panel min-width 250px-0
-$(".toggle-hide-dashboard").click(function(){
-    $("body").toggleClass("hide-dashboard");
+// handle toggle HOME panel min-width 250px-0
+$(".toggle-hide-home").click(function(){
+    $("body").toggleClass("hide-home");
 });
 
 // handle toggle FILTER panel min-width 250px-0

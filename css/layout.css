@@ -22,11 +22,11 @@ html, body {
 
 /****************************************
 
-	DASHBOARD
+	HOME
 
 *****************************************/
 /* DEFAULT STATE */
-.dashboard {
+.home {
     flex: 0 0 auto; /* Allows resize to work without jumping. Originally flex: 1 1 auto */
     min-width: 250px;
     min-height: 1px;
@@ -34,8 +34,8 @@ html, body {
     overflow: hidden;
     transition: width 750ms ease, min-width 250ms ease-in-out;
 }
-/* Toggle collapsed .dashboard from page-header control */
-.hide-dashboard .dashboard {min-width: 0;}
+/* Toggle collapsed .home from page-header control */
+.hide-home .home {min-width: 0;}
 
 
 
@@ -76,7 +76,7 @@ html, body {
     /* resize: horizontal; */
     transition: width 250ms ease;
 }
-.show-results .dashboard {
+.show-results .home {
     width: 0;
 }
 .show-results.show-profile .results {

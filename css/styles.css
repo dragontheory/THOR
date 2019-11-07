@@ -50,12 +50,12 @@ a {
 .page-footer {
     background-color: rgba(0,0,0,0.03);
 }
-.toggle-hide-dashboard,
+.toggle-hide-home,
 .toggle-hide-filter{
     opacity: 0.0;
     pointer-events: none;
 }
-.show-results .toggle-hide-dashboard,
+.show-results .toggle-hide-home,
 .show-results .toggle-hide-filter {
     opacity: 0.75;
     pointer-events: auto;
@@ -66,14 +66,14 @@ a {
 
 /****************************************
 
-    DASHBOARD PANEL
+    HOME PANEL
 
 *****************************************/
-.dashboard {
+.home {
     background-color: rgba(0,0,0,0.1);
     box-shadow: -1px 0 0 0 rgba(255,255,255,0.5) inset;
 }
-.dashboard .card {
+.home .card {
     background-color: rgba(255,255,255,0.7)
 }
 
