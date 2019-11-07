@@ -130,7 +130,7 @@ a {
     -webkit-filter: drop-shadow(0 1px 1px rgba(0,0,0,0.75)) drop-shadow(0 0 8px rgba(102,204,255,0.6));
     filter: drop-shadow(0 1px 1px rgba(0,0,0,0.75)) drop-shadow(0 0 8px rgba(102,204,255,0.6));
 }
-.filter .panel-body .list-group .list-group-item:after ,
+/*.filter .panel-body .list-group .list-group-item:after,*/
 .filter .panel-body .list-group .list-group-item:hover:after {
     background-color: rgba(102,204,255,1.0);
 }
