@@ -87,6 +87,21 @@ $(".toggle-profile-fullscreen").click(function(){
     $(".profile").toggleClass("fullscreen");
 });
 
+// handle toggle DETAILS fullscreen
+$(".toggle-details-fullscreen").click(function(){
+    $(".details").toggleClass("fullscreen");
+});
+
+// dismiss modal on ESC
+$(document).keyup(function(event){
+    if(event.which=='27'){
+        $(".results").removeClass("fullscreen");
+        $(".profile").removeClass("fullscreen");
+        $(".details").removeClass("fullscreen");
+    }
+});
+
+
 /* jQuery textarea resizer pollyfill plug-in usage
 $(document).ready(function() {
 $('textarea.resizable:not(.processed)').TextAreaResizer()
