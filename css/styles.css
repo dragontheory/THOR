@@ -118,6 +118,7 @@ a {
     color: rgba(102,204,255,1.0);
     cursor: pointer;
 }
+
 .filter .panel-body .list-group .list-group-item:after {
     content: "";
     position: absolute;
