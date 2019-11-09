@@ -146,6 +146,9 @@ html, body {
     background: rgba(102,175,233,0.5);
     border-radius: 5px;
 }
+.details .list-group-item {
+    width: 100%;
+}
 
 
 
