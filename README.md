@@ -397,6 +397,7 @@ Back-End (BE)
 
 ---
 
-DEFINITION OF TERMS : :
-Separation of Concerns
-https://en.wikipedia.org/wiki/Separation_of_concerns
+DEFINITION OF TERMS : :  
+Separation of Concerns  
+https://en.wikipedia.org/wiki/Separation_of_concerns  
+https://almanac.httparchive.org/en/2019/
