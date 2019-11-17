@@ -394,3 +394,10 @@ Front-End (FE)
 Back-End (BE)  
 * Front-Back-End (FBE) - Services layer
 * Back-Back-End (BBE) - Database layer  
+
+---
+
+DEFINITION OF TERMS : :  
+Separation of Concerns  
+https://en.wikipedia.org/wiki/Separation_of_concerns  
+https://almanac.httparchive.org/en/2019/
