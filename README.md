@@ -56,8 +56,8 @@ FEATURES : :
 * W3C Standards Compliant
 * Cross/backward browser compatible and tested - FF60.530esr, IE11, Edge, Chrome65
 * Fully documented (Bootstrap + intuitive naming convention + commented)
-* **NEW GUI PARADIGM : :** Is actually the old paradigm that has been lost with the advent of ubiquitous JS framworks
-* **NEW GUI PARADIGM : : THOR** is an "HTML/CSS first" (GPU accelerated) paradigm vise the current ubiquitous slower scripting firt paradigm (see FAQ for details)
+* **NEW GUI PARADIGM : :** Is actually the old paradigm that has been lost with the advent of ubiquitous JS frameworks
+* **NEW GUI PARADIGM : : THOR** is an "HTML/CSS first" (GPU accelerated) paradigm vise the current ubiquitous slower scripting first paradigm (see FAQ for details)
 * **NEW GUI PARADIGM : :** CSS live deta detection (helps separate data logic from UI logic)
 * HTML5 Routing (with options) allows for bookmarking/sharing links of full layouts and data
 * HTML5 User Storage allows for preferences to be saved cross browser session
@@ -180,6 +180,9 @@ ANSWER : : Depends on your definition of custom but no. To maintain ease of use 
 
 QUESTION : : How do I know the right data is loaded?  
 ANSWER : : The data itself is controlled and validated by the back-end. Only the right data is allowed to be loaded to the front-end. 
+
+QUESTION : : Where is all the padding/spacing?  
+ANSWER : : Padding/spacing or "Display Density" is configurable via the end-user. Options are "Full", "Medium", and "Compact". 
 
 ---
 
