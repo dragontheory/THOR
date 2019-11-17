@@ -2,7 +2,35 @@
 //$(".toggle-home").click(function(){
 //	$("body").toggleClass("show-home");
 //});
+// handle global search box expand/collapse
+jQuery(document).on('click', '.global-search-form', function(e) {
+    $(this).addClass("open");
+    $(this).find('.form-control').focus();
 
+    $(".global-search-form .form-control").on("blur", function(e) {
+        $(this).closest('.global-search-form').removeClass("open");
+        $(this).unbind("blur");
+    });
+});
+// handle mega menu click
+jQuery(document).on('click', '.hold-on-click', function(e) {
+    e.stopPropagation()
+});
+// handle tooltips
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+});
+
+// handle RESULTS fullscreen
+$(".toggle-results-fullscreen").click(function(){
+    $("body").toggleClass("fullscreen");
+});
+$(".toggle-profile-fullscreen").click(function(){
+    $("body").toggleClass("fullscreen");
+});
+$(".toggle-details-fullscreen").click(function(){
+    $("body").toggleClass("fullscreen");
+});
 // handle toggle RESULTS panel width 100%-0%
 $(".toggle-results").click(function(){
     $("body").toggleClass("show-results");
@@ -70,9 +98,15 @@ $(".toggle-hide-filter").click(function(){
 
 // handle close PROFILE panel
 $(".close-profile").click(function(){
-    $("body").toggleClass("show-profile"); /* open/close profile panel */
+    $("body").removeClass("show-profile");
     $("body").removeClass("show-details");
     $(".results table tbody tr").removeClass("selected"); /* highlight selected row */
+    $(".profile").removeAttr("style"); /* remove inline style width put there dynamically by resizer */
+    $(".results").removeAttr("style"); /* remove inline style width put there dynamically by resizer */
+});
+// handle close DETAILS panel
+$(".close-details").click(function(){
+    $("body").removeClass("show-details");
     $(".profile").removeAttr("style"); /* remove inline style width put there dynamically by resizer */
     $(".results").removeAttr("style"); /* remove inline style width put there dynamically by resizer */
 });

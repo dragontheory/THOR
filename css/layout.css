@@ -3,10 +3,10 @@
 	LAYOUT
 
 *****************************************/
-html, body {
-    min-height: 100vh; /* force footer to bottom of browser */
-    height: 100%; /* for IE11 */
-}
+/*html, body {
+    /* min-height: 100vh;  force footer to bottom of browser */
+    /* height: 100%;  for IE11 */
+/* } */
 .gutter-horizontal {
     background-repeat: no-repeat;
     background-position: 50%;
@@ -15,6 +15,36 @@ html, body {
 .flex-item { /* Immediate child of .d-flex element */
     flex: 1;
     /* overflow: auto; */
+}
+
+
+
+/****************************************
+
+    PAGE HEADER SEARCH FORM
+
+*****************************************/
+.global-search-form {
+    width: 300px;
+    -webkit-transition: width 400ms ease;
+    -o-transition: width 400ms ease;
+    transition: width 400ms ease;
+    margin-right: 20px;
+}
+.global-search-form.open { width: 400px; }
+
+
+
+
+/****************************************
+
+    PAGE HEADER ADVANCED SEARCH PANEL
+
+*****************************************/
+.advanced-search-panel {
+    min-width: 800px;
+    margin: 15px 0 0;
+    padding: 20px 10px;
 }
 
 
@@ -117,6 +147,10 @@ html, body {
 }
 .show-results.show-profile .profile {
     min-width: 100px;
+}
+/* if (condition) "selector" */
+.show-results .profile .loaded {
+
 }
 
 

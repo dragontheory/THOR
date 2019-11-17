@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="vh-100 h-100 overflow-hidden">
     <head>
         <!--
         Bootstrap 4.3.2 HTML/SCSS layout/component/feature scaffolding/class conventions must be followed to maintain
@@ -35,7 +35,7 @@
             </style>
         </noscript>
     </head>
-    <body class="container-fluid d-flex flex-column px-0" id="thor">
+    <body class="container-fluid d-flex flex-column vh-100 h-100 overflow-hidden px-0" id="thor">
         <!-- BEGIN PAGE-HEADER -->
         <div class="d-flex justify-content-between page-header p-0"><!--  navbar-dark bg-dark -->
             <!-- BEGIN NAV -->
@@ -47,19 +47,37 @@
                         <small class="text-muted">[  ]</small>
                     </a>
                 </li>
-                <li class="nav-item" title="Toggle Home">
+                <li class="nav-item"
+                    data-toggle="tooltip"
+                    data-placement="top"
+                    data-html="true"
+                    data-container="body"
+                    data-trigger="hover"
+                    title="Toggle Home">
                     <a class="nav-link toggle-hide-home pr-1" href="#" title="Toggle Home">
                         <i class="far fa-window-maximize fa-rotate-270"></i>
                         <span class="sr-only">Toggle Home</span>
                     </a>
                 </li>
-                <li class="nav-item" title="Toggle Filter">
+                <li class="nav-item"
+                    data-toggle="tooltip"
+                    data-placement="top"
+                    data-html="true"
+                    data-container="body"
+                    data-trigger="hover"
+                    title="Toggle Filter">
                     <a class="nav-link toggle-hide-filter px-1" href="#" title="Toggle Filter">
                         <i class="far fa-window-maximize fa-rotate-270"></i>
                         <span class="sr-only">Toggle Filter</span>
                     </a>
                 </li>
-                <li class="nav-item" title="Toogle Lights">
+                <li class="nav-item"
+                    data-toggle="tooltip"
+                    data-placement="top"
+                    data-html="true"
+                    data-container="body"
+                    data-trigger="hover"
+                    title="Toggle Lights">
                     <a class="nav-link toggle-lights pl-1" href="#" title="Toggle Lights">
                         <i class="fas fa-adjust"></i>
                         <span class="sr-only">Toggle Lights</span>
@@ -86,34 +104,256 @@
             <ul class="nav">
                 <!-- BEGIN NAV-ITEM -->
                 <li class="nav-item">
-                    <!-- BEGIN FORM -->
-                    <form class="form-inline">
+                    <!-- BEGIN FORM-INLINE -->
+                    <form class="form-inline my-2 my-lg-0">
                         <!-- BEGIN GLOBAL-SEARCH-FORM -->
                         <div class="global-search-form">
-                            <!-- BEGIN GLOBAL-SEARCH-FORM -->
+                            <!-- BEGIN INPUT-GROUP -->
                             <div class="input-group input-group-sm">
-                                <input class="form-control form-control-sm" placeholder="Search..." type="text" aria-label="Text input with segmented dropdown button" />
+                                <input type="text" class="form-control mr-sm-2 form-control-sm" aria-label="Text input with segmented dropdown button" placeholder="Search...">
                                 <!-- BEGIN INPUT-GROUP-APPEND -->
-                                <div class="input-group-append dropdown">
-                                    <button class="btn btn-outline-primary glow" type="button"></button>
-                                    <button class="btn btn-outline-primary glow dropdown-toggle dropdown-toggle-split" type="button"></button>
+                                <div class="input-group-append">
+                                    <button type="button" class="btn btn-outline-primary glow">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split glow" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="sr-only">Toggle Dropdown</span>
+                                        <i class="fa fa-search-plus"></i>
+                                    </button>
+                                    <!-- BEGIN DROPDOWN-MENU -->
+                                    <div class="dropdown-menu dropdown-menu-right advanced-search-panel hold-on-click">
+                                        <!-- BEGIN ROW -->
+                                        <div class="row">
+                                            <!-- BEGIN COL -->
+                                            <div class="col-sm-8 separator">
+                                                <h6 class="section-header p-2">ADVANCED SEARCH CRITERIA : :</h6>
+                                                <!-- BEGIN NAV -->
+                                                <ul class="nav" role="tablist">
+                                                    <li class="nav-item"><a role="tab" data-toggle="tab" aria-selected="true" href="#tab_general" aria-controls="tab_general" class="nav-link p-1 active" id="general_tab">GERERAL</a></li>
+                                                    <li class="nav-item"><a role="tab" data-toggle="tab" aria-selected="false" href="#tab_bio" aria-controls="tab_bio" class="nav-link p-1" id="bio_tab">BIOGRAPHICAL</a></li>
+                                                    <li class="nav-item"><a role="tab" data-toggle="tab" aria-selected="false" href="#tab_certification" aria-controls="tab_certification" class="nav-link p-1" id="certification_tab">CERTIFICATION(S)</a></li>
+                                                    <li class="nav-item"><a role="tab" data-toggle="tab" aria-selected="false" href="#tab_contact" aria-controls="tab_contact" class="nav-link p-1" id="contact_tab">CONTACT(S)</a></li>
+                                                    <li class="nav-item"><a role="tab" data-toggle="tab" aria-selected="false" href="#tab_travel" aria-controls="tab_travel" class="nav-link p-1" id="travel_tab">TRAVEL</a></li>
+                                                    <li class="nav-item"><a role="tab" data-toggle="tab" aria-selected="false" href="#tab_address" aria-controls="tab_address" class="nav-link p-1" id="address_tab">ADDRESS(ES)</a></li>
+                                                    <li class="nav-item"><a role="tab" data-toggle="tab" aria-selected="false" href="#tab_financial" aria-controls="tab_financial" class="nav-link p-1" id="financial_tab">FINANCIAL</a></li>
+                                                    <li class="nav-item"><a role="tab" data-toggle="tab" aria-selected="false" href="#tab_vehicle" aria-controls="tab_vehicle" class="nav-link p-1" id="vehicle_tab">VEHICLE(S)</a></li>
+                                                    <li class="nav-item"><a role="tab" data-toggle="tab" aria-selected="false" href="#tab_collections" aria-controls="tab_collections" class="nav-link p-1" id="collections_tab">COLLECTION(S)</a></li>
+                                                </ul>
+                                                <!-- END NAV -->
+                                                <!-- BEGIN TAB-CONTENT -->
+                                                <div class="tab-content">
+                                                    <!-- BEGIN TAB-PANE -->
+                                                    <div role="tabpanel" class="tab-pane fade show active" id="tab_general" aria-labelledby="general_tab">
+                                                        <!-- BEGIN ROW -->
+                                                        <div class="row">
+                                                            <!-- BEGIN COL -->
+                                                            <div class="col-sm-12">
+                                                                <h6 class="sectionHeader">GENERAL SEARCH&nbsp;&nbsp;<small>[ SELECT SEARCH CRITERIA ]</small></h6>
+                                                                <div class="form-group">
+                                                                    <input type="text" class="form-control form-control-sm" placeholder="Term ..." />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- END ROW -->
+                                                    </div>
+                                                    <!-- END TAB-PANE -->
+                                                    <!-- BEGIN TAB-PANE -->
+                                                    <div role="tabpanel" class="tab-pane fade" id="tab_bio" aria-labelledby="bio_tab">
+                                                        <div class="row">
+                                                            <div class="col-sm-12">
+                                                                <h6 class="sectionHeader">BIOGRAPHICAL CONTENT&nbsp;&nbsp;<small>[ SELECT SEARCH CRITERIA ]</small></h6>
+                                                                <form class="needs-validation" novalidate="">
+                                                                    <div class="row">
+                                                                        <div class="col-md-6 mb-3">
+                                                                            <!-- <label for="firstName">First name</label> -->
+                                                                            <input type="text" class="form-control form-control-sm" id="firstName" placeholder="First Name" value="" required="" />
+                                                                            <div class="invalid-feedback">Valid first name is required.</div>
+                                                                        </div>
+                                                                        <div class="col-md-6 mb-3">
+                                                                            <!-- <label for="lastName">Last name</label> -->
+                                                                            <input type="text" class="form-control form-control-sm" id="lastName" placeholder="Last Name" value="" required="" />
+                                                                            <div class="invalid-feedback">Valid last name is required.</div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="mb-3">
+                                                                        <!-- <label for="username">Username</label> -->
+                                                                        <div class="input-group input-group-sm">
+                                                                            <div class="input-group-prepend"><span class="input-group-text">@</span></div>
+                                                                            <input type="text" class="form-control form-control-sm" id="username" placeholder="Username" required="" />
+                                                                            <div class="invalid-feedback" style="width: 100%;">Your username is required.</div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="mb-3">
+                                                                        <!-- <label for="email">Email <span class="text-muted">(Optional)</span></label> -->
+                                                                        <input type="email" class="form-control form-control-sm" id="email" placeholder="your@email.com (Optional)" />
+                                                                        <div class="invalid-feedback">Please enter a valid email address for shipping updates.</div>
+                                                                    </div>
+
+                                                                    <div class="mb-3">
+                                                                        <!-- <label for="address">Address</label> -->
+                                                                        <input type="text" class="form-control form-control-sm" id="address" placeholder="Street Address" required="" />
+                                                                        <div class="invalid-feedback">Please enter your shipping address.</div>
+                                                                    </div>
+
+                                                                    <div class="mb-3">
+                                                                        <!-- <label for="address2">Address 2 <span class="text-muted">(Optional)</span></label> -->
+                                                                        <input type="text" class="form-control form-control-sm" id="address2" placeholder="Apartment or suite (Optional)" />
+                                                                    </div>
+
+                                                                    <div class="row">
+                                                                        <div class="col-md-5 mb-3">
+                                                                            <!-- <label for="country">Country</label> -->
+                                                                            <select class="custom-select d-block w-100" id="country" required="">
+                                                                                <option value="">Country</option>
+                                                                                <option>United States</option>
+                                                                            </select>
+                                                                            <div class="invalid-feedback">Please select a valid country.</div>
+                                                                        </div>
+                                                                        <div class="col-md-4 mb-3">
+                                                                            <!-- <label for="state">State</label> -->
+                                                                            <select class="custom-select d-block w-100" id="state" required="">
+                                                                                <option value="">State</option>
+                                                                                <option>California</option>
+                                                                            </select>
+                                                                            <div class="invalid-feedback">Please provide a valid state.</div>
+                                                                        </div>
+                                                                        <div class="col-md-3 mb-3">
+                                                                            <!-- <label for="zip">Zip</label> -->
+                                                                            <input type="text" class="form-control form-control-sm" id="zip" placeholder="Zip Code" required="" />
+                                                                            <div class="invalid-feedback">Zip code required.</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <hr class="mb-4">
+                                                                    <div class="custom-control custom-checkbox">
+                                                                        <input type="checkbox" class="custom-control-input" id="same-address" />
+                                                                        <label class="custom-control-label" for="same-address">Shipping address is the same as my billing address</label>
+                                                                    </div>
+                                                                    <div class="custom-control custom-checkbox">
+                                                                        <input type="checkbox" class="custom-control-input" id="save-info" />
+                                                                        <label class="custom-control-label" for="save-info">Save this information for next time</label>
+                                                                    </div>
+                                                                    <hr class="mb-4">
+
+                                                                    <h4 class="mb-3">Payment</h4>
+
+                                                                    <div class="d-block my-3">
+                                                                        <div class="custom-control custom-radio">
+                                                                            <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked="" required="" />
+                                                                            <label class="custom-control-label" for="credit">Credit card</label>
+                                                                        </div>
+                                                                        <div class="custom-control custom-radio">
+                                                                            <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required="" />
+                                                                            <label class="custom-control-label" for="debit">Debit card</label>
+                                                                        </div>
+                                                                        <div class="custom-control custom-radio">
+                                                                            <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required="" />
+                                                                            <label class="custom-control-label" for="paypal">PayPal</label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-md-6 mb-3">
+                                                                            <!-- <label for="cc-name">Name on card</label> -->
+                                                                            <input type="text" class="form-control form-control-sm" id="cc-name" placeholder="Name on card" required="" />
+                                                                            <small class="text-muted">Full name as displayed on card</small>
+                                                                            <div class="invalid-feedback">Name on card is required</div>
+                                                                        </div>
+                                                                        <div class="col-md-6 mb-3">
+                                                                            <!-- <label for="cc-number">Credit card number</label> -->
+                                                                            <input type="text" class="form-control form-control-sm" id="cc-number" placeholder="Credit card number" required="" />
+                                                                            <div class="invalid-feedback">Credit card number is required</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-md-3 mb-3">
+                                                                            <!-- <label for="cc-expiration">Expiration</label> -->
+                                                                            <input type="text" class="form-control form-control-sm" id="cc-expiration" placeholder="Expiration" required="" />
+                                                                            <div class="invalid-feedback">Expiration date required</div>
+                                                                        </div>
+                                                                        <div class="col-md-3 mb-3">
+                                                                            <!-- <label for="cc-cvv">CVV</label> -->
+                                                                            <input type="text" class="form-control form-control-sm" id="cc-cvv" placeholder="CVV" required="" />
+                                                                            <div class="invalid-feedback">Security code required</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <hr class="mb-4">
+                                                                    <button class="btn btn-primary btn-sm btn-block" type="submit">Continue to checkout</button>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- END TAB-PANE -->
+                                                    <!-- BEGIN TAB-PANE -->
+                                                    <div role="tabpanel" class="tab-pane fade" id="tab_certification" aria-labelledby="certification_tab">
+                                                        <h6 class="sectionHeader">CERTIFICATION CONTENT&nbsp;&nbsp;<small>[ SELECT SEARCH CRITERIA ]</small></h6>
+                                                    </div>
+                                                    <!-- END TAB-PANE -->
+                                                    <!-- BEGIN TAB-PANE -->
+                                                    <div role="tabpanel" class="tab-pane fade" id="tab_contact" aria-labelledby="contact_tab">
+                                                        <h6 class="sectionHeader">CONTACT CONTENT&nbsp;&nbsp;<small>[ SELECT SEARCH CRITERIA ]</small></h6>
+                                                    </div>
+                                                    <!-- END TAB-PANE -->
+                                                    <!-- BEGIN TAB-PANE -->
+                                                    <div role="tabpanel" class="tab-pane fade" id="tab_travel" aria-labelledby="travel_tab">
+                                                        <h6 class="sectionHeader">TRAVEL CONTENT&nbsp;&nbsp;<small>[ SELECT SEARCH CRITERIA ]</small></h6>
+                                                    </div>
+                                                    <!-- END TAB-PANE -->
+                                                    <!-- BEGIN TAB-PANE -->
+                                                    <div role="tabpanel" class="tab-pane fade" id="tab_address" aria-labelledby="address_tab">
+                                                        <h6 class="sectionHeader">ADDRESS CONTENT&nbsp;&nbsp;<small>[ SELECT SEARCH CRITERIA ]</small></h6>
+                                                    </div>
+                                                    <!-- END TAB-PANE -->
+                                                    <!-- BEGIN TAB-PANE -->
+                                                    <div role="tabpanel" class="tab-pane fade" id="tab_financial" aria-labelledby="financial_tab">
+                                                        <h6 class="sectionHeader">FINANCIAL CONTENT&nbsp;&nbsp;<small>[ SELECT SEARCH CRITERIA ]</small></h6>
+                                                    </div>
+                                                    <!-- END TAB-PANE -->
+                                                    <!-- BEGIN TAB-PANE -->
+                                                    <div role="tabpanel" class="tab-pane fade" id="tab_vehicle" aria-labelledby="vehicle_tab">
+                                                        <h6 class="sectionHeader">VEHICLE CONTENT&nbsp;&nbsp;<small>[ SELECT SEARCH CRITERIA ]</small></h6>
+                                                    </div>
+                                                    <!-- END TAB-PANE -->
+                                                    <!-- BEGIN TAB-PANE -->
+                                                    <div role="tabpanel" class="tab-pane fade" id="tab_collections" aria-labelledby="collections_tab">
+                                                        <h6 class="sectionHeader">COLLECTIONS CONTENT&nbsp;&nbsp;<small>[ SELECT SEARCH CRITERIA ]</small></h6>
+                                                    </div>
+                                                    <!-- END TAB-PANE -->
+                                                </div>
+                                                <!-- END TAB-CONTENT -->
+                                            </div>
+                                            <!-- END ROW -->
+                                            <!-- BEGIN COL -->
+                                            <div class="col-sm-4">
+                                                <h6 class="section-header p-2">SEARCH CRITERIA&nbsp;&nbsp;<small>[ SELECTED ]</small></h6>
+                                                <div class="p-2">General Search&nbsp;<small class="small hold-on-click" title="Click to remove from search criteria">search&nbsp;&nbsp;&nbsp;x</small></div>
+                                                <div class="p-2">Full Name&nbsp;<small class="small hold-on-click" title="Click to remove from search criteria">name&nbsp;&nbsp;&nbsp;x</small></div>
+                                                <div class="p-2">Nickname&nbsp;<small class="small hold-on-click" title="Click to remove from search criteria">nick&nbsp;&nbsp;&nbsp;x</small></div>
+                                                <div class="p-2">DOB&nbsp;<small class="small hold-on-click" title="Click to remove from search criteria">dob&nbsp;&nbsp;&nbsp;x</small></div>
+                                                <div class="p-2">Nationality&nbsp;<small class="small hold-on-click" title="Click to remove from search criteria">nationality&nbsp;&nbsp;&nbsp;x</small></div>
+                                                <div class="float-right"><button type="reset" class="btn btn-sm btn-default mr-2">CLEAR</button><button type="submit" class="btn btn-sm btn-success">SEARCH</button></div>
+                                            </div>
+                                            <!-- END COL -->
+                                        </div>
+                                        <!-- END ROW -->
+                                    </div>
+                                    <!-- END DROPDOWN-MENU -->
                                 </div>
                                 <!-- END INPUT-GROUP-APPEND -->
                             </div>
-                            <!-- END GLOBAL-SEARCH-FORM -->
+                            <!-- END INPUT-GROUP -->
                         </div>
                         <!-- END GLOBAL-SEARCH-FORM -->
                     </form>
-                    <!-- END FORM -->
+                    <!-- END FORM-INLINE -->
                 </li>
                 <!-- END NAV-ITEM -->
                 <!-- BEGIN NAV-ITEM -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle"
-                       href="#"
-                       id="userName01"
-                       role="button"
                        id="userDropdownMenuLink"
+                       href="#"
+                       role="button"
                        data-toggle="dropdown"
                        aria-haspopup="true"
                        aria-expanded="false">First Lastname
@@ -159,7 +399,7 @@
                             data-html="true"
                             data-container="body"
                             data-trigger="hover"
-                            title="Favorite">
+                            title="Watch">
                             <a class="nav-link toggle-favorite py-0 px-1 glow" href="#"><i class="far fa-star fa-sm"></i></a>
                         </li>-->
                         <!-- END NAV-ITEM -->
@@ -208,8 +448,8 @@
                             data-html="true"
                             data-container="body"
                             data-trigger="hover"
-                            title="Fullscreen">
-                            <a class="nav-link toggle-home-fullscreen py-0 px-1 glow" href="#"><i class="fas fa-times"></i></a>
+                            title="Close/Cancel">
+                            <a class="nav-link py-0 px-1 glow" href="#"><i class="fas fa-times"></i></a>
                         </li>-->
                         <!-- END NAV-ITEM -->
                         <!-- BEGIN NAV-ITEM -->
@@ -752,7 +992,8 @@
                                 data-placement="top"
                                 data-html="true"
                                 data-container="body"
-                                data-trigger="hover">
+                                data-trigger="hover"
+                                title="Watch">
                                 <a class="nav-link py-0 px-1 glow toggle-watch" href="#" title="Watch">
                                     <i class="far fa-bell fa-sm"></i>
                                 </a>
@@ -764,7 +1005,8 @@
                                 data-placement="top"
                                 data-html="true"
                                 data-container="body"
-                                data-trigger="hover">
+                                data-trigger="hover"
+                                title="Favorite">
                                 <a class="nav-link toggle-favorite py-0 px-1 glow" href="#" title="Favorite">
                                     <i class="far fa-star fa-sm"></i>
                                 </a>
@@ -785,7 +1027,8 @@
                                 data-placement="top"
                                 data-html="true"
                                 data-container="body"
-                                data-trigger="hover">
+                                data-trigger="hover"
+                                title="Settings">
                                 <a class="nav-link toggle-settings py-0 px-1 glow" href="#" title="Settings">
                                     <i class="far fa-sun"></i>
                                 </a>
@@ -797,7 +1040,8 @@
                                 data-placement="top"
                                 data-html="true"
                                 data-container="body"
-                                data-trigger="hover">
+                                data-trigger="hover"
+                                title="Refresh">
                                 <a class="nav-link toggle-refresh py-0 px-1 glow" href="#" title="Refresh">
                                     <i class="fas fa-sync-alt"></i>
                                 </a>
@@ -809,7 +1053,8 @@
                                 data-placement="top"
                                 data-html="true"
                                 data-container="body"
-                                data-trigger="hover">
+                                data-trigger="hover"
+                                title="Fullscreen">
                                 <a class="nav-link toggle-results-fullscreen py-0 px-1 glow" href="#" title="Fullscreen">
                                     <i class="fas fa-arrows-alt-v fa-rotate-45"></i>
                                 </a>
@@ -821,7 +1066,8 @@
                                 data-placement="top"
                                 data-html="true"
                                 data-container="body"
-                                data-trigger="hover">
+                                data-trigger="hover"
+                                title="Close/Cancel">
                                 <a class="nav-link close-profile py-0 px-1 glow" href="#" title="Close/Cancel">
                                     <i class="fas fa-times"></i>
                                 </a>
@@ -1721,7 +1967,8 @@
                                 data-placement="top"
                                 data-html="true"
                                 data-container="body"
-                                data-trigger="hover">
+                                data-trigger="hover"
+                                title="Watch">
                                 <a class="nav-link py-0 px-1 glow toggle-watch" href="#" title="Watch">
                                     <i class="far fa-bell fa-sm"></i>
                                 </a>
@@ -1733,8 +1980,9 @@
                                 data-placement="top"
                                 data-html="true"
                                 data-container="body"
-                                data-trigger="hover">
-                                <a class="nav-link toggle-favorite py-0 px-1 glow" href="#"title="Favorite">
+                                data-trigger="hover"
+                                title="Favorite">
+                                <a class="nav-link toggle-favorite py-0 px-1 glow" href="#" title="Favorite">
                                     <i class="far fa-star fa-sm"></i>
                                 </a>
                             </li>
@@ -1755,7 +2003,8 @@
                                 data-placement="top"
                                 data-html="true"
                                 data-container="body"
-                                data-trigger="hover">
+                                data-trigger="hover"
+                                title="Settings">
                                 <a class="nav-link toggle-settings py-0 px-1 glow" href="#" title="Settings">
                                     <i class="far fa-sun"></i>
                                 </a>
@@ -1767,7 +2016,8 @@
                                 data-placement="top"
                                 data-html="true"
                                 data-container="body"
-                                data-trigger="hover">
+                                data-trigger="hover"
+                                title="Refresh">
                                 <a class="nav-link toggle-refresh py-0 px-1 glow" href="#" title="Refresh">
                                     <i class="fas fa-sync-alt"></i>
                                 </a>
@@ -1779,7 +2029,8 @@
                                 data-placement="top"
                                 data-html="true"
                                 data-container="body"
-                                data-trigger="hover">
+                                data-trigger="hover"
+                                title="Fullscreen">
                                 <a class="nav-link toggle-profile-fullscreen py-0 px-1 glow" href="#" title="Fullscreen">
                                     <i class="fas fa-arrows-alt-v fa-rotate-45"></i>
                                 </a>
@@ -1791,7 +2042,8 @@
                                 data-placement="top"
                                 data-html="true"
                                 data-container="body"
-                                data-trigger="hover">
+                                data-trigger="hover"
+                                title="Close/Cancel">
                                 <a class="nav-link close-profile py-0 px-1 glow" href="#" title="Close/Cancel">
                                     <i class="fas fa-times"></i>
                                 </a>
@@ -2460,8 +2712,8 @@
         <script type="text/javascript" src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
         <script type="text/javascript" src="https://viralpatel.net/blogs/demo/jquery.textarearesizer.compressed.js"></script>
         <script type="text/javascript" src="https://rawgit.com/RickStrahl/jquery-resizable/master/src/jquery-resizable.js"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/eqcss/1.9.2/EQCSS-polyfills.min.js"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/eqcss/1.9.2/EQCSS.min.js"></script>
+        <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/eqcss/1.9.2/EQCSS-polyfills.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/eqcss/1.9.2/EQCSS.min.js" crossorigin="anonymous"></script>-->
         <script type="text/javascript" src="js/layout.js"></script>
     </body>
 </html>
