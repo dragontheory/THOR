@@ -2714,8 +2714,14 @@
         <script type="text/javascript" src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
         <script type="text/javascript" src="https://viralpatel.net/blogs/demo/jquery.textarearesizer.compressed.js"></script>
         <script type="text/javascript" src="https://rawgit.com/RickStrahl/jquery-resizable/master/src/jquery-resizable.js"></script>
-        <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/eqcss/1.9.2/EQCSS-polyfills.min.js"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/eqcss/1.9.2/EQCSS.min.js" crossorigin="anonymous"></script>-->
+        <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/eqcss/1.9.2/EQCSS.min.js"></script>-->
+        <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/eqcss/1.9.2/EQCSS-polyfills.min.js"></script>-->
         <script type="text/javascript" src="js/layout.js"></script>
+<!--        <script type="text/eqcss">
+        /* EQCSS */
+            @element ".show-results" {
+            eval("if (document.querySelector('.profile .loaded')) { '$this' }") .results {width: 50%; background-color: red !important;}
+        }
+        </script>-->
     </body>
 </html>
