@@ -15,15 +15,6 @@ a {
 [contenteditable="true"]:hover {
     background-color: rgba(0,0,0,0.05);
 }
-/** {
-    transition: background-color 250ms,
-    border-bottom-color 250ms,
-    border-top-color 250ms,
-    border-left-color 250ms,
-    border-right-color 250ms,
-    box-shadow 250ms,
-    color 250ms;
-}*/
 
 
 
