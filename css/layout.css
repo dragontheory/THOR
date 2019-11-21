@@ -38,6 +38,24 @@
 
 /****************************************
 
+    PAGE HEADER SEARCH FORM
+
+*****************************************/
+/* PAGE HEADER SEARCH FORM */
+.global-search-form {
+    width: 300px;
+    -webkit-transition: width 400ms ease;
+    -o-transition: width 400ms ease;
+    transition: width 400ms ease;
+    margin-right: 20px;
+}
+.global-search-form.open { width: 400px; }
+
+
+
+
+/****************************************
+
     PAGE HEADER ADVANCED SEARCH PANEL
 
 *****************************************/
@@ -121,6 +139,12 @@
 	SPLITTER
 
 *****************************************/
+.splitter {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 0; /* flex-basis px for IE11 */
+    flex: 0 0 0; /* Originally 0 0 10px from Rick Strahl's support.west.wind.com F12 source code 2019.11.03*/
+    width: 0; /* Use width rather than flex-basis. More backwards compatible with IE and smoother transitions */
+}
 .show-profile .splitter {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 10px; /* flex-basis px for IE11 */
@@ -186,8 +210,6 @@
 
 
 
-
-
 /****************************************
 
 	FULLSCREEN
@@ -229,3 +251,11 @@
   position: absolute;
   z-index: -1;
 }*/
+
+
+
+/****************************************
+
+	LOADING DATA
+
+*****************************************/
