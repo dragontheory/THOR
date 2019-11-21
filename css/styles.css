@@ -219,10 +219,10 @@ a {
     cursor: col-resize;
     background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==') center center no-repeat rgba(0,0,0,0.1);
     box-shadow: 1px 0 0 0 rgba(0,0,0,0.1) inset, -1px 0 0 0 rgba(255,255,255,0.5) inset;
-    -webkit-transition: background 250ms;
-    -moz-transition: background 250ms;
-    -o-transition: background 250ms;
-    transition: background 250ms;
+    -webkit-transition: all 250ms;
+    -moz-transition: all 250ms;
+    -o-transition: all 250ms;
+    transition: all 250ms;
 }
 .splitter:link,
 .splitter:visited,
@@ -457,7 +457,7 @@ div.grippy {
 	FULLSCREEN
 
 ********************************************/
-.fullscreen {background-color: rgba(255,255,255,1.0);}
+/*.fullscreen {background-color: rgba(255,255,255,1.0);}*/
 .fullscreen > .table {
     overflow-y: auto;
     overflow-x: hidden;
