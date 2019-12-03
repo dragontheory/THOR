@@ -3,18 +3,30 @@
 [ H ] UD  
 [ O ] perational  
 [ R ] esources  
-
-Angular and Vue.js ingetrations coming soon. 
-
 ---
+### SUMMARY : :
+THOR combines a master/detail workflow, with a Holy Grail layout pattern, and a "reactive" CSS GUI to achieve a simple, optimized, minimal, lightweight, scalable, "unopinionated" (compatible with any JavaScript framework), HTML/CSS scaffolding framework.
 
+THOR is : :
+* [A professional Front-end HTML/CSS Framework](#professional) for search and triage UI requirements
+* [Master/detail](#master) workflow
+* [Holy Grail](#holy) layout
+* [Reactive CSS](#reactive) 
+* [Optimized and minimal for the end-user](#optimized-user) (clean and simple UX)
+* [Optimized and minimal for the developer](#optimized-developer) (minimal nesting, obfuscation, complication, dependencies, and bloat)
+* [Fast, robust, and scalable](#fast) (single scratch to IC wide enterprise level CMS)
+* [Agile friendly](#agile) (road map allows for accurate/predictable iterative sprint planning and dissemination)
+* [Angular and Vue.js integrations](#integrations) coming soon.
+* [User configurable](#configurable) 
+---
+### <a id="professional">Professional Front-end HTML/CSS Framework</a>
 A professional front-end template for building fast, robust, and adaptable web applications and web sites.  
-Fast Triage Workflow UX  
+Fast Triage Workflow UX
 A better way for users and developers.
 
 Front to back development  
 Roadmap for developers  
-Agile (iteritive) roadmap for clients/shareholders  
+Agile (iterative) roadmap for clients/shareholders  
 
 BASIC : :  
 * Classic Holy Grail layout
@@ -273,7 +285,55 @@ Combine the custom element app-results with the d-flex class in the associated A
     selector: 'div.results.d-flex'
 })
 ```
+---
+---
 
+REACTIVE CSS : : LOADING DATA
+```
+/* Closed State (default) */
+.results {
+     flex: 0 0 auto;
+     width: 0;
+     transition: width 550ms ease;
+}
+/* Open State */
+.details .loaded {    
+     .results {          
+          width: 25%;
+     }
+}
+```
+HTML : :
+```
+<div class="results">
+     <div class="list-of-results"></div>
+</div>
+
+<div class="details">
+     <div class="dynamically-loaded-content **loaded**">
+
+     </div>
+</div>
+```
+LAYOUT EXAMPLE : :
+```
+                               '
+             ( ON SCRN )       ' ( OFF SCRN )
+                               '             _[ close btn ]
+ _____ ________.results________'__.details__/
+|     |                        |           x|
+|     |                        |            | When the child class
+|     |                        | + .loaded  | '.loaded' is present in
+|     |                      <-|---         | '.details', '.details' slides
+|     |                        |            | on screen from right
+|     |                        |            |
+|     |                        |            |
+|     |                        | - .loaded  | When '.loaded' disappears
+|     |                      --|-->         | '.details' slides off screen
+|     |                        |            |
+ ----- ------------------------ ------------
+
+```
 ---
 
 TODO : :  
