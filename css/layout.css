@@ -130,6 +130,24 @@
 .show-results.show-profile .results {
     width: 50%;
 }
+/* 
+BUTTON LOADING VISUAL QUE - proof of concept (WIP) 
+Objective: Show LOADING only between when end-user clicks record item and PROFILE slides in.
+*/
+/* Turn off LOADING by default */
+.results .btn::after,
+body.show-results.show-profile.loaded .results .toggle-profile::after
+ {
+    content:'LOADING';
+    position: absolute;
+    opacity: 0.0;
+    transition: opacity 250ms;
+    pointer-events: none;
+}
+/* Except when class .loaded is in <body> */
+body.show-results.show-profile .results .toggle-profile::after {
+    opacity: 1.0;
+}
 
 
 
