@@ -11,7 +11,7 @@ THOR is : :
 * [A professional Front-end HTML/CSS Framework](#professional) for search and triage UI requirements
 * [Master/detail](#master) workflow
 * [Holy Grail](#holy) layout
-* [Reactive CSS](#reactive) 
+* [Reactive CSS](#reactive) (no JS framework necessary)
 * [Optimized and minimal for the end-user](#optimized-user) (clean and simple UX)
 * [Optimized and minimal for the developer](#optimized-developer) (minimal nesting, obfuscation, complication, dependencies, and bloat)
 * [Fast, robust, and scalable](#fast) (single scratch to IC wide enterprise level CMS)
@@ -41,6 +41,37 @@ FULL : :
 * Four panels resizable (WIP)
 * https://dragontheory.com/holygrail10
 
+FULL : :
+Default State
+```
+                                                                        :
+                                                          [ on screen ] : [ off screen ]
+<body id="thor">________________________________________________________:_________________________________
+| .page-header________________________________________________________  :                                 |
+| |                                                                   | :                                 |
+| |___________________________________________________________________| :                                 |
+| <main>________________________________________________________________:_______________________________  |
+| |                           <div>_______(for resizer)_________________:_________________              | |
+| | .home______  .filter____  | .results______________________________  : .profile______  | .details__  | |
+| | |          | |          | | |                                     | : |             | | |         | | |
+| | |          | |          | | |                                     | : |             | | |         | | |
+| | |          | |          | | |                                     | : |             | | |         | | |
+| | |          | |          | | |                                     | : |             | | |         | | |
+| | |          | |          | | |                                     | : |             | | |         | | |
+| | |          | |          | | |                                     | : |             | | |         | | |
+| | |          | |          | | |                                     | : |             | | |         | | |
+| | |          | |          | | |                                     | : |             | | |         | | |
+| | |          | |          | | |                                     | : |             | | |         | | |
+| | |__________| |__________| | |_____________________________________| : |_____________| | |_________| | |
+| |                           </div>____________________________________:_________________|             | |
+| </main>_______________________________________________________________:_______________________________| |
+| .page-foofter_______________________________________________________  :                                 |
+| |                                                                   | :                                 |
+| |___________________________________________________________________| :                                 |
+</body>_________________________________________________________________:_________________________________|
+                                                                        :
+                                                                        :
+```
 ---
 
 PURPOSE : :  
