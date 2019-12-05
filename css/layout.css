@@ -10,11 +10,6 @@ Panels push their way onto the screen from the right.
 	LAYOUT
 
 *****************************************/
-.gutter-horizontal {
-    background-repeat: no-repeat;
-    background-position: 50%;
-    flex: 0 0 10px;
-}
 /* Immediate child of .d-flex element */
 .flex-item {
     flex: 1;
@@ -164,6 +159,11 @@ body.show-results.show-profile .results .toggle-profile::after {
     -ms-flex: 0 0 10px; /* flex-basis px for IE11 */
     flex: 0 0 auto; /* Originally 0 0 10px from Rick Strahl's support.west.wind.com F12 source code 2019.11.03*/
     width: 10px; /* Use width rather than flex-basis. More backwards compatible with IE and smoother transitions */
+}
+.gutter-horizontal {
+    background-repeat: no-repeat;
+    background-position: 50%;
+    flex: 0 0 10px;
 }
 
 
