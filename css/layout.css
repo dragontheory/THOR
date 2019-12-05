@@ -11,7 +11,6 @@
 *****************************************/
 
 
-
 /****************************************
 
     PAGE HEADER SEARCH FORM
@@ -29,7 +28,6 @@
 .global-search-form.open {width: 400px;}
 
 
-
 /****************************************
 
     PAGE HEADER ADVANCED SEARCH PANEL
@@ -40,7 +38,6 @@
     margin: 15px 0 0;
     padding: 20px 10px;
 }
-
 
 
 /****************************************
@@ -72,7 +69,6 @@
 .show-home.show-results .home {width: 250px;}
 
 
-
 /****************************************
 
 	FILTER
@@ -95,7 +91,6 @@
 }
 /* Add .show-filter to <body> to open */
 .show-filter .filter {width: 250px;}
-
 
 
 /****************************************
@@ -125,7 +120,6 @@
 .show-results .results {width: 100%;}
 
 
-
 /****************************************
 
     LOADING DATA
@@ -150,7 +144,6 @@
 }
 /* Except when .loaded is added to <body> */
 .show-profile .results .toggle-profile::after {opacity: 1.0;}
-
 
 
 /****************************************
@@ -197,7 +190,6 @@
 }*/
 
 
-
 /****************************************
 
 	PROFILE
@@ -227,7 +219,6 @@
 }
 /* Add .show-results and .show-profile and .loaded to <body> to open */
 .show-results.show-profile.loaded .results {margin-right: 0;}
-
 
 
 /****************************************
@@ -260,7 +251,6 @@
 .details .list-group-item {width: 100%;}
 
 
-
 /****************************************
 
     FLEX-ITEM
@@ -272,7 +262,6 @@
     flex: 1;
     overflow: hidden;
 }
-
 
 
 /****************************************
