@@ -1,18 +1,34 @@
 @font-face {
-    font-family: "BGL";
-    src: url("fonts/Bank Gothic Light.ttf") format("truetype") /*,
-    url("fonts/OpenSans-Regular-webfont.woff") format("woff")*/;
+    font-family: 'agencyfb-regular';
+    src: url('fonts/AGENCYR.eot'); /* IE9 */
+    src: url('fonts/AGENCYR.eot?#iefix') format('embedded-opentype'); /* IE6-IE8 */
+    url('fonts/AGENCYR.TTF') format('truetype'); /* Safari, Android, iOS */
+    font-weight: normal;
+    font-style: normal;
 }
 @font-face {
-    font-family: "BGB";
-    src: url("fonts/BankGothic Bold.ttf") format("truetype") /*,
-    url("fonts/OpenSans-Regular-webfont.woff") format("woff")*/;
+    font-family: 'agencyfb-bold';
+    src: url('fonts/AGENCYB.eot'); /* IE9 */
+    src: url('fonts/AGENCYB.eot?#iefix') format('embedded-opentype'); /* IE6-IE8 */
+    url('fonts/AGENCYB.TTF') format('truetype'); /* Safari, Android, iOS */
+    font-weight: normal;
+    font-style: normal;
 }
 @font-face {
-    font-family: "BGM";
-    src: url("fonts/Bank Gothic Medium BT.ttf") format("truetype") /*,
-    url("fonts/OpenSans-Regular-webfont.woff") format("woff")*/;
+    font-family: 'bankgothic-medium';
+    src: url('fonts/bankgothic_md_bt_medium.eot'); /* IE9 */
+    src: url('fonts/bankgothic_md_bt_medium.eot?#iefix') format('embedded-opentype'); /* IE6-IE8 */
+    url('fonts/bankgothic_md_bt_medium.woff') format('woff'); /* modern browsers */
+    url('fonts/bankgothic_md_bt_medium.ttf') format('truetype'); /* Safari, Android, iOS */
+    font-weight: normal;
+    font-style: normal;
 }
-.bgm {
-    font-family: "BGM", serif;
+.font-agencyfb-regular {
+    font-family: 'agencyfb-regular', Calibri, sans-serif;
+}
+.font-agencyfb-bold {
+    font-family: 'agencyfb-bold', Calibri, sans-serif;
+}
+.font-agencyfb-medium {
+    font-family: 'agencyfb-medium', Calibri, sans-serif;
 }
