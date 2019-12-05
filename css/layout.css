@@ -1,20 +1,13 @@
-/*
-NOTE ::
-Panels are closed by default. 
-Adding show-* to <body> opens each panel.
-HOME is 100% width.
-Panels push their way onto the screen from the right.
-*/
 /****************************************
 
 	LAYOUT
 
+	Panels are closed by default. 
+	Adding show-* to <body> opens each panel.
+	HOME is 100% width.
+	Panels push their way onto the screen from the right.
+
 *****************************************/
-/* Immediate child of .d-flex element */
-.flex-item {
-    flex: 1;
-    overflow: hidden;
-}
 
 
 
@@ -30,7 +23,7 @@ Panels push their way onto the screen from the right.
     transition: width 400ms ease;
     margin-right: 20px;
 }
-.global-search-form.open { width: 400px; }
+.global-search-form.open {width: 400px;}
 
 
 
@@ -53,26 +46,26 @@ Panels push their way onto the screen from the right.
 
 *****************************************/
 /* Toggle collapsed .home from page-header controls */
-/* Closed by default */
 .home {
     -webkit-flex: 0 0 auto;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 0;
-    min-width: 0;
+    width: 250px;
+    margin-left: -250px;
     min-height: 1px;
-    -webkit-transition: width 750ms ease, min-width 250ms ease-in-out;
-    -moz-transition: width 750ms ease, min-width 250ms ease-in-out;
-    -ms-transition: width 750ms ease, min-width 250ms ease-in-out;
-    transition: width 750ms ease, min-width 250ms ease-in-out;
+    -webkit-transition: width 750ms ease, margin-left 250ms ease-in-out;
+    -moz-transition: width 750ms ease, margin-left 250ms ease-in-out;
+    -ms-transition: width 750ms ease, margin-left 250ms ease-in-out;
+    -o-transition: width 750ms ease, margin-left 250ms ease-in-out;
+    transition: width 750ms ease, margin-left 250ms ease-in-out;
 }
 /* Add .show-home to <body> to open */
 .show-home .home {
     width: 100%;
-    min-width: 250px;
+    margin-left: 0;
 }
 /* When RESULTS is showing resize HOME to 250px */
-.show-home .show-results .home {width: 250px;}
+.show-home.show-results .home {width: 250px;}
 
 
 
@@ -81,7 +74,7 @@ Panels push their way onto the screen from the right.
 	FILTER
 
 *****************************************/
-/* Closed by default */
+/* Offscreen by default */
 .filter  {
     -webkit-flex: 0 0 auto;
     -ms-flex: 0 0 auto;
@@ -89,13 +82,14 @@ Panels push their way onto the screen from the right.
     /* Varies on logo width TODO: find adaptive solution */
     width: 0;
     min-height: 1px;
-    -webkit-transition: width 550ms ease;
-    -moz-transition: width 550ms ease;
-    -ms-transition: width 550ms ease;
-    transition: width 550ms ease;
+    -webkit-transition: width 250ms ease;
+    -moz-transition: width 250ms ease;
+    -ms-transition: width 250ms ease;
+    -o-transition: width 250ms ease;
+    transition: width 250ms ease;
 }
-/*  */
-.show-filter .filter {width: 221;}
+/* Add .show-filter to <body> to open */
+.show-filter .filter {width: 250px;}
 
 
 
@@ -104,41 +98,47 @@ Panels push their way onto the screen from the right.
 	RESULTS
 
 *****************************************/
-/* Closed by default */
+/* Offscreen by default */
 .results {
-    flex: 0 0 auto; /* Allows resize to work without jumping. Originally flex: 1 1 auto */
-    width: 100%;
-    max-width: 100%; /* from Rick Strahl's support.west.wind.com F12 source code 2019.11.03*/
-    min-width: 200px;
-    min-height: 1px;
-    overflow: hidden; /* required for table resize */
-    /* resize: horizontal; */
-    transition: width 250ms ease;
-}
-.show-results .home {
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
     width: 0;
+    /* max-width from Rick Strahl's support.west.wind.com F12 source code 2019.11.03 */
+    max-width: 100%;
+    min-width: 200px;
+    /* IE11 fix */
+    min-height: 1px;
+    /* resize: horizontal; */
+    -webkit-transition: width 550ms ease;
+    -moz-transition: width 550ms ease;
+    -ms-transition: width 550ms ease;
+    -o-transition: width 550ms ease;
+    transition: width 550ms ease;
 }
-.show-results.show-profile .results {
-    width: 50%;
-}
+/* Add .show-results to <body> to open */
+.show-results .results {width: 100%;}
+
 /* 
 BUTTON LOADING VISUAL QUE - proof of concept (WIP) 
-Objective: Show LOADING only between when end-user clicks record item and PROFILE slides in.
+Objective: Show LOADING only between when end-user clicks item and PROFILE slides in.
+Next step: Narrow LOADING to appear only on clicked element (focus or active?).
 */
 /* Turn off LOADING by default */
-.results .btn::after,
-body.show-results.show-profile.loaded .results .toggle-profile::after
- {
+.show-profile.loaded .results .toggle-profile::after,
+.results .toggle-profile::after {
     content:'LOADING';
     position: absolute;
     opacity: 0.0;
-    transition: opacity 250ms;
     pointer-events: none;
+    -webkit-transition: opacity 250ms ease;
+    -moz-transition: opacity 250ms ease;
+    -ms-transition: opacity 250ms ease;
+    -o-transition: opacity 250ms ease;
+    transition: opacity 250ms;
 }
-/* Except when class .loaded is in <body> */
-body.show-results.show-profile .results .toggle-profile::after {
-    opacity: 1.0;
-}
+/* Except when .loaded is added to <body> */
+.show-results .results .toggle-profile::after {opacity: 1.0;}
 
 
 
@@ -147,18 +147,22 @@ body.show-results.show-profile .results .toggle-profile::after {
 	SPLITTER
 
 *****************************************/
-/* Closed by default */
+/* Offscreen by default */
 .splitter {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 0; /* flex-basis px for IE11 */
-    flex: 0 0 0; /* Originally 0 0 10px from Rick Strahl's support.west.wind.com F12 source code 2019.11.03*/
-    width: 0; /* Use width rather than flex-basis. More backwards compatible with IE and smoother transitions */
+    -webkit-transition: all 250ms ease;
+    -moz-transition: all 250ms ease;
+    -ms-transition: all 250ms ease;
+    -o-transition: all 250ms ease;
 }
+/* Add .show-profile to <body> to open */
 .show-profile .splitter {
     -webkit-box-flex: 0;
-    -ms-flex: 0 0 10px; /* flex-basis px for IE11 */
-    flex: 0 0 auto; /* Originally 0 0 10px from Rick Strahl's support.west.wind.com F12 source code 2019.11.03*/
-    width: 10px; /* Use width rather than flex-basis. More backwards compatible with IE and smoother transitions */
+    /* flex-basis px for IE11 */
+    -ms-flex: 0 0 10px; 
+    /* Originally 0 0 10px from Rick Strahl's support.west.wind.com F12 source code 2019.11.03 */    
+    flex: 0 0 10px; 
+    /* Use width rather than flex-basis. More backwards compatible with IE and smoother transitions */
+    width: 10px; 
 }
 .gutter-horizontal {
     background-repeat: no-repeat;
@@ -173,7 +177,7 @@ body.show-results.show-profile .results .toggle-profile::after {
 	PROFILE
 
 *****************************************/
-/* Closed by default */
+/* Offscreen by default */
 .profile {
     flex: 1 1 auto;
     height: 100%;
@@ -197,7 +201,7 @@ body.show-results.show-profile .results .toggle-profile::after {
 	DETAILS
 
 *****************************************/
-/* Closed by default */
+/* Offscreen by default */
 .details {
     flex: 0 0 auto;
     height: 100%;
@@ -218,6 +222,20 @@ body.show-results.show-profile .results .toggle-profile::after {
 }
 .details .list-group-item {
     width: 100%;
+}
+
+
+
+/****************************************
+
+    FLEX-ITEM
+
+    Immediate child of .d-flex element
+
+*****************************************/
+.flex-item {
+    flex: 1;
+    overflow: hidden;
 }
 
 
