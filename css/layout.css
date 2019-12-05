@@ -1,20 +1,24 @@
+/*
+NOTE ::
+Panels are closed by default. 
+Adding show-* to <body> opens each panel.
+HOME is 100% width.
+Panels push their way onto the screen from the right.
+*/
 /****************************************
 
 	LAYOUT
 
 *****************************************/
-/*html, body {
-    /* min-height: 100vh;  force footer to bottom of browser */
-    /* height: 100%;  for IE11 */
-/* } */
 .gutter-horizontal {
     background-repeat: no-repeat;
     background-position: 50%;
     flex: 0 0 10px;
 }
-.flex-item { /* Immediate child of .d-flex element */
+/* Immediate child of .d-flex element */
+.flex-item {
     flex: 1;
-    /* overflow: auto; */
+    overflow: hidden;
 }
 
 
@@ -32,25 +36,6 @@
     margin-right: 20px;
 }
 .global-search-form.open { width: 400px; }
-
-
-
-
-/****************************************
-
-    PAGE HEADER SEARCH FORM
-
-*****************************************/
-/* PAGE HEADER SEARCH FORM */
-.global-search-form {
-    width: 300px;
-    -webkit-transition: width 400ms ease;
-    -o-transition: width 400ms ease;
-    transition: width 400ms ease;
-    margin-right: 20px;
-}
-.global-search-form.open { width: 400px; }
-
 
 
 
@@ -67,24 +52,32 @@
 
 
 
-
 /****************************************
 
 	HOME
 
 *****************************************/
-/* DEFAULT STATE */
+/* Toggle collapsed .home from page-header controls */
+/* Closed by default */
 .home {
-    flex: 0 0 auto; /* Allows resize to work without jumping. Originally flex: 1 1 auto */
-    min-width: 250px;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 0;
+    min-width: 0;
     min-height: 1px;
-    width: 100%;
-    overflow: hidden;
+    -webkit-transition: width 750ms ease, min-width 250ms ease-in-out;
+    -moz-transition: width 750ms ease, min-width 250ms ease-in-out;
+    -ms-transition: width 750ms ease, min-width 250ms ease-in-out;
     transition: width 750ms ease, min-width 250ms ease-in-out;
 }
-/* Toggle collapsed .home from page-header control */
-.hide-home .home {min-width: 0;}
-
+/* Add .show-home to <body> to open */
+.show-home .home {
+    width: 100%;
+    min-width: 250px;
+}
+/* When RESULTS is showing resize HOME to 250px */
+.show-home .show-results .home {width: 250px;}
 
 
 
@@ -93,18 +86,21 @@
 	FILTER
 
 *****************************************/
-/* DEFAULT STATE */
+/* Closed by default */
 .filter  {
-    flex: 0 0 0;
-    min-width: 250px;
-    max-width: 250px;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    /* Varies on logo width TODO: find adaptive solution */
+    width: 0;
     min-height: 1px;
-    overflow: hidden;
-    transition: min-width 250ms ease;
+    -webkit-transition: width 550ms ease;
+    -moz-transition: width 550ms ease;
+    -ms-transition: width 550ms ease;
+    transition: width 550ms ease;
 }
-/* Toggle .filter from page-header control */
-.hide-filter .filter {min-width: 0;}
-
+/*  */
+.show-filter .filter {width: 221;}
 
 
 
@@ -113,7 +109,7 @@
 	RESULTS
 
 *****************************************/
-/* DEFAULT STATE */
+/* Closed by default */
 .results {
     flex: 0 0 auto; /* Allows resize to work without jumping. Originally flex: 1 1 auto */
     width: 100%;
@@ -151,12 +147,12 @@ body.show-results.show-profile .results .toggle-profile::after {
 
 
 
-
 /****************************************
 
 	SPLITTER
 
 *****************************************/
+/* Closed by default */
 .splitter {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 0; /* flex-basis px for IE11 */
@@ -172,13 +168,12 @@ body.show-results.show-profile .results .toggle-profile::after {
 
 
 
-
 /****************************************
 
 	PROFILE
 
 *****************************************/
-/* DEFAULT STATE */
+/* Closed by default */
 .profile {
     flex: 1 1 auto;
     height: 100%;
@@ -197,13 +192,12 @@ body.show-results.show-profile .results .toggle-profile::after {
 
 
 
-
 /****************************************
 
 	DETAILS
 
 *****************************************/
-/* DEFAULT STATE */
+/* Closed by default */
 .details {
     flex: 0 0 auto;
     height: 100%;
