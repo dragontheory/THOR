@@ -95,7 +95,7 @@ FOR EXAMPLE : :
 
 ---
 
-FEATURES : :  
+END-USER FEATURES : : "Kitchen Sink"   
 * W3C Standards Compliant
 * Cross/backward browser compatible and tested - FF60.530esr, IE11, Edge, Chrome65
 * Fully documented (Bootstrap + intuitive naming convention + commented)
@@ -124,6 +124,7 @@ FEATURES : :
 * Customize-able display density (Roomy/medium/compact/No Fluff! Just Stuff!)
 * Customize-able/rearrange-able sections
 * Sweep (keep the latest but delete the rest)
+* Less motion
 * Favorite a profile
 * Watch a profile
 
