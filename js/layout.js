@@ -61,17 +61,6 @@ $('.results table tbody tr .open-profile').click(function(){
     $('.results').removeAttr('style');
 });
 
-// toggle DETAILS
-$('.toggle-details').click(function(){
-	$('body').toggleClass('show-details');
-});
-
-// toggle light/dark themes
-$('.toggle-lights').click(function(){
-    // hash is required to work vs class
-    $('#lightsOut').prop('disabled', function(i, v) { return !v; });
-});
-
 // close PROFILE
 $('.close-profile').click(function(){
     $('body').removeClass('show-profile show-details loaded');
@@ -82,6 +71,23 @@ $('.close-profile').click(function(){
     $('.profile').removeAttr('style');
     // remove inline style width put there dynamically by resizer
     $('.results').removeAttr('style');
+});
+
+// open DETAILS
+$('.open-details').click(function(){
+	$('body').addClass('show-details');
+});
+
+// close DETAILS
+$('.close-details').click(function(){
+	$('body').removeClass('show-details');
+	$('body').removeClass('fullscreen');
+});
+
+// toggle light/dark themes
+$('.toggle-lights').click(function(){
+    // hash is required to work vs class
+    $('#lightsOut').prop('disabled', function(i, v) { return !v; });
 });
 
 // toggle RESULTS fullscreen
@@ -99,7 +105,7 @@ $('.toggle-details-fullscreen').click(function(){
     $('.details').toggleClass('fullscreen');
 });
 
-// Exit FULLSCREEN on ESC
+// Exit FULLSCREEN via ESC
 $(document).keyup(function(event){
     if(event.which=='27'){
         $('.results').removeClass('fullscreen');
@@ -108,7 +114,7 @@ $(document).keyup(function(event){
     }
 });
 
-// Exit FULLSCREEN on ESC v2
+// Exit FULLSCREEN via ESC v2
 /*$(document).on('keydown', function(event) {
     if (event.key == 'Escape') {
         $('.results').removeClass('fullscreen');
