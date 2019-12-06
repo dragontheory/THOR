@@ -180,8 +180,8 @@ function toggleProfile(e) {
         setTimeout(function () { splitterTappedTwice = false; }, 300);
         return false;
     }
-    var profile = $(".profile");
-    var oldTrans = $profile.css("transition");
+    let profile = $(".profile");
+    let oldTrans = $profile.css("transition");
     $profile.css("transition", "width 0.5s ease-in-out");
     if ($profile.width() < 20) {
         $profile.show();
