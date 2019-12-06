@@ -1,7 +1,122 @@
-// handle toggle .show-home width 100%-0%
-//$(".toggle-home").click(function(){
-//	$("body").toggleClass("show-home");
-//});
+// toggle HOME (button in bage-hader)
+$(".toggle-home").click(function(){
+	$('body').toggleClass('how-home');
+});
+
+// toggle FILTER (button in bage-hader)
+$('.toggle-filter').click(function(){
+	$('body').toggleClass('show-filter');
+});
+
+// toggle FILTER and RESULTS (button in .home)
+$(".toggle-filter-results").click(function(){
+	$('body').toggleClass('show-filter show-results');
+    $('body').removeClass('show-profile show-details');
+});
+
+// resizer
+// https://github.com/RickStrahl/jquery-resizable
+$('.profile').resizable({
+    // optional selector for handle that starts dragging
+    handleSelector: '.splitter',
+    // resize the width
+    resizeWidth: true,
+    // resize the height
+    resizeHeight: false,
+    // the side that the width resizing is relative to
+    resizeWidthFrom: 'left',
+    // the side that the height resizing is relative to
+    resizeHeightFrom: 'bottom',
+    // hook into start drag operation (event,$el,opt passed - return false to abort drag)
+    onDragStart: null,
+    // hook into stop drag operation (event,$el,opt passed)
+    onDragEnd: null,
+    // hook into each drag operation (event,$el,opt passed)
+    onDrag: null,
+    // disable touch-action on the $handle
+    // prevents browser level actions like forward back gestures
+    touchActionNone: true
+});
+
+//open PROFILE
+$('.open-profile').click(function(){
+	$('body').addClass('show-profile loaded');
+    $('body').removeClass('show-details');
+    // remove inline styles put there dynamically by resizer
+    $('.profile').removeAttr('style');
+    $('.results').removeAttr('style');
+});
+
+// open PROFILE (in RESULTS table)
+$('.results table tbody tr .open-profile').click(function(){
+	// remove classes from rows
+    $('.results table tbody tr').removeClass('selected');
+    // open PROFILE
+    $('body').addClass('show-profile loaded');
+    // highlight selected row
+    $(this).closest('tr').addClass('selected');
+    $('body').removeClass('show-details');
+    // remove inline styles put there dynamically by resizer
+    $('.profile').removeAttr('style');
+    $('.results').removeAttr('style');
+});
+
+// toggle DETAILS
+$('.toggle-details').click(function(){
+	$('body').toggleClass('show-details');
+});
+
+// toggle light/dark themes
+$('.toggle-lights').click(function(){
+    // hash is required to work vs class
+    $('#lightsOut').prop('disabled', function(i, v) { return !v; });
+});
+
+// close PROFILE
+$('.close-profile').click(function(){
+    $('body').removeClass('show-profile show-details loaded');
+    // remove highlight from selected row
+    $('.results table tbody tr').removeClass('selected');
+    $('.profile').removeClass('fullscreen');
+    // remove inline style width put there dynamically by resizer
+    $('.profile').removeAttr('style');
+    // remove inline style width put there dynamically by resizer
+    $('.results').removeAttr('style');
+});
+
+// toggle RESULTS fullscreen
+$('.toggle-results-fullscreen').click(function(){
+    $('.results').toggleClass('fullscreen');
+});
+
+// toggle PROFILE fullscreen
+$('.toggle-profile-fullscreen').click(function(){
+    $('.profile').toggleClass('fullscreen');
+});
+
+// toggle DETAILS fullscreen
+$('.toggle-details-fullscreen').click(function(){
+    $('.details').toggleClass('fullscreen');
+});
+
+// Exit FULLSCREEN on ESC
+$(document).keyup(function(event){
+    if(event.which=='27'){
+        $('.results').removeClass('fullscreen');
+        $('.profile').removeClass('fullscreen');
+        $('.details').removeClass('fullscreen');
+    }
+});
+
+// Exit FULLSCREEN on ESC v2
+/*$(document).on('keydown', function(event) {
+    if (event.key == 'Escape') {
+        $('.results').removeClass('fullscreen');
+        $('.profile').removeClass('fullscreen');
+        $('.details').removeClass('fullscreen');
+    }
+});*/
+
 // handle global search box expand/collapse
 jQuery(document).on('click', '.global-search-form', function(e) {
     $(this).addClass('open');
@@ -12,129 +127,16 @@ jQuery(document).on('click', '.global-search-form', function(e) {
         $(this).unbind('blur');
     });
 });
+
 // handle mega menu click
 jQuery(document).on('click', '.hold-on-click', function(e) {
     e.stopPropagation()
 });
+
 // handle tooltips
 $(function () {
     $('[data-toggle="tooltip"]').tooltip()
 });
-
-// handle RESULTS fullscreen
-$('.toggle-results-fullscreen').click(function(){
-    $('.results').toggleClass('fullscreen');
-});
-$('.toggle-profile-fullscreen').click(function(){
-    $('.profile').toggleClass('fullscreen');
-});
-$('.toggle-details-fullscreen').click(function(){
-    $('.details').toggleClass('fullscreen');
-});
-
-// handle toggle RESULTS panel width 100%-0%
-$('.toggle-results').click(function(){
-    $('body').toggleClass('show-results');
-    $('body').removeClass('hide-home hide-filter show-profile show-details');
-});
-
-// handle Loading PROFILE content
-$('body').removeClass('show-profile');
-if ($('.profile').hasClass('loaded')){
-    $('body').toggleClass('show-profile');
-}
-
-
-// handle flex box splitter
-$(document).ready(function () {
-    $('.results').resizable({
-        // optional selector for handle that starts dragging
-        handleSelector: '.splitter',
-        // resize the width
-        resizeWidth: true,
-        // resize the height
-        resizeHeight: false,
-        // the side that the width resizing is relative to
-        resizeWidthFrom: 'right',
-        // the side that the height resizing is relative to
-        resizeHeightFrom: 'bottom',
-        // hook into start drag operation (event,$el,opt passed - return false to abort drag)
-        onDragStart: null,
-        // hook into stop drag operation (event,$el,opt passed)
-        onDragEnd: null,
-        // hook into each drag operation (event,$el,opt passed)
-        onDrag: null,
-        // disable touch-action on the $handle
-        // prevents browser level actions like forward back gestures
-        touchActionNone: true
-    });
-});
-
-// handle toggle PROFILE panel width 100%-0%
-$('.toggle-profile').click(function(){
-    $('body').toggleClass('show-profile'); /* open/close profile panel */
-    $('body').removeClass('show-details');
-    $('.results table tbody tr').toggleClass('selected'); /* highlight selected row */
-    $('.profile').removeAttr('style'); /* remove inline style width put there dynamically by resizer */
-    $('.results').removeAttr('style'); /* remove inline style width put there dynamically by resizer */
-});
-
-// handle open PROFILE panel button(s)
-$('.open-profile').click(function(){
-    $('body').addClass('show-profile');
-});
-
-// handle toggle DETAILS panel margin-right 0-300px
-$('.toggle-details').click(function(){
-    $('body').toggleClass('show-details');
-});
-
-// handle toggle light/dark themes
-$('.toggle-lights').click(function(){
-    $('#lightsOut').prop('disabled', function(i, v) { return !v; }); /* hash is required to work vs class */
-});
-
-// handle toggle HOME panel min-width 250px-0
-$('.toggle-hide-home').click(function(){
-    $('body').toggleClass('hide-home');
-});
-
-// handle toggle FILTER panel min-width 250px-0
-$('.toggle-hide-filter').click(function(){
-    $('body').toggleClass('hide-filter');
-});
-
-// handle close PROFILE panel
-$('.close-profile').click(function(){
-    $('body').removeClass('show-profile');
-    $('body').removeClass('show-details');
-    $('.results table tbody tr').removeClass('selected'); /* highlight selected row */
-    $('.profile').removeAttr('style'); /* remove inline style width put there dynamically by resizer */
-    $('.results').removeAttr('style'); /* remove inline style width put there dynamically by resizer */
-});
-// handle close DETAILS panel
-$('.close-details').click(function(){
-    $('body').removeClass('show-details');
-    $('.profile').removeAttr('style'); /* remove inline style width put there dynamically by resizer */
-    $('.results').removeAttr('style'); /* remove inline style width put there dynamically by resizer */
-});
-
-// dismiss modal on ESC
-/*$(document).keyup(function(event){
-    if(event.which=='27'){
-        $('.results').removeClass('fullscreen');
-        $('.profile').removeClass('fullscreen');
-        $('.details').removeClass('fullscreen');
-    }
-});*/
-$(document).on('keydown', function(event) {
-    if (event.key == 'Escape') {
-        $('.results').removeClass('fullscreen');
-        $('.profile').removeClass('fullscreen');
-        $('.details').removeClass('fullscreen');
-    }
-});
-
 
 /* jQuery textarea resizer pollyfill plug-in usage
 $(document).ready(function() {
@@ -145,7 +147,7 @@ $('iframe.resizable:not(.processed)').TextAreaResizer();
 // handle dynamic user name
 
 // handle theme SWITCH
-var checkbox = document.querySelector('input[name=mode]');
+let checkbox = document.querySelector('input[name=mode]');
 checkbox.addEventListener('change', function() {
     if(this.checked) {
         trans();
@@ -164,7 +166,7 @@ let trans = () => {
 };
 
 // handle double clicking splitter to close
-var splitterTappedTwice = false;
+let splitterTappedTwice = false;
 function toggleProfile(e) {
 
     // handle double tap
