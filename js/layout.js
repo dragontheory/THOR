@@ -117,11 +117,10 @@ $(document).keyup(function(event){
     }
 });*/
 
-// handle global search box expand/collapse
+// global search box expand/collapse
 jQuery(document).on('click', '.global-search-form', function(e) {
     $(this).addClass('open');
     $(this).find('.form-control').focus();
-
     $('.global-search-form .form-control').on('blur', function(e) {
         $(this).closest('.global-search-form').removeClass('open');
         $(this).unbind('blur');
