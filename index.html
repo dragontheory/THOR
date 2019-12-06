@@ -1,20 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" class="vh-100 h-100 overflow-hidden">
     <head>
-        <!--
-        Bootstrap 4.3.2 HTML/SCSS layout/component/feature scaffolding/class conventions must be followed to maintain
-        cross/backward browser compatibility, responsiveness, look and feel and structural/functional/theme integrity.
-        Please see readme.txt
-        Full documentation: https://getbootstrap.com/docs/
-        -->
-        <!-- Required meta tags -->
-        <meta http-equiv="Content-Type" content="text/html" />
-        <meta charset="UTF-8" />
         <title>THOR | Triage HUD Operational Resources</title>
+        <meta charset="UTF-8" />        
+        <meta http-equiv="Content-Type" content="text/html" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- W3C Validator for IE 8-10 -->
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="Data/platform/resolution agnostic, Master/detail, minimal, fast triage, Holy Grail work-flow/layout" />
         <meta name="author" content="[)4@6()|\|" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Data/platform/resolution agnostic, Master/detail, minimal, fast triage, Holy Grail work-flow/layout" />
         <link type="image/x-icon" rel="shortcut icon" href="images/THOR3D128x128a_transparent.png" />
         <link type="image/x-icon" rel="mask-icon" href="images/THOR3D128x128a_transparent.png" />
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -22,8 +15,8 @@
         <link rel="stylesheet" type="text/css" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
         <link rel="stylesheet" type="text/css" href="css/layout.css" />
         <link rel="stylesheet" type="text/css" href="css/styles.css" />
-        <link rel="stylesheet" type="text/css" href="css/themes/dark.css" disabled="true" id="lightsOut" />
         <link rel="stylesheet" type="text/css" href="css/fonts.css" />
+        <link rel="stylesheet" type="text/css" href="css/themes/dark.css" disabled="true" id="lightsOut" />
         <link rel="stylesheet" type="text/css" href="css/animations.css"  /><!-- temp required for plug-in -->
         <link rel="stylesheet" type="text/css" href="css/click-effects.css" /><!-- temp required for plug-in -->
         <script src="https://kit.fontawesome.com/e628637c5b.js" crossorigin="anonymous"></script>
@@ -35,7 +28,7 @@
             </style>
         </noscript>
     </head>
-    <body class="container-fluid d-flex flex-column vh-100 h-100 overflow-hidden px-0" id="thor">
+    <body class="container-fluid d-flex flex-column vh-100 h-100 overflow-hidden px-0 show-home" id="thor">
         <!-- BEGIN PAGE-HEADER -->
         <div class="d-flex justify-content-between page-header p-0"><!--  navbar-dark bg-dark -->
             <!-- BEGIN NAV -->
@@ -375,7 +368,7 @@
         <!-- BEGIN MAIN -->
         <main class="d-flex flex-row overflow-hidden">
             <!-- BEGIN HOME -->
-            <div class="d-flex flex-column home">
+            <div class="d-flex flex-column home overflow-hidden">
                 <!-- BEGIN NAVBAR -->
                 <nav class="navbar justify-content-between">
                     <h6 class="section-header p-2" id="userName02">Welcome [ First Lastname ]</h6>
@@ -641,7 +634,7 @@
             </div>
             <!-- END HOME -->
             <!-- BEGIN FILTER -->
-            <div class="d-flex flex-column filter">
+            <div class="d-flex flex-column filter overflow-hidden">
                 <!-- BEGIN NAVBAR -->
                 <nav class="navbar justify-content-between pl-1">
                     <h6 class="section-header p-2">FILTER : :</h6>
@@ -978,9 +971,9 @@
             </div>
             <!-- END FILTER -->
             <!-- BEGIN FLEX-ROW -->
-            <div class="d-flex flex-row no-gutters overflow-hidden" style="flex: 1 1 auto;"> <!-- required nesting for splitter (WIP), TODO :: remove wrapper -->
+            <div class="d-flex flex-row no-gutters overflow-hidden flex-item"> <!-- required nesting for splitter (WIP), TODO :: remove wrapper -->
                 <!-- BEGIN RESULTS -->
-                <div class="d-flex flex-column results">
+                <div class="d-flex flex-column results overflow-hidden">
                     <!-- BEGIN NAVBAR -->
                     <nav class="navbar justify-content-between pl-1">
                         <h6 class="section-header p-2">RESULTS : :</h6>
@@ -1954,10 +1947,10 @@
                 </div>
                 <!-- END RESULTS -->
                 <!-- BEGIN SPLITTER -->
-                <div class="d-flex flex-column splitter" title="Click and drag to resize"></div>
+                <div class="d-flex flex-column splitter overflow-hidden" title="Click and drag to resize"></div>
                 <!-- END SPLITTER -->
                 <!-- BEGIN PROFILE -->
-                <div class="d-flex flex-column profile">
+                <div class="d-flex flex-column profile overflow-hidden">
                     <!-- BEGIN NAVBAR -->
                     <nav class="navbar justify-content-between pl-1">
                         <h6 class="section-header p-2 userName">PROFILE : : [ <span>Person Name</span> | <span>Item Name</span> ]</h6>
@@ -2296,7 +2289,7 @@
             </div>
             <!-- END FLEX-ROW -->
             <!-- BEGIN DETAILS -->
-            <div class="d-flex flex-column details">
+            <div class="d-flex flex-column details overflow-hidden">
                 <!-- BEGIN NAVBAR -->
                 <nav class="navbar justify-content-between pl-1">
                     <h6 class="section-header p-2">DETAILS : :</h6>
@@ -2369,7 +2362,7 @@
                                 <a class="dropdown-item" href="#"><i class="far fa-file-pdf"></i>&#160;&#160;&#160;Export to PDF</a>
                                 <a class="dropdown-item" href="#"><i class="far fa-print"></i>&#160;&#160;&#160;Print</a>
                             </div>
-			                <!-- END DROPDOWN MENU -->
+			    <!-- END DROPDOWN MENU -->
                         </li>
                         <!-- END NAV-ITEM -->
                     </ul>
@@ -2717,11 +2710,11 @@
         <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/eqcss/1.9.2/EQCSS.min.js"></script>-->
         <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/eqcss/1.9.2/EQCSS-polyfills.min.js"></script>-->
         <script type="text/javascript" src="js/layout.js"></script>
-<!--        <script type="text/eqcss">
+        <!-- <script type="text/eqcss">
         /* EQCSS */
             @element ".show-results" {
             eval("if (document.querySelector('.profile .loaded')) { '$this' }") .results {width: 50%; background-color: red !important;}
         }
-        </script>-->
+        </script> -->
     </body>
 </html>
