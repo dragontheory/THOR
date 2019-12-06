@@ -112,7 +112,7 @@ a {
     cursor: pointer;
 }
 .filter .panel-body .list-group .list-group-item:after {
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     top: 0;
@@ -259,7 +259,7 @@ div.grippy {
 }
 .accordion-toggle:not(.collapsed):before,
 .accordion-toggle:hover:before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     bottom: 0;
@@ -270,7 +270,7 @@ div.grippy {
     filter: drop-shadow(0 1px 1px rgba(0,0,0,0.75)) drop-shadow(0 0 8px rgba(102,204,255,0.6));
 }
 .accordion-toggle:hover:before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     bottom: 0;
@@ -283,7 +283,7 @@ div.grippy {
 .accordion-toggle:hover {background-color: rgba(0,0,0,0.05);}
 /* CAROUSEL */
 .profile .carousel-item img {opacity: 0.3;}
-.profile a[data-toggle="collapse"] {position: relative;}
+.profile a[data-toggle='collapse'] {position: relative;}
 .profile-carousel {
     max-width: 200px;
     min-width: 200px;
@@ -420,7 +420,7 @@ input[type='text']:active:focus {outline: 0 !important;}
 }
 .table tbody tr:hover {background-color: rgba(0,0,0,0.05);}
 .table tbody > tr > td:first-child:after {
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     top: 0;
@@ -439,11 +439,11 @@ input[type='text']:active:focus {outline: 0 !important;}
 /* ROWS HOVER and SELECTED */
 .table.dataTable tbody > tr.selected,
 .table.dataTable tbody > tr > .selected {
-    background-color: rgba(0,0,0,0.2); /* Bootstrap override */
+    background-color: rgba(0,0,0,0.2); /* direct Bootstrap override */
 }
 .table tbody > tr.selected > td:first-child:after,
 .table-hover tbody > tr > td:first-child:hover:after {
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     top: 0;
@@ -493,7 +493,7 @@ input[type='text']:active:focus {outline: 0 !important;}
 .btn-group > .dropdown-menu:before,
 .dropdown-toggle > .dropdown-menu:before,
 .dropdown > .dropdown-menu:before {
-    content: "";
+    content: '';
     position: absolute;
     top: -7px;
     left: 9px;

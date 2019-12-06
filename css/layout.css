@@ -177,7 +177,7 @@
     flex: 0 0 10px;
 }
 /*.gutter::after {
-  content: "";
+  content: '';
   background: rgba(102,204,255,0.5);
 
   opacity: 0.5;

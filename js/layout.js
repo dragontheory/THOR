@@ -175,14 +175,14 @@ let splitterTappedTwice = false;
 function toggleProfile(e) {
 
     // handle double tap
-    if (e.type === "touchend" && !splitterTappedTwice) {
+    if (e.type === 'touchend' && !splitterTappedTwice) {
         splitterTappedTwice = true;
         setTimeout(function () { splitterTappedTwice = false; }, 300);
         return false;
     }
-    let profile = $(".profile");
-    let oldTrans = $profile.css("transition");
-    $profile.css("transition", "width 0.5s ease-in-out");
+    let profile = $('.profile');
+    let oldTrans = $profile.css('transition');
+    $profile.css('transition', 'width 0.5s ease-in-out');
     if ($profile.width() < 20) {
         $profile.show();
         $profile.width(400);
@@ -190,6 +190,6 @@ function toggleProfile(e) {
         $profile.width(0);
     }
 
-    setTimeout(function () { profile.css("transition", oldTrans) }, 700);
+    setTimeout(function () { profile.css('transition', oldTrans) }, 700);
     return true;
 }
