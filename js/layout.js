@@ -1,6 +1,6 @@
 // toggle HOME (button in bage-hader)
 $(".toggle-home").click(function(){
-	$('body').toggleClass('how-home');
+	$('body').toggleClass('show-home');
 });
 
 // toggle FILTER (button in bage-hader)
@@ -9,9 +9,9 @@ $('.toggle-filter').click(function(){
 });
 
 // toggle FILTER and RESULTS (button in .home)
-$(".toggle-filter-results").click(function(){
-	$('body').toggleClass('show-filter show-results');
-    $('body').removeClass('show-profile show-details');
+$('.toggle-filter-results').click(function(){
+	$('body').toggleClass('show-filter show-results loaded');
+    $('body').removeClass('show-profile show-details loaded');
 });
 
 // resizer

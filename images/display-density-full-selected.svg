@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="70px" viewBox="0 0 80 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="quick-settings" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Full-unselected" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="Group">
+                <path d="M0,0 L80,0 L80,70 L0,70 L0,0 Z M6,36 L6,57 L74,57 L74,36 L6,36 Z M6,13 L6,34 L74,34 L74,13 L6,13 Z" id="Combined-Shape" fill-opacity="0.9"></path>
+                <path d="M6,13 L74,13 L74,34 L6,34 L6,13 Z M13,25 C15.209139,25 17,23.209139 17,21 C17,18.790861 15.209139,17 13,17 C10.790861,17 9,18.790861 9,21 C9,23.209139 10.790861,25 13,25 Z M21,17 L21,23 L70,23 L70,17 L21,17 Z M21,25 L21,30 L43,30 L43,25 L21,25 Z M45,25 L45,30 L70,30 L70,25 L45,25 Z" id="Combined-Shape"></path>
+                <path d="M6,36 L74,36 L74,57 L6,57 L6,36 Z M13,48 C15.209139,48 17,46.209139 17,44 C17,41.790861 15.209139,40 13,40 C10.790861,40 9,41.790861 9,44 C9,46.209139 10.790861,48 13,48 Z M21,40 L21,46 L70,46 L70,40 L21,40 Z M21,48 L21,53 L43,53 L43,48 L21,48 Z M45,48 L45,53 L70,53 L70,48 L45,48 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>
