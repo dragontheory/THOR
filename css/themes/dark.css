@@ -1,8 +1,6 @@
-/****************************************
-
+/*
     DARK THEME
-
-*****************************************/
+*/
 body {
     background-color: rgba(37,40,48,1.0); /* #252830 */
     color: #A5C4CF;/*#CFD2DA #5A868C*/
@@ -12,19 +10,15 @@ a:hover {color: rgba(102,204,255,1.0);}
 .section-header {color: rgba(255,255,255,1.0);}
 
 
-/****************************************
-
+/*
     CONTENT EDITABLE
-
-*****************************************/
+*/
 [contenteditable='true']:hover {background-color: rgba(102,204,255,0.05);}
 
 
-/****************************************
-
+/*
     PAGE HEADER/FOOTER and ADVANCED SEARCH PANEL
-
-*****************************************/
+*/
 .page-header,
 .page-footer {background-color: rgba(255,255,255,0.03);}
 .page-header {box-shadow: inset 0 -1px 0 0 rgba(0,0,0,0.5);}
@@ -43,20 +37,16 @@ a:hover {color: rgba(102,204,255,1.0);}
 }
 
 
-/****************************************
-
-	HOME
-
-*****************************************/
+/*
+    HOME
+*/
 .home {box-shadow: 1px 0 0 0 rgba(0,0,0,0.5) inset, -1px 0 0 0 rgba(255,255,255,0.05) inset;}
 .home .card {background-color: rgba(0,0,0,0.05);}
 
 
-/****************************************
-
-	FILTER
-
-*****************************************/
+/*
+    FILTER
+*/
 .filter {box-shadow: 1px 0 0 0 rgba(0,0,0,0.5) inset, -1px 0 0 0 rgba(255,255,255,0.05) inset;}
 .filter .panel-body {background-color: rgba(0,0,0,0.1);}
 .filter .nav .nav-link:hover,
@@ -64,36 +54,28 @@ a:hover {color: rgba(102,204,255,1.0);}
 .filter .panel-body .list-group .list-group-item:hover{background-color: rgba(102,204,255,0.05);}
 
 
-/****************************************
-
+/*
 	RESULTS
-
-*****************************************/
+*/
 .results {box-shadow: 1px 0 0 0 rgba(0,0,0,0.5) inset, -1px 0 0 0 rgba(255,255,255,0.05) inset;}
 
 
-/****************************************
-
+/*
 	SPLITTER
-
-*****************************************/
+*/
 .splitter {box-shadow: 1px 0 0 0 rgba(0,0,0,0.5) inset, -1px 0 0 0 rgba(255,255,255,0.05) inset;}
 
 
-/****************************************
-
+/*
 	PROFILE
-
-*****************************************/
+*/
 .profile {box-shadow: 1px 0 0 0 rgba(0,0,0,0.5) inset, -1px 0 0 0 rgba(255,255,255,0.05) inset;}
 .profile .accordion-toggle:hover {background-color: rgba(102,204,255,0.05);}
 
 
-/****************************************
-
+/*
 	DETAILS
-
-*****************************************/
+*/
 .details {box-shadow: 1px 0 0 0 rgba(0,0,0,0.5) inset, -1px 0 0 0 rgba(255,255,255,0.05) inset;}
 .details .flex-item {background-color: rgba(0,0,0,0.05);}
 .nav-bordered > .nav-item > .nav-link.active:hover,
@@ -114,21 +96,17 @@ a:hover {color: rgba(102,204,255,1.0);}
 }
 
 
-/****************************************
-
+/*
 	FULLSCREEN
-
-*****************************************/
+*/
 .results.fullscreen,
 .profile.fullscreen,
 .details.fullscreen {background-color: rgba(32,34,40,1.0);}
 
 
-/****************************************
-
+/*
 	TABLES
-
-*****************************************/
+*/
 .table {color: #A5C4CF;}
 .table tbody tr.selected,
 .table tbody tr:hover {
@@ -142,11 +120,9 @@ a:hover {color: rgba(102,204,255,1.0);}
 }
 
 
-/****************************************
-
+/*
 	BUTTONS
-
-*****************************************/
+*/
 .btn-outline-primary:not(:disabled):not(.disabled) {
     background-color: rgba(102,175,233,0.1);
     border-color: rgba(102,175,233,0.0);
@@ -183,11 +159,9 @@ a:hover {color: rgba(102,204,255,1.0);}
 }
 
 
-/****************************************
-
+/*
 	FORMS
-
-*****************************************/
+*/
 .form-control {
     background-color: rgba(37,40,48,1.0);
     border-left-color: rgba(255,255,255,0.1);
@@ -205,19 +179,15 @@ a:hover {color: rgba(102,204,255,1.0);}
 }
 
 
-/****************************************
-
+/*
 	CARDS
-
-*****************************************/
+*/
 .card {background-color: rgba(0,0,0,0.125);}
 
 
-/****************************************
-
+/*
 	UTILITIES
-
-*****************************************/
+*/
 .glow {
     -webkit-transition: all 250ms;
     -moz-transition: all 250ms;
@@ -233,11 +203,9 @@ a:hover {color: rgba(102,204,255,1.0);}
 }
 
 
-/********************************************
-
+/*
 	SWITCHES
-
-********************************************/
+*/
 .custom-switch .custom-control-label::before,
 .custom-switch .custom-control-label::after {
     border-color: rgba(0,0,0,1.0);
@@ -265,11 +233,9 @@ a:hover {color: rgba(102,204,255,1.0);}
 }
 
 
-/****************************************
-
+/*
 	DROPDOWN-MENU
-
-*****************************************/
+*/
 .dropdown-menu {
     color: rgba(255,255,255,0.4);
     background-color: rgb(44,47,54);
@@ -309,8 +275,6 @@ a:hover {color: rgba(102,204,255,1.0);}
 }
 
 
-/****************************************
-
+/*
 	BADGES
-
-*****************************************/
+*/

@@ -1,9 +1,9 @@
-// toggle HOME (button in bage-hader)
-$(".toggle-home").click(function(){
+// toggle HOME (button in page-header)
+$('.toggle-home').click(function(){
 	$('body').toggleClass('show-home');
 });
 
-// toggle FILTER (button in bage-hader)
+// toggle FILTER (button in page-header)
 $('.toggle-filter').click(function(){
 	$('body').toggleClass('show-filter');
 });
