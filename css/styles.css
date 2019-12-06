@@ -114,7 +114,6 @@ a {
 .filter .panel-body .list-group .list-group-item:after {
     content: "";
     position: absolute;
-    transition: all 250ms;
     left: 0;
     top: 0;
     bottom: 0;
@@ -122,6 +121,11 @@ a {
     background-color: rgba(102,204,255,0.0);
     -webkit-filter: drop-shadow(0 1px 1px rgba(0,0,0,0.75)) drop-shadow(0 0 8px rgba(102,204,255,0.6));
     filter: drop-shadow(0 1px 1px rgba(0,0,0,0.75)) drop-shadow(0 0 8px rgba(102,204,255,0.6));
+    -webkit-transition: all 250ms;
+    -moz-transition: all 250ms;
+    -ms-transition: all 250ms;
+    -o-transition: all 250ms;
+    transition: all 250ms;
 }
 /*.filter .panel-body .list-group .list-group-item:after,*/
 .filter .panel-body .list-group .list-group-item:hover:after {background-color: rgba(102,204,255,1.0);}
@@ -178,6 +182,7 @@ a {
     box-shadow: 1px 0 0 0 rgba(0,0,0,0.1) inset, -1px 0 0 0 rgba(255,255,255,0.5) inset;
     -webkit-transition: all 250ms;
     -moz-transition: all 250ms;
+    -ms-transition: all 250ms;
     -o-transition: all 250ms;
     transition: all 250ms;
 }
@@ -204,6 +209,8 @@ div.grippy {
 .customResizer {height: 50px;}
 .gutter-horizontal {
     -webkit-transition: background-color 250ms;
+    -moz-transition: background-color 250ms;
+    -ms-transition: background-color 250ms;
     -o-transition: background-color 250ms;
     transition: background-color 250ms;
     cursor: col-resize;
@@ -237,6 +244,8 @@ div.grippy {
 .profile .card-body {background-color: rgba(0,0,0,0.05);}
 .accordion-toggle {
     -webkit-transition: color 250ms ease, background-color 250ms ease;
+    -moz-transition: color 250ms ease, background-color 250ms ease;
+    -ms-transition: color 250ms ease, background-color 250ms ease;
     -o-transition: color 250ms ease, background-color 250ms ease;
     transition: color 250ms ease, background-color 250ms ease;
 }
@@ -403,12 +412,16 @@ input[type=text"]:active:focus {outline: 0 !important;}
 .table tbody tr {
     box-shadow: 0 1px 0 0 rgba(255,255,255,0.7) inset,
                 0 -1px 0 0 rgba(0,0,0,0.1) inset;
+    -webkit-transition: all 250ms;
+    -moz-transition: all 250ms;
+    -ms-transition: all 250ms;
+    -o-transition: all 250ms;
+    transition: all 250ms;
 }
 .table tbody tr:hover {background-color: rgba(0,0,0,0.05);}
 .table tbody > tr > td:first-child:after {
     content: "";
     position: absolute;
-    transition: all 250ms;
     left: 0;
     top: 0;
     bottom: 0;
@@ -416,6 +429,11 @@ input[type=text"]:active:focus {outline: 0 !important;}
     background-color: rgba(102,204,255,0.0);
     -webkit-filter: drop-shadow(0 1px 1px rgba(0,0,0,0.75)) drop-shadow(0 0 8px rgba(102,204,255,0.6));
     filter: drop-shadow(0 1px 1px rgba(0,0,0,0.75)) drop-shadow(0 0 8px rgba(102,204,255,0.6));
+    -webkit-transition: all 250ms;
+    -moz-transition: all 250ms;
+    -ms-transition: all 250ms;
+    -o-transition: all 250ms;
+    transition: all 250ms;
 }
 .table tbody > tr:hover > td:first-child:after {background-color: rgba(102,204,255,1.0);}
 /* ROWS HOVER and SELECTED */
@@ -522,9 +540,28 @@ input[type=text"]:active:focus {outline: 0 !important;}
     left: auto;
     right: 10px;
 }
-/*.dropdown-menu {display: block; visibility: hidden; opacity: 0.0; transform: translateY(50px); transition: .5s ease opacity translateY;}
-.dropdown-menu.show {display: block; visibility: visible; opacity: 1.0;transform: translateY(0px); transition: .5s ease opacity translateY;} */
-
+/*.dropdown-menu {
+    display: block; 
+    visibility: hidden; 
+    opacity: 0.0; 
+    transform: translateY(50px); 
+    -webkit-transition: .5s ease opacity translateY;
+    -moz-transition: .5s ease opacity translateY;
+    -ms-transition: .5s ease opacity translateY;
+    -o-transition: .5s ease opacity translateY;
+    transition: .5s ease opacity translateY;
+}
+.dropdown-menu.show {
+    display: block; 
+    visibility: visible; 
+    opacity: 1.0;
+    transform: translateY(0px); 
+    -webkit-transition: .5s ease opacity translateY;
+    -moz-transition: .5s ease opacity translateY;
+    -ms-transition: .5s ease opacity translateY;
+    -o-transition: .5s ease opacity translateY;
+    transition: .5s ease opacity translateY;
+} */
 /*.dropdown-item { padding: .25rem .5rem; }*/
 
 
@@ -561,9 +598,12 @@ button:focus {
     color: #286aab;
     font-size: 1.4em;
     overflow: visible;
-    -webkit-transition: color 0.7s;
-    transition: color 0.7s;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-transition: color 0.7s;
+    -moz-transition: color 0.7s;
+    -ms-transition: color 0.7s;
+    -o-transition: color 0.7s;
+    transition: color 0.7s;
 }
 .cbutton.cbutton--click,
 .cbutton:focus {
@@ -671,15 +711,17 @@ button:focus {
 
 *****************************************/
 /*
-.page-on-load {
-	background: #fefefe;
-}
+.page-on-load {background: #fefefe;}
 .page-on-load .page-header,
 .page-on-load .page-container,
 .page-on-load .page-footer,
 .page-on-load > .clearfix {
-	display: none;
-	transition: all 2s;
+    display: none;
+    -webkit-transition: all 2s;
+    -moz-transition: all 2s;
+    -ms-transition: all 2s;
+    -o-transition: all 2s;
+    transition: all 2s;
 }
 */
 
