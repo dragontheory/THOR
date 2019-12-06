@@ -221,6 +221,7 @@ a:hover {color: rgba(102,204,255,1.0);}
 .glow {
     -webkit-transition: all 250ms;
     -moz-transition: all 250ms;
+    -ms-transition: all 250ms;
     -o-transition: all 250ms;
     transition: all 250ms;
 }
@@ -277,6 +278,10 @@ a:hover {color: rgba(102,204,255,1.0);}
 }
 .dropdown-item {
     color: rgba(255,255,255,0.4);
+    -webkit-transition: background-color 250ms, color 250ms;
+    -moz-transition: background-color 250ms, color 250ms;
+    -ms-transition: background-color 250ms, color 250ms;
+    -o-transition: background-color 250ms, color 250ms;
     transition: background-color 250ms, color 250ms;
 }
 .dropdown-item:hover {
