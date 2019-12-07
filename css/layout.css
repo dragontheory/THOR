@@ -182,9 +182,9 @@
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
     height: 100%;
-    width: 400px;
-    margin-right: -400px;
-    min-width: 0;
+    width: 50%;
+    margin-right: -50%;
+    min-width: 200px;
     /* min-height IE11 fix */
     min-height: 1px;
     -webkit-transition: margin-right 550ms ease;
@@ -196,7 +196,6 @@
 /* Add .show-results and .show-profile and .loaded to <body> to open */
 .show-results.show-profile.loaded .profile {
     margin-right: 0;
-    min-width: 200px;
 }
 /* Add .show-results and .show-profile and .loaded to <body> to open */
 .show-results.show-profile.loaded .results {margin-right: 0;}
