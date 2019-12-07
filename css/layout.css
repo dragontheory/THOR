@@ -150,7 +150,7 @@
     -ms-flex: 0 0 10px; 
     /* Originally 0 0 10px from Rick Strahl's support.west.wind.com F12 source code 2019.11.03 */    
     flex: 0 0 10px; 
-    /* Use width rather than flex-basis. More backwards compatible with IE and smoother transitions */
+    /* Use width rather than flex-basis. Compatible with IE and smoother transitions */
     width: 10px; 
 }
 .gutter-horizontal {
@@ -163,7 +163,6 @@
 /*.gutter::after {
   content: '';
   background: rgba(102,204,255,0.5);
-
   opacity: 0.5;
   top: 0;
   left: 0;
