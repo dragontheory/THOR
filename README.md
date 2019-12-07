@@ -340,7 +340,8 @@ Combine the custom element app-results with the d-flex class in the associated A
 REACTIVE CSS : : LOADING DATA  
 Loading animation : :  
 CSS controls loading animation appearance and timing.   
-The loading animation appears between when an end-user clicks to open PROFILE (`.show-profile` is added to `<body>`) and when PROFILE opens (`.profile` dynamically receives child `.loaded`).
+The loading animation appears between when an end-user clicks to open PROFILE (`.show-profile` is added to `<body>`) and when PROFILE opens (`.profile` dynamically receives child `.loaded`).  
+TODO : : Narrow animation scope to item clicked. 
 ```
 /* Closed State (default) */
 .results {
@@ -389,13 +390,25 @@ LAYOUT EXAMPLE : :
 ---
 
 #####TODO : :  
-* Add toggle for light/dark theme
+* ~~Add toggle for light/dark theme~~
 * Add script for Bootstrap Toastr alerts
 * Add script for Bootstrap right click context menus
-* Add CSS rule for data load detection
-* Add CSS media query to accommodate for nested resize-parent div to preserve responsiveness.
-* Remove nested resize-parent div
-* Fix icon menu at the top of each section
+* Documentation: 
+  * break up 
+  * revamp
+  * simplify
+  * remove value judgments
+  * justify "why use THOR over proven established solutions"
+* ~~Add CSS rule for data load detection~~
+  * Narrow loading animation scope to item clicked
+* Resizer nesting:
+  * Add CSS media query to accommodate for nested resize-parent div to preserve responsiveness.
+  * Remove nested resize-parent div
+* Fix/revamp icon menu at the top of each section. Space between and better wrapping of icons
+* Testing:
+  * Write regression testing script 
+  * Write testing script for usability
+  * Test/compare loading/rendering to similar (apples to apples) national averages
 
 ---
 
