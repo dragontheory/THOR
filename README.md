@@ -337,7 +337,10 @@ Combine the custom element app-results with the d-flex class in the associated A
 ---
 ---
 
-REACTIVE CSS : : LOADING DATA
+REACTIVE CSS : : LOADING DATA  
+Loading animation : :  
+CSS controls loading animation appearance and timing.   
+The loading animation appears between when an end-user clicks to open PROFILE (`.show-profile` is added to `<body>`) and when PROFILE opens (`.profile` dynamically receives child `.loaded`).
 ```
 /* Closed State (default) */
 .results {
