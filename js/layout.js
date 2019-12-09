@@ -1,16 +1,16 @@
 // toggle HOME (button in page-header)
 $('.toggle-home').click(function(){
-	$('body').toggleClass('show-home');
+    $('body').toggleClass('show-home');
 });
 
 // toggle FILTER (button in page-header)
 $('.toggle-filter').click(function(){
-	$('body').toggleClass('show-filter');
+    $('body').toggleClass('show-filter');
 });
 
 // toggle FILTER and RESULTS (button in .home)
 $('.toggle-filter-results').click(function(){
-	$('body').toggleClass('show-filter show-results loaded');
+    $('body').toggleClass('show-filter show-results loaded');
     $('body').removeClass('show-profile show-details loaded');
 });
 
@@ -46,7 +46,7 @@ $('.open-profile').click(function(){
 
 // open PROFILE (in RESULTS table)
 $('.results table tbody tr .open-profile').click(function(){
-	// remove classes from rows
+    // remove classes from rows
     $('.results table tbody tr').removeClass('selected');
     // open PROFILE
     $('body').addClass('show-profile loaded');
@@ -69,13 +69,13 @@ $('.close-profile').click(function(){
 
 // open DETAILS
 $('.open-details').click(function(){
-	$('body').addClass('show-details');
+    $('body').addClass('show-details');
 });
 
 // close DETAILS
 $('.close-details').click(function(){
-	$('body').removeClass('show-details');
-	$('body').removeClass('fullscreen');
+    $('body').removeClass('show-details');
+    $('body').removeClass('fullscreen');
 });
 
 // toggle light/dark themes
@@ -183,7 +183,6 @@ function toggleProfile(e) {
     } else {
         $profile.width(0);
     }
-
     setTimeout(function () { profile.css('transition', oldTrans) }, 700);
     return true;
 }
