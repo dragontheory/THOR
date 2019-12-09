@@ -40,11 +40,8 @@ $('.profile').resizable({
 
 //open PROFILE
 $('.open-profile').click(function(){
-	$('body').addClass('show-profile loaded');
+    $('body').addClass('show-profile loaded');
     $('body').removeClass('show-details');
-    // remove inline styles put there dynamically by resizer
-    //$('.profile').removeAttr('style');
-    //$('.results').removeAttr('style');
 });
 
 // open PROFILE (in RESULTS table)
@@ -56,9 +53,6 @@ $('.results table tbody tr .open-profile').click(function(){
     // highlight selected row
     $(this).closest('tr').addClass('selected');
     $('body').removeClass('show-details');
-    // remove inline styles put there dynamically by resizer
-    //$('.profile').removeAttr('style');
-    //$('.results').removeAttr('style');
 });
 
 // close PROFILE
