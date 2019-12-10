@@ -4,8 +4,6 @@
 body {font: 0.9rem Calibri, Sans Serif;}
 a {
     -webkit-transition: all 250ms;
-    -moz-transition: all 250ms;
-    -ms-transition: all 250ms;
     -o-transition: all 250ms;
     transition: all 250ms;
 }
@@ -17,6 +15,7 @@ a {
     PAGE HEADER/FOOTER and ADVANCED SEARCH PANEL
 */
 .page-header {
+    -webkit-box-shadow: inset 0 -1px 0 0 rgba(0,0,0,0.3);
     box-shadow: inset 0 -1px 0 0 rgba(0,0,0,0.3);
     background-color: rgba(0,0,0,0.03);
     /*background-color: rgba(37,40,48,1.0);*/
@@ -25,6 +24,7 @@ a {
 .page-header li.active,
 .page-header li.active .nav-link {
     background-color: rgba(229,229,229,1.0);
+    -webkit-box-shadow: -1px 0 0 0 rgba(0,0,0,0.25) inset, 1px 0 0 0 rgba(255,255,255,0.7) inset;
     box-shadow: -1px 0 0 0 rgba(0,0,0,0.25) inset, 1px 0 0 0 rgba(255,255,255,0.7) inset;
 }
 .logo-icon {height: 30px;}
@@ -56,6 +56,7 @@ a {
 */
 .home {
     background-color: rgba(0,0,0,0.1);
+    -webkit-box-shadow: -1px 0 0 0 rgba(255,255,255,0.5) inset;
     box-shadow: -1px 0 0 0 rgba(255,255,255,0.5) inset;
 }
 .home .card {background-color: rgba(255,255,255,0.7);}
@@ -66,26 +67,32 @@ a {
 */
 .filter {
     background-color: rgba(0,0,0,0.1);
+    -webkit-box-shadow: -1px 0 0 0 rgba(255,255,255,0.5) inset;
     box-shadow: -1px 0 0 0 rgba(255,255,255,0.5) inset;
 }
 .filter .panel-body {
     background-color: rgba(0,0,0,0.05);
+    -webkit-box-shadow: 0 1px 0 0 rgba(0,0,0,0.3) inset,
+                        0 -1px 0 0 rgba(255,255,255,0.07) inset;
     box-shadow: 0 1px 0 0 rgba(0,0,0,0.3) inset,
-    0 -1px 0 0 rgba(255,255,255,0.07) inset;
+                0 -1px 0 0 rgba(255,255,255,0.07) inset;
 }
 .filter .panel-body .list-group .list-group-item {
     font-weight: normal;
     background-color: rgba(255,255,255,0.0);
+    -webkit-box-shadow: -1px 0 0 0 rgba(0,0,0,0.25) inset;
     box-shadow: -1px 0 0 0 rgba(0,0,0,0.25) inset;
     -webkit-transition: box-shadow 250ms;
-    -moz-transition: box-shadow 250ms;
-    -ms-transition: box-shadow 250ms;
     -o-transition: box-shadow 250ms;
+    -webkit-transition: -webkit-box-shadow 250ms;
+    transition: -webkit-box-shadow 250ms;
     transition: box-shadow 250ms;
+    transition: box-shadow 250ms, -webkit-box-shadow 250ms;
     padding: .5rem 2.3rem;
 }
 .filter .panel-body .list-group .list-group-item.active {
     color: rgba(102,204,255,1.0);
+    -webkit-box-shadow: 1px 0 0 0 rgba(102,204,255,1.0) inset;
     box-shadow: 1px 0 0 0 rgba(102,204,255,1.0) inset;
     border: 0; /* direct override of Bootstrap .active */
 }
@@ -112,8 +119,6 @@ a {
     -webkit-filter: drop-shadow(0 1px 1px rgba(0,0,0,0.75)) drop-shadow(0 0 8px rgba(102,204,255,0.6));
     filter: drop-shadow(0 1px 1px rgba(0,0,0,0.75)) drop-shadow(0 0 8px rgba(102,204,255,0.6));
     -webkit-transition: all 250ms;
-    -moz-transition: all 250ms;
-    -ms-transition: all 250ms;
     -o-transition: all 250ms;
     transition: all 250ms;
 }
@@ -141,6 +146,7 @@ a {
 */
 .results {
     background-color: rgba(0,0,0,0.1);
+    -webkit-box-shadow: 1px 0 0 0 rgba(0,0,0,0.1) inset, -1px 0 0 0 rgba(255,255,255,0.5) inset;
     box-shadow: 1px 0 0 0 rgba(0,0,0,0.1) inset, -1px 0 0 0 rgba(255,255,255,0.5) inset;
 }
 .results table tbody > tr > td:first-child {padding-left: 20px;}
@@ -165,10 +171,9 @@ a {
 .splitter {
     cursor: col-resize;
     background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==') center center no-repeat rgba(0,0,0,0.1);
+    -webkit-box-shadow: 1px 0 0 0 rgba(0,0,0,0.1) inset, -1px 0 0 0 rgba(255,255,255,0.5) inset;
     box-shadow: 1px 0 0 0 rgba(0,0,0,0.1) inset, -1px 0 0 0 rgba(255,255,255,0.5) inset;
     -webkit-transition: all 250ms;
-    -moz-transition: all 250ms;
-    -ms-transition: all 250ms;
     -o-transition: all 250ms;
     transition: all 250ms;
 }
@@ -195,8 +200,6 @@ div.grippy {
 .customResizer {height: 50px;}
 .gutter-horizontal {
     -webkit-transition: background-color 250ms;
-    -moz-transition: background-color 250ms;
-    -ms-transition: background-color 250ms;
     -o-transition: background-color 250ms;
     transition: background-color 250ms;
     cursor: col-resize;
@@ -215,6 +218,7 @@ div.grippy {
 */
 .profile {
     background-color: rgba(0,0,0,0.1);
+    -webkit-box-shadow: 1px 0 0 0 rgba(0,0,0,0.1) inset, -1px 0 0 0 rgba(255,255,255,0.5) inset;
     box-shadow: 1px 0 0 0 rgba(0,0,0,0.1) inset, -1px 0 0 0 rgba(255,255,255,0.5) inset;
 }
 .profile .card {background-color: rgba(0,0,0,0.0);} /* direct Bootstrap override */
@@ -228,8 +232,6 @@ div.grippy {
 .profile .card-body {background-color: rgba(0,0,0,0.05);}
 .accordion-toggle {
     -webkit-transition: color 250ms ease, background-color 250ms ease;
-    -moz-transition: color 250ms ease, background-color 250ms ease;
-    -ms-transition: color 250ms ease, background-color 250ms ease;
     -o-transition: color 250ms ease, background-color 250ms ease;
     transition: color 250ms ease, background-color 250ms ease;
 }
@@ -249,6 +251,7 @@ div.grippy {
     bottom: 0;
     width: 1px;
     left: 0;
+    -webkit-box-shadow: 5px 0 0 0 rgba(102,204,255,1.0) inset;
     box-shadow: 5px 0 0 0 rgba(102,204,255,1.0) inset;
     -webkit-filter: drop-shadow(0 1px 1px rgba(0,0,0,0.75)) drop-shadow(0 0 8px rgba(102,204,255,0.6));
     filter: drop-shadow(0 1px 1px rgba(0,0,0,0.75)) drop-shadow(0 0 8px rgba(102,204,255,0.6));
@@ -260,6 +263,7 @@ div.grippy {
     bottom: 0;
     width: 1px;
     left: 0;
+    -webkit-box-shadow: 5px 0 0 0 rgba(102,204,255,1.0) inset;
     box-shadow: 5px 0 0 0 rgba(102,204,255,1.0) inset;
     -webkit-filter: drop-shadow(0 1px 1px rgba(0,0,0,0.75)) drop-shadow(0 0 8px rgba(102,204,255,0.6));
     filter: drop-shadow(0 1px 1px rgba(0,0,0,0.75)) drop-shadow(0 0 8px rgba(102,204,255,0.6));
@@ -283,6 +287,7 @@ div.grippy {
 */
 .details {
     background-color: rgba(0,0,0,0.1);
+    -webkit-box-shadow: 1px 0 0 0 rgba(0,0,0,0.1) inset, -1px 0 0 0 rgba(255,255,255,0.5) inset;
     box-shadow: 1px 0 0 0 rgba(0,0,0,0.1) inset, -1px 0 0 0 rgba(255,255,255,0.5) inset;
 }
 .details .flex-item {background-color: rgba(0,0,0,0.05);}
@@ -290,7 +295,7 @@ div.grippy {
 /* pasted from holygrail09*/
 .nav-bordered > .nav-item > .nav-link.active,
 .nav-bordered > .nav-item > .nav-link.active:hover,
-.nav-bordered > .nav-item > .nav-link.active:focus { font-weight: 500; }
+.nav-bordered > .nav-item > .nav-link.active:focus {font-weight: 500;}
 .details .nav-tabs .nav-link {padding: .25rem 0.5rem;}
 .details .nav-tabs .dropdown-menu {
     border-top-left-radius: .25rem;
@@ -304,9 +309,7 @@ div.grippy {
     border-color: transparent transparent rgba(102,204,255,1.0);
 }
 .details .nav-tabs .nav-link:focus,
-.details .nav-tabs .nav-link:hover {
-    border-color: transparent transparent rgba(102,204,255,1.0);
-}
+.details .nav-tabs .nav-link:hover {border-color: transparent transparent rgba(102,204,255,1.0);}
 
 
 /*
@@ -374,15 +377,18 @@ input[type='text']:active:focus {outline: 0 !important;}
 
 /*
     TABLES
+    Must override classes vs tags because Bootstrap styles classes
 */
-/* Must override classes vs tags because Bootstrap styles classes */
-.table thead th {box-shadow: 0 -1px 0 0 rgba(0,0,0,0.1) inset;}
+.table thead th {
+    -webkit-box-shadow: 0 -1px 0 0 rgba(0,0,0,0.1) inset;
+    box-shadow: 0 -1px 0 0 rgba(0,0,0,0.1) inset;
+}
 .table tbody tr {
+    -webkit-box-shadow: 0 1px 0 0 rgba(255,255,255,0.7) inset,
+                        0 -1px 0 0 rgba(0,0,0,0.1) inset;
     box-shadow: 0 1px 0 0 rgba(255,255,255,0.7) inset,
                 0 -1px 0 0 rgba(0,0,0,0.1) inset;
     -webkit-transition: all 250ms;
-    -moz-transition: all 250ms;
-    -ms-transition: all 250ms;
     -o-transition: all 250ms;
     transition: all 250ms;
 }
@@ -398,8 +404,6 @@ input[type='text']:active:focus {outline: 0 !important;}
     -webkit-filter: drop-shadow(0 1px 1px rgba(0,0,0,0.75)) drop-shadow(0 0 8px rgba(102,204,255,0.6));
     filter: drop-shadow(0 1px 1px rgba(0,0,0,0.75)) drop-shadow(0 0 8px rgba(102,204,255,0.6));
     -webkit-transition: all 250ms;
-    -moz-transition: all 250ms;
-    -ms-transition: all 250ms;
     -o-transition: all 250ms;
     transition: all 250ms;
 }
@@ -508,8 +512,6 @@ input[type='text']:active:focus {outline: 0 !important;}
     opacity: 0.0; 
     transform: translateY(50px); 
     -webkit-transition: .5s ease opacity translateY;
-    -moz-transition: .5s ease opacity translateY;
-    -ms-transition: .5s ease opacity translateY;
     -o-transition: .5s ease opacity translateY;
     transition: .5s ease opacity translateY;
 }
@@ -519,8 +521,6 @@ input[type='text']:active:focus {outline: 0 !important;}
     opacity: 1.0;
     transform: translateY(0px); 
     -webkit-transition: .5s ease opacity translateY;
-    -moz-transition: .5s ease opacity translateY;
-    -ms-transition: .5s ease opacity translateY;
     -o-transition: .5s ease opacity translateY;
     transition: .5s ease opacity translateY;
 } */
@@ -539,6 +539,7 @@ button:active,
 button:active:focus,
 button:focus {
     outline: 0 !important;
+    -webkit-box-shadow: none;
     box-shadow: none;
 }
 
@@ -558,8 +559,6 @@ button:focus {
     overflow: visible;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-transition: color 0.7s;
-    -moz-transition: color 0.7s;
-    -ms-transition: color 0.7s;
     -o-transition: color 0.7s;
     transition: color 0.7s;
 }
@@ -598,6 +597,7 @@ button:focus {
     opacity: 0;
     background: rgba(111,148,182,0.3);
     -webkit-transform-origin: 35px 50%;
+    -ms-transform-origin: 35px 50%;
     transform-origin: 35px 50%;
 }
 .cbutton--effect-simo::after {border: 8px solid rgba(111,148,182,0.1);}
@@ -706,14 +706,14 @@ button:focus {
 .bg-FFF-55 {background-color: rgba(255,255,255,0.55);}
 .hover {
     -webkit-transition: 250ms -webkit-filter;
-    -moz-transition: 250ms -moz-filter;
-    -ms-transition: 250ms -ms-filter;
     -o-transition: 250ms -o-filter;
     transition: 250ms filter, 1s -webkit-filter;
 }
 .hover:hover {filter: brightness(110%);}
 .fa-rotate-45 {
     -ms-filter: 'progid:DXImageTransform.Microsoft.BasicImage(rotation=3)';
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
     transform: rotate(45deg);
 }
 
