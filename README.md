@@ -390,25 +390,25 @@ LAYOUT EXAMPLE : :
 ---
 
 #####TODO : :  
-* ~~Add toggle for light/dark theme~~
-* Add script for Bootstrap Toastr alerts
-* Add script for Bootstrap right click context menus
-* Documentation: 
-  * break up 
-  * revamp
-  * simplify
-  * remove value judgments
-  * justify "why use THOR over proven established solutions"
-* ~~Add CSS rule for data load detection~~
-  * Narrow loading animation scope to item clicked
-* Resizer nesting:
-  * Add CSS media query to accommodate for nested resize-parent div to preserve responsiveness.
-  * Remove nested resize-parent div
-* Fix/revamp icon menu at the top of each section. Space between and better wrapping of icons
-* Testing:
-  * Write regression testing script 
-  * Write testing script for usability
-  * Test/compare loading/rendering to similar (apples to apples) national averages
+- [X] ~~Add toggle for light/dark theme~~
+- [ ] Add script for Bootstrap Toastr alerts
+- [ ] Add script for Bootstrap right click context menus
+- [ ] Documentation: 
+  - [ ] break up 
+  - [ ] revamp
+  - [ ] simplify
+  - [ ] remove value judgments
+  - [ ] justify "why use THOR over proven established solutions"
+- [x] ~~Add CSS rule for data load detection~~
+  - [ ] Narrow loading animation scope to item clicked
+- [ ] Resizer nesting:
+  - [ ] Add CSS media query to accommodate for nested resize-parent div to preserve responsiveness.
+  - [ ] Remove nested resize-parent div
+- [ ] Fix/revamp icon menu at the top of each section. Space between and better wrapping of icons
+- [ ] Testing:
+  - [ ] Write regression testing script 
+  - [ ] Write testing script for usability
+  - [ ] Test/compare loading/rendering to similar (apples to apples) national averages
 
 ---
 
@@ -516,7 +516,7 @@ A new, better, faster way to do web development.
 ---
 
 #####DEVELOPMENT LAYERS : :  
-Front-End (FE)  
+Front-End (FE)
 * Front-Front-End (FFE) - HTML/CSS/JS - what end-users actually see on the screen
 * Front-Back-End (FBE) - Vue.js - hooks services and or data into the FFE
 Back-End (BE)  
