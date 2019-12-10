@@ -17,7 +17,7 @@
 @font-face {
     font-family: 'bankgothic-medium';
     src: url('fonts/bankgothic_md_bt_medium.eot'); /* IE9 */
-    src: url('fonts/bankgothic_md_bt_medium.eot?#iefix') format('embedded-opentype'); /* IE6-IE8 */
+    src: url('fonts/bankgothic_md_bt_medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
     url('fonts/bankgothic_md_bt_medium.woff') format('woff'), /* modern browsers */
     url('fonts/bankgothic_md_bt_medium.ttf') format('truetype'); /* Safari, Android, iOS */
     font-weight: normal;
