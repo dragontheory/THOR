@@ -24,7 +24,7 @@ Total 3976ms
 ---
 
 ##THOR is : :
-* [A professional Front-end HTML/CSS Framework](#professional) for search and triage UI requirements
+* A [professional Front-end HTML/CSS Framework](#professional) for search and triage UI requirements
 * [Master/detail](#master) workflow
 * [Holy Grail](#holy) layout
 * [Reactive CSS](#reactive) (no JS framework necessary)
@@ -35,7 +35,7 @@ Total 3976ms
 * [Angular and Vue.js integrations](#integrations) coming soon.
 * [User configurable](#configurable) 
 ---
-### <a id="professional">Professional Front-end HTML/CSS Framework</a>
+#### <a id="professional"></a>Professional Front-end HTML/CSS Framework
 A professional front-end template for building fast, robust, and adaptable web applications and web sites.  
 Fast Triage Workflow UX
 A better way for users and developers.
@@ -97,9 +97,9 @@ To save time and money by reducing duplicative, redundant (unnecessary), rework 
 
 To establish a clear, easy, and independent (separation fo concerns) update/upgrade path (SOP) front-end (FE) tech stack to avoid deprecation and security vulnerabilities and allow for efficient web integration.
 
-To create a web interface that is uper lightweight load and fast loading with minimal markup. **50%** reduction of HTML/CSS/JS client-side customer facing markup.
+To create a web interface that is lightweight load and fast loading with minimal markup. **50%** reduction of HTML/CSS/JS client-side customer facing markup.
 
-**NEW GUI PARADIGM **95%** of the scaffolding layout markup is loaded on first load, waithing off-canvas to be loaded when a component with the correct CSS selectoris load.
+**NEW GUI PARADIGM **95%** of the scaffolding layout markup is loaded on first load, waiting off-canvas to be loaded when a component with the correct CSS selector is loaded.
 
 To allow for developers to more easily absorb the cost of management (or whomever) changing course midstream.
 
