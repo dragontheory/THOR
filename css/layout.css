@@ -1,11 +1,13 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
+
 /*
     LAYOUT
-
-    In order of appearance.
-    Panels are closed by default. 
-    Adding show-* to <body> opens each panel.
-    HOME is 100% width.
-    Panels push their way onto the screen from the right.
+    * In order of appearance.
+    * Panels are closed by default.
+    * Adding show-* to <body> opens each panel.
+    * HOME is 100% width.
+    * Panels push their way onto the screen from the right.
+    * Auto-prefixer = Global coverage: 91.8%
 */
 
 
@@ -16,8 +18,6 @@
     width: 300px;
     margin-right: 20px;
     -webkit-transition: width 400ms ease;
-    -moz-transition: width 400ms ease;
-    -ms-transition: width 400ms ease;
     -o-transition: width 400ms ease;
     transition: width 400ms ease;
 }
@@ -36,19 +36,17 @@
 
 /*
 	HOME
+	Toggle collapsed .home from page-header controls
 */
-/* Toggle collapsed .home from page-header controls */
 .home {
-    -webkit-flex: 0 0 auto;
     -ms-flex: 0 0 auto;
+    -webkit-box-flex: 0;
     flex: 0 0 auto;
     width: 250px;
     margin-left: -250px;
     /* min-height IE11 fix */
     min-height: 1px;
     -webkit-transition: width 750ms ease, margin-left 250ms ease-in-out;
-    -moz-transition: width 750ms ease, margin-left 250ms ease-in-out;
-    -ms-transition: width 750ms ease, margin-left 250ms ease-in-out;
     -o-transition: width 750ms ease, margin-left 250ms ease-in-out;
     transition: width 750ms ease, margin-left 250ms ease-in-out;
 }
@@ -63,19 +61,17 @@
 
 /*
 	FILTER
+	Offscreen by default
 */
-/* Offscreen by default */
 .filter  {
-    -webkit-flex: 0 0 auto;
     -ms-flex: 0 0 auto;
+    -webkit-box-flex: 0;
     flex: 0 0 auto;
     /* Varies on logo width TODO: find adaptive solution */
     width: 0;
     /* min-height IE11 fix */
     min-height: 1px;
     -webkit-transition: width 250ms ease;
-    -moz-transition: width 250ms ease;
-    -ms-transition: width 250ms ease;
     -o-transition: width 250ms ease;
     transition: width 250ms ease;
 }
@@ -85,11 +81,11 @@
 
 /*
 	RESULTS
+	Offscreen by default
 */
-/* Offscreen by default */
 .results {
-    -webkit-flex: 1 1 auto;
     -ms-flex: 1 1 auto;
+    -webkit-box-flex: 1;
     flex: 1 1 auto;
     width: 0;
     /* max-width from Rick Strahl's support.west.wind.com F12 source code 2019.11.03 */
@@ -99,8 +95,6 @@
     min-height: 1px;
     /* resize: horizontal; */
     -webkit-transition: width 550ms ease;
-    -moz-transition: width 550ms ease;
-    -ms-transition: width 550ms ease;
     -o-transition: width 550ms ease;
     transition: width 550ms ease;
 }
@@ -111,7 +105,7 @@
 /*
     LOADING DATA
 
-    BUTTON LOADING VISUAL QUE - proof of concept (WIP) 
+    BUTTON LOADING VISUAL QUE - proof of concept (WIP)
     Objective: Show LOADING only between when end-user clicks item and PROFILE slides in.
     Next step: Narrow LOADING to appear only on clicked element (focus or active?).
 */
@@ -123,10 +117,8 @@
     opacity: 0.0;
     pointer-events: none;
     -webkit-transition: opacity 250ms ease;
-    -moz-transition: opacity 250ms ease;
-    -ms-transition: opacity 250ms ease;
     -o-transition: opacity 250ms ease;
-    transition: opacity 250ms;
+    transition: opacity 250ms ease;
 }
 /* Except when .loaded is added to <body> */
 .show-profile .results .toggle-profile::after {opacity: 1.0;}
@@ -134,30 +126,28 @@
 
 /*
 	SPLITTER
+	Offscreen by default
 */
-/* Offscreen by default */
 .splitter {
     -webkit-transition: all 250ms ease;
-    -moz-transition: all 250ms ease;
-    -ms-transition: all 250ms ease;
     -o-transition: all 250ms ease;
     transition: all 250ms ease;
 }
 /* Add .show-profile to <body> to open */
 .show-profile .splitter {
-    -webkit-flex: 0 0 10px;
     /* flex-basis px for IE11 */
-    -ms-flex: 0 0 10px; 
-    /* Originally 0 0 10px from Rick Strahl's support.west.wind.com F12 source code 2019.11.03 */    
-    flex: 0 0 10px; 
+    -ms-flex: 0 0 10px;
+    /* Originally 0 0 10px from Rick Strahl's support.west.wind.com F12 source code 2019.11.03 */
+    -webkit-box-flex: 0;
+    flex: 0 0 10px;
     /* Use width rather than flex-basis. Compatible with IE and smoother transitions */
-    width: 10px; 
+    width: 10px;
 }
 .gutter-horizontal {
     background-repeat: no-repeat;
     background-position: 50%;
-    -webkit-flex: 0 0 10px;
-    -ms-flex: 0 0 10px; 
+    -ms-flex: 0 0 10px;
+    -webkit-box-flex: 0;
     flex: 0 0 10px;
 }
 /*.gutter::after {
@@ -175,11 +165,11 @@
 
 /*
 	PROFILE
+	Offscreen by default
 */
-/* Offscreen by default */
 .profile {
-    -webkit-flex: 0 0 auto;
     -ms-flex: 0 0 auto;
+    -webkit-box-flex: 0;
     flex: 0 0 auto;
     height: 100%;
     width: 50%;
@@ -188,39 +178,32 @@
     /* min-height IE11 fix */
     min-height: 1px;
     -webkit-transition: margin-right 550ms ease;
-    -moz-transition: margin-right 550ms ease;
-    -ms-transition: margin-right 550ms ease;
     -o-transition: margin-right 550ms ease;
     transition: margin-right 550ms ease;
 }
 /* Add .show-results and .show-profile and .loaded to <body> to open */
-.show-results.show-profile.loaded .profile {
-    margin-right: 0;
-}
+.show-results.show-profile.loaded .profile {margin-right: 0;}
 /* Add .show-results and .show-profile and .loaded to <body> to open */
 .show-results.show-profile.loaded .results {margin-right: 0;}
 
 
 /*
 	DETAILS
+	Offscreen by default
 */
-/* Offscreen by default */
 .details {
-    -webkit-flex: 0 0 auto;
     -ms-flex: 0 0 auto;
+    -webkit-box-flex: 0;
     flex: 0 0 auto;
     height: 100%;
     width: 300px;
     margin-right: -300px;
     -webkit-transition: margin-right 250ms ease;
-    -moz-transition: margin-right 250ms ease;
-    -ms-transition: margin-right 250ms ease;
     -o-transition: margin-right 250ms ease;
     transition: margin-right 250ms ease;
 }
 /* Add .show-results and .show-profile and .show-details and .loaded to <body> to open */
 .show-results.show-profile.show-details .details {margin-right: 0;}
-
 .simplebar-scrollbar {width: 5px;}
 .simplebar-scrollbar::before {
     background: rgba(102,175,233,0.5);
@@ -234,6 +217,8 @@
     Immediate child of .d-flex element
 */
 .flex-item {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
     flex: 1;
     overflow: hidden;
 }
