@@ -23,12 +23,6 @@
     font-weight: normal;
     font-style: normal;
 }
-.font-agencyfb-regular {
-    font-family: 'agencyfb-regular', Calibri, sans-serif;
-}
-.font-agencyfb-bold {
-    font-family: 'agencyfb-bold', Calibri, sans-serif;
-}
-.font-agencyfb-medium {
-    font-family: 'agencyfb-medium', Calibri, sans-serif;
-}
+.font-agencyfb-regular {font-family: 'agencyfb-regular', Calibri, sans-serif;}
+.font-agencyfb-bold {font-family: 'agencyfb-bold', Calibri, sans-serif;}
+.font-bankgothic-medium {font-family: 'bankgothic-medium', Calibri, sans-serif;}
