@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'agencyfb-regular';
     src: url('fonts/AGENCYR.eot'); /* IE9 */
-    src: url('fonts/AGENCYR.eot?#iefix') format('embedded-opentype'); /* IE6-IE8 */
+    src: url('fonts/AGENCYR.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
     url('fonts/AGENCYR.TTF') format('truetype'); /* Safari, Android, iOS */
     font-weight: normal;
     font-style: normal;
@@ -9,7 +9,7 @@
 @font-face {
     font-family: 'agencyfb-bold';
     src: url('fonts/AGENCYB.eot'); /* IE9 */
-    src: url('fonts/AGENCYB.eot?#iefix') format('embedded-opentype'); /* IE6-IE8 */
+    src: url('fonts/AGENCYB.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
     url('fonts/AGENCYB.TTF') format('truetype'); /* Safari, Android, iOS */
     font-weight: normal;
     font-style: normal;
