@@ -42,6 +42,9 @@ $('.profile').resizable({
 $('.open-profile').click(function(){
     $('body').addClass('show-profile loaded');
     $('body').removeClass('show-details');
+    $('.results').removeClass('fullscreen');
+    $('.profile').removeClass('fullscreen');
+    $('.details').removeClass('fullscreen');
 });
 
 // open PROFILE (in RESULTS table)
