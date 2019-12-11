@@ -1,5 +1,4 @@
-/*
-    DARK THEME
+/*  DARK THEME
 */
 body {
     background-color: rgba(37,40,48,1.0); /* #252830 */
@@ -10,14 +9,12 @@ a:hover {color: rgba(102,204,255,1.0);}
 .section-header {color: rgba(255,255,255,1.0);}
 
 
-/*
-    CONTENT EDITABLE
+/*  CONTENT EDITABLE
 */
 [contenteditable='true']:hover {background-color: rgba(102,204,255,0.05);}
 
 
-/*
-    PAGE HEADER/FOOTER and ADVANCED SEARCH PANEL
+/*  PAGE HEADER/FOOTER and ADVANCED SEARCH PANEL
 */
 .page-header,
 .page-footer {background-color: rgba(255,255,255,0.03);}
@@ -37,15 +34,13 @@ a:hover {color: rgba(102,204,255,1.0);}
 }
 
 
-/*
-    HOME
+/*  HOME
 */
 .home {box-shadow: 1px 0 0 0 rgba(0,0,0,0.5) inset, -1px 0 0 0 rgba(255,255,255,0.05) inset;}
 .home .card {background-color: rgba(0,0,0,0.05);}
 
 
-/*
-    FILTER
+/*  FILTER
 */
 .filter {box-shadow: 1px 0 0 0 rgba(0,0,0,0.5) inset, -1px 0 0 0 rgba(255,255,255,0.05) inset;}
 .filter .panel-body {background-color: rgba(0,0,0,0.1);}
@@ -54,27 +49,23 @@ a:hover {color: rgba(102,204,255,1.0);}
 .filter .panel-body .list-group .list-group-item:hover{background-color: rgba(102,204,255,0.05);}
 
 
-/*
-	RESULTS
+/*  RESULTS
 */
 .results {box-shadow: 1px 0 0 0 rgba(0,0,0,0.5) inset, -1px 0 0 0 rgba(255,255,255,0.05) inset;}
 
 
-/*
-	SPLITTER
+/*  SPLITTER
 */
 .splitter {box-shadow: 1px 0 0 0 rgba(0,0,0,0.5) inset, -1px 0 0 0 rgba(255,255,255,0.05) inset;}
 
 
-/*
-	PROFILE
+/*  PROFILE
 */
 .profile {box-shadow: 1px 0 0 0 rgba(0,0,0,0.5) inset, -1px 0 0 0 rgba(255,255,255,0.05) inset;}
 .profile .accordion-toggle:hover {background-color: rgba(102,204,255,0.05);}
 
 
-/*
-	DETAILS
+/*  DETAILS
 */
 .details {box-shadow: 1px 0 0 0 rgba(0,0,0,0.5) inset, -1px 0 0 0 rgba(255,255,255,0.05) inset;}
 .details .flex-item {background-color: rgba(0,0,0,0.05);}
@@ -96,16 +87,14 @@ a:hover {color: rgba(102,204,255,1.0);}
 }
 
 
-/*
-	FULLSCREEN
+/*  FULLSCREEN
 */
 .results.fullscreen,
 .profile.fullscreen,
 .details.fullscreen {background-color: rgba(32,34,40,1.0);}
 
 
-/*
-	TABLES
+/*  TABLES
 */
 .table {color: #A5C4CF;}
 .table tbody tr.selected,
@@ -120,8 +109,7 @@ a:hover {color: rgba(102,204,255,1.0);}
 }
 
 
-/*
-	BUTTONS
+/*  BUTTONS
 */
 .btn-outline-primary:not(:disabled):not(.disabled) {
     background-color: rgba(102,175,233,0.1);
@@ -159,8 +147,7 @@ a:hover {color: rgba(102,204,255,1.0);}
 }
 
 
-/*
-	FORMS
+/*  FORMS
 */
 .form-control {
     background-color: rgba(37,40,48,1.0);
@@ -179,14 +166,12 @@ a:hover {color: rgba(102,204,255,1.0);}
 }
 
 
-/*
-	CARDS
+/*  CARDS
 */
 .card {background-color: rgba(0,0,0,0.125);}
 
 
-/*
-	UTILITIES
+/*  UTILITIES
 */
 .glow {
     -webkit-transition: all 250ms;
@@ -203,8 +188,7 @@ a:hover {color: rgba(102,204,255,1.0);}
 }
 
 
-/*
-	SWITCHES
+/*  SWITCHES
 */
 .custom-switch .custom-control-label::before,
 .custom-switch .custom-control-label::after {
@@ -233,8 +217,7 @@ a:hover {color: rgba(102,204,255,1.0);}
 }
 
 
-/*
-	DROPDOWN-MENU
+/*  DROPDOWN-MENU
 */
 .dropdown-menu {
     color: rgba(255,255,255,0.4);
@@ -275,6 +258,5 @@ a:hover {color: rgba(102,204,255,1.0);}
 }
 
 
-/*
-	BADGES
+/*  BADGES
 */

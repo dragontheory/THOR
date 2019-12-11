@@ -1,7 +1,6 @@
 /* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
 
-/*
-    LAYOUT
+/*  LAYOUT
     * In order of appearance.
     * Panels are closed by default.
     * Adding show-* to <body> opens each panel.
@@ -11,8 +10,7 @@
 */
 
 
-/*
-    PAGE HEADER SEARCH FORM
+/*  PAGE HEADER SEARCH FORM
 */
 .global-search-form {
     width: 300px;
@@ -24,8 +22,7 @@
 .global-search-form.open {width: 400px;}
 
 
-/*
-    PAGE HEADER ADVANCED SEARCH PANEL
+/*  PAGE HEADER ADVANCED SEARCH PANEL
 */
 .advanced-search-panel {
     min-width: 800px;
@@ -34,8 +31,7 @@
 }
 
 
-/*
-	HOME
+/*  HOME
 	Toggle collapsed .home from page-header controls
 */
 .home {
@@ -59,8 +55,7 @@
 .show-home.show-results .home {width: 250px;}
 
 
-/*
-	FILTER
+/*  FILTER
 	Offscreen by default
 */
 .filter  {
@@ -79,8 +74,7 @@
 .show-filter .filter {width: 250px;}
 
 
-/*
-	RESULTS
+/*  RESULTS
 	Offscreen by default
 */
 .results {
@@ -102,14 +96,12 @@
 .show-results .results {width: 100%;}
 
 
-/*
-    LOADING DATA
-
-    BUTTON LOADING VISUAL QUE - proof of concept (WIP)
-    Objective: Show LOADING only between when end-user clicks item and PROFILE slides in.
-    Next step: Narrow LOADING to appear only on clicked element (focus or active?).
+/*  LOADING DATA
+    * BUTTON LOADING VISUAL QUE - proof of concept (WIP)
+    * Objective: Show LOADING only between when end-user clicks item and PROFILE slides in.
+    * Next step: Narrow LOADING to appear only on clicked element (focus or active?).
+    * Turn off LOADING by default
 */
-/* Turn off LOADING by default */
 .show-profile.loaded .results .toggle-profile::after,
 .results .toggle-profile::after {
     content:'LOADING';
@@ -124,8 +116,7 @@
 .show-profile .results .toggle-profile::after {opacity: 1.0;}
 
 
-/*
-	SPLITTER
+/*  SPLITTER
 	Offscreen by default
 */
 .splitter {
@@ -163,8 +154,7 @@
 }*/
 
 
-/*
-	PROFILE
+/*  PROFILE
 	Offscreen by default
 */
 .profile {
@@ -187,8 +177,7 @@
 .show-results.show-profile.loaded .results {margin-right: 0;}
 
 
-/*
-	DETAILS
+/*  DETAILS
 	Offscreen by default
 */
 .details {
@@ -212,8 +201,7 @@
 .details .list-group-item {width: 100%;}
 
 
-/*
-    FLEX-ITEM
+/*  FLEX-ITEM
     Immediate child of .d-flex element
 */
 .flex-item {
@@ -224,8 +212,7 @@
 }
 
 
-/*
-	FULLSCREEN
+/*  FULLSCREEN
 */
 .fullscreen {
     overflow: hidden;
