@@ -1,20 +1,20 @@
-// toggle HOME (button in page-header)
+// Toggle HOME (button in page-header)
 $('.toggle-home').click(function(){
     $('body').toggleClass('show-home');
 });
 
-// toggle FILTER (button in page-header)
+// Toggle FILTER (button in page-header)
 $('.toggle-filter').click(function(){
     $('body').toggleClass('show-filter');
 });
 
-// toggle FILTER and RESULTS (button in .home)
+// Toggle FILTER and RESULTS (button in .home)
 $('.toggle-filter-results').click(function(){
     $('body').toggleClass('show-filter show-results loaded');
     $('body').removeClass('show-profile show-details loaded');
 });
 
-// resizer
+// Resizer
 // https://github.com/RickStrahl/jquery-resizable
 $('.profile').resizable({
     // optional selector for handle that starts dragging
@@ -38,7 +38,7 @@ $('.profile').resizable({
     touchActionNone: true
 });
 
-//open PROFILE
+//Open PROFILE
 $('.open-profile').click(function(){
     $('body').addClass('show-profile loaded');
     $('body').removeClass('show-details');
@@ -47,7 +47,7 @@ $('.open-profile').click(function(){
     $('.details').removeClass('fullscreen');
 });
 
-// open PROFILE (in RESULTS table)
+// Open PROFILE (in RESULTS table)
 $('.results table tbody tr .open-profile').click(function(){
     // remove classes from rows
     $('.results table tbody tr').removeClass('selected');
@@ -58,7 +58,7 @@ $('.results table tbody tr .open-profile').click(function(){
     $('body').removeClass('show-details');
 });
 
-// close PROFILE
+// Close PROFILE
 $('.close-profile').click(function(){
     $('body').removeClass('show-profile show-details loaded');
     // remove highlight from selected row
@@ -70,34 +70,34 @@ $('.close-profile').click(function(){
     $('.results').removeAttr('style');
 });
 
-// open DETAILS
+// Open DETAILS
 $('.open-details').click(function(){
     $('body').addClass('show-details');
 });
 
-// close DETAILS
+// Close DETAILS
 $('.close-details').click(function(){
     $('body').removeClass('show-details');
     $('body').removeClass('fullscreen');
 });
 
-// toggle light/dark themes
+// Toggle light/dark themes
 $('.toggle-lights').click(function(){
     // hash is required to work vs class
     $('#lightsOut').prop('disabled', function(i, v) { return !v; });
 });
 
-// toggle RESULTS fullscreen
+// Toggle RESULTS fullscreen
 $('.toggle-results-fullscreen').click(function(){
     $('.results').toggleClass('fullscreen');
 });
 
-// toggle PROFILE fullscreen
+// Toggle PROFILE fullscreen
 $('.toggle-profile-fullscreen').click(function(){
     $('.profile').toggleClass('fullscreen');
 });
 
-// toggle DETAILS fullscreen
+// Toggle DETAILS fullscreen
 $('.toggle-details-fullscreen').click(function(){
     $('.details').toggleClass('fullscreen');
 });
@@ -120,7 +120,7 @@ $(document).keyup(function(event){
     }
 });*/
 
-// global search box expand/collapse
+// Global search box expand/collapse
 jQuery(document).on('click', '.global-search-form', function(e) {
     $(this).addClass('open');
     $(this).find('.form-control').focus();
@@ -130,12 +130,12 @@ jQuery(document).on('click', '.global-search-form', function(e) {
     });
 });
 
-// handle mega menu click
+// Mega menu click
 jQuery(document).on('click', '.hold-on-click', function(e) {
     e.stopPropagation()
 });
 
-// handle tooltips
+// Tooltips
 $(function () {
     $('[data-toggle="tooltip"]').tooltip()
 });
@@ -167,7 +167,7 @@ let trans = () => {
     }, 1000)
 };
 
-// handle double clicking splitter to close
+// Double clicking splitter to close
 let splitterTappedTwice = false;
 function toggleProfile(e) {
 
