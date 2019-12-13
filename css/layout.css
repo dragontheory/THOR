@@ -1,5 +1,3 @@
-/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
-
 /*  LAYOUT
     * In order of appearance.
     * Panels are closed by default.
@@ -28,6 +26,9 @@
     min-width: 800px;
     margin: 15px 0 0;
     padding: 20px 10px;
+   -webkit-box-shadow: 5px 5px rgba(0,0,0,0.1);
+   box-shadow: 5px 5px rgba(0,0,0,0.1);
+   /* background-color: #2A2C32 */
 }
 
 
@@ -78,8 +79,8 @@
     Offscreen by default
 */
 .results {
-    -ms-flex: 1 1 auto;
     -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
     flex: 1 1 auto;
     width: 0;
     /* max-width from Rick Strahl's support.west.wind.com F12 source code 2019.11.03 */
@@ -102,35 +103,33 @@
     * Next step: Narrow LOADING to appear only on clicked element (focus or active?).
     * Turn off LOADING by default
 */
-/*  Open PROFILE loading animation (existing record) 
+/*  Open PROFILE loading animation (existing profile) 
     Except when .loaded is added to <body>
 */
-.show-profile.loaded .results .open-profile::after,
-.results .open-profile::after {
-    content:'LOADING Exising Record';
+.show-profile.loading .results .open-profile::after {
+    content:'LOADING Existing Profile';
     position: absolute;
-    opacity: 0.0;
+    opacity: 1.0;
     pointer-events: none;
     -webkit-transition: opacity 250ms ease;
     -o-transition: opacity 250ms ease;
     transition: opacity 250ms ease;
 }
-.show-profile .results .toggle-profile::after {opacity: 1.0;}
+.show-profile.loading.loaded .results .open-profile::after {opacity: 0.0;}
 
-/*  Open PROFILE loading animation (new record)
+/*  Open PROFILE loading animation (new profile)
     Except when .loaded is added to <body>
 */
-.show-profile.loaded .results .open-profile::after,
-.results .open-profile::after {
-    content:'LOADING Exising Record';
+.show-profile.loading-new-profile .results .open-new-profile::after {
+    content:'LOADING New Profile';
     position: absolute;
-    opacity: 0.0;
+    opacity: 1.0;
     pointer-events: none;
     -webkit-transition: opacity 250ms ease;
     -o-transition: opacity 250ms ease;
     transition: opacity 250ms ease;
 }
-.show-profile .results .toggle-profile::after {opacity: 1.0;}
+.show-profile.loading-new-profile.loaded .results .open-new-profile::after {opacity: 0.0;}
 
 
 /*  SPLITTER
