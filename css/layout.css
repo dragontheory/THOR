@@ -32,7 +32,7 @@
 
 
 /*  HOME
-	Toggle collapsed .home from page-header controls
+    Toggle collapsed .home from page-header controls
 */
 .home {
     -ms-flex: 0 0 auto;
@@ -56,7 +56,7 @@
 
 
 /*  FILTER
-	Offscreen by default
+    Offscreen by default
 */
 .filter  {
     -ms-flex: 0 0 auto;
@@ -75,7 +75,7 @@
 
 
 /*  RESULTS
-	Offscreen by default
+    Offscreen by default
 */
 .results {
     -ms-flex: 1 1 auto;
@@ -102,9 +102,12 @@
     * Next step: Narrow LOADING to appear only on clicked element (focus or active?).
     * Turn off LOADING by default
 */
-.show-profile.loaded .results .toggle-profile::after,
-.results .toggle-profile::after {
-    content:'LOADING';
+/*  Open PROFILE loading animation (existing record) 
+    Except when .loaded is added to <body>
+*/
+.show-profile.loaded .results .open-profile::after,
+.results .open-profile::after {
+    content:'LOADING Exising Record';
     position: absolute;
     opacity: 0.0;
     pointer-events: none;
@@ -112,12 +115,26 @@
     -o-transition: opacity 250ms ease;
     transition: opacity 250ms ease;
 }
-/* Except when .loaded is added to <body> */
+.show-profile .results .toggle-profile::after {opacity: 1.0;}
+
+/*  Open PROFILE loading animation (new record)
+    Except when .loaded is added to <body>
+*/
+.show-profile.loaded .results .open-profile::after,
+.results .open-profile::after {
+    content:'LOADING Exising Record';
+    position: absolute;
+    opacity: 0.0;
+    pointer-events: none;
+    -webkit-transition: opacity 250ms ease;
+    -o-transition: opacity 250ms ease;
+    transition: opacity 250ms ease;
+}
 .show-profile .results .toggle-profile::after {opacity: 1.0;}
 
 
 /*  SPLITTER
-	Offscreen by default
+    Offscreen by default
 */
 .splitter {
     -webkit-transition: all 250ms ease;
@@ -155,7 +172,7 @@
 
 
 /*  PROFILE
-	Offscreen by default
+    Offsreen by default
 */
 .profile {
     -ms-flex: 0 0 auto;
@@ -178,7 +195,7 @@
 
 
 /*  DETAILS
-	Offscreen by default
+    Offscreen by default
 */
 .details {
     -ms-flex: 0 0 auto;
