@@ -103,7 +103,7 @@
     * Next step: Narrow LOADING to appear only on clicked element (focus or active?).
     * Turn off LOADING by default
 */
-/*  Open PROFILE loading animation (existing profile) 
+/*  Open PROFILE loading animation (existing) 
     Except when .loaded is added to <body>
 */
 .show-profile.loading .results .open-profile::after {
@@ -120,7 +120,7 @@
 /*  Open PROFILE loading animation (new profile)
     Except when .loaded is added to <body>
 */
-.show-profile.loading-new-profile .results .open-new-profile::after {
+.show-profile.loading-new .results .open-new::after {
     content:'LOADING New Profile';
     position: absolute;
     opacity: 1.0;
@@ -129,7 +129,7 @@
     -o-transition: opacity 250ms ease;
     transition: opacity 250ms ease;
 }
-.show-profile.loading-new-profile.loaded .results .open-new-profile::after {opacity: 0.0;}
+.show-profile.loading-new.loaded .results .open-new::after {opacity: 0.0;}
 
 
 /*  SPLITTER
