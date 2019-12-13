@@ -50,7 +50,7 @@ $('.open-profile').click(function(){
 });
 
 //  Open PROFILE (new)
-$('.open-profile-new').click(function(){
+$('.open-new').click(function(){
     $('body').addClass('show-profile loading-new');
     $('body').removeClass('show-details');
     $('.results').removeClass('fullscreen');
@@ -72,7 +72,7 @@ $('.results table tbody tr .open-profile').click(function(){
     $('.details').removeClass('fullscreen');
 });
 
-// Close PROFILE
+// Close PROFILE (existing)
 $('.close-profile').click(function(){
     $('body').removeClass('show-profile show-details loaded');
     // Remove highlight from selected row
