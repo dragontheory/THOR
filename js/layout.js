@@ -17,28 +17,30 @@ $('.toggle-filter-results').click(function(){
 // Resizer
 // https://github.com/RickStrahl/jquery-resizable
 $('.profile').resizable({
-    // optional selector for handle that starts dragging
+    // Optional selector for handle that starts dragging
     handleSelector: '.splitter',
-    // resize the width
+    // Resize the width
     resizeWidth: true,
-    // resize the height
+    // Resize the height
     resizeHeight: false,
-    // the side that the width resizing is relative to
+    // The side that the width resizing is relative to
     resizeWidthFrom: 'left',
-    // the side that the height resizing is relative to
+    // The side that the height resizing is relative to
     resizeHeightFrom: 'bottom',
-    // hook into start drag operation (event,$el,opt passed - return false to abort drag)
+    // Hook into start drag operation (event,$el,opt passed - return false to abort drag)
     onDragStart: null,
-    // hook into stop drag operation (event,$el,opt passed)
+    // Hook into stop drag operation (event,$el,opt passed)
     onDragEnd: null,
-    // hook into each drag operation (event,$el,opt passed)
+    // Hook into each drag operation (event,$el,opt passed)
     onDrag: null,
-    // disable touch-action on the $handle
-    // prevents browser level actions like forward back gestures
+    // Disable touch-action on the $handle
+    // Prevents browser level actions like forward back gestures
     touchActionNone: true
 });
 
-//Open PROFILE
+//  Open PROFILE
+//  Adding .show-profile to <body> enables loading animation
+//  Adding .loaded to <body> disables loading animation
 $('.open-profile').click(function(){
     $('body').addClass('show-profile loaded');
     $('body').removeClass('show-details');
@@ -47,26 +49,38 @@ $('.open-profile').click(function(){
     $('.details').removeClass('fullscreen');
 });
 
+//  Open PROFILE (new record)
+$('.open-profile-new-record').click(function(){
+    $('body').addClass('show-profile loading-new-record');
+    $('body').removeClass('show-details');
+    $('.results').removeClass('fullscreen');
+    $('.profile').removeClass('fullscreen');
+    $('.details').removeClass('fullscreen');
+});
+
 // Open PROFILE (in RESULTS table)
 $('.results table tbody tr .open-profile').click(function(){
-    // remove classes from rows
+    // Remove classes from rows
     $('.results table tbody tr').removeClass('selected');
-    // open PROFILE
+    // Open PROFILE
     $('body').addClass('show-profile loaded');
-    // highlight selected row
+    // Highlight selected row
     $(this).closest('tr').addClass('selected');
     $('body').removeClass('show-details');
+    $('.results').removeClass('fullscreen');
+    $('.profile').removeClass('fullscreen');
+    $('.details').removeClass('fullscreen');
 });
 
 // Close PROFILE
 $('.close-profile').click(function(){
     $('body').removeClass('show-profile show-details loaded');
-    // remove highlight from selected row
+    // Remove highlight from selected row
     $('.results table tbody tr').removeClass('selected');
     $('.profile').removeClass('fullscreen');
-    // remove inline style width put there dynamically by resizer
+    // Remove inline style width put there dynamically by resizer
     $('.profile').removeAttr('style');
-    // remove inline style width put there dynamically by resizer
+    // Remove inline style width put there dynamically by resizer
     $('.results').removeAttr('style');
 });
 
@@ -78,12 +92,12 @@ $('.open-details').click(function(){
 // Close DETAILS
 $('.close-details').click(function(){
     $('body').removeClass('show-details');
-    $('body').removeClass('fullscreen');
+    $('.details').removeClass('fullscreen');
 });
 
 // Toggle light/dark themes
 $('.toggle-lights').click(function(){
-    // hash is required to work vs class
+    // Hash is required to work vs class
     $('#lightsOut').prop('disabled', function(i, v) { return !v; });
 });
 
@@ -146,17 +160,17 @@ $('textarea.resizable:not(.processed)').TextAreaResizer()
 $('iframe.resizable:not(.processed)').TextAreaResizer();
 });*/
 
-// handle dynamic user name
+// Dynamic user name
 
-// handle theme SWITCH
+// Theme SWITCH
 let checkbox = document.querySelector('input[name=mode]');
 checkbox.addEventListener('change', function() {
     if(this.checked) {
         trans();
-        document.documentElement.setAttribute('data-theme', 'dark')
+        document.documentElement.setAttribute('data-theme', 'dark');
     } else {
         trans();
-        document.documentElement.setAttribute('data-theme', 'light')
+        document.documentElement.setAttribute('data-theme', 'light');
     }
 });
 
@@ -171,7 +185,7 @@ let trans = () => {
 let splitterTappedTwice = false;
 function toggleProfile(e) {
 
-    // handle double tap
+    // Double tap
     if (e.type === 'touchend' && !splitterTappedTwice) {
         splitterTappedTwice = true;
         setTimeout(function () { splitterTappedTwice = false; }, 300);
