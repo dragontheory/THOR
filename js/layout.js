@@ -72,9 +72,9 @@ $('.results table tbody tr .open-profile').click(function(){
     $('.details').removeClass('fullscreen');
 });
 
-// Close PROFILE (existing)
+// Close PROFILE
 $('.close-profile').click(function(){
-    $('body').removeClass('show-profile show-details loaded');
+    $('body').removeClass('show-profile show-details loading-new loading loaded');
     // Remove highlight from selected row
     $('.results table tbody tr').removeClass('selected');
     $('.profile').removeClass('fullscreen');
