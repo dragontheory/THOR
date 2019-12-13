@@ -49,9 +49,9 @@ $('.open-profile').click(function(){
     $('.details').removeClass('fullscreen');
 });
 
-//  Open PROFILE (new record)
-$('.open-profile-new-record').click(function(){
-    $('body').addClass('show-profile loading-new-record');
+//  Open PROFILE (new)
+$('.open-profile-new').click(function(){
+    $('body').addClass('show-profile loading-new');
     $('body').removeClass('show-details');
     $('.results').removeClass('fullscreen');
     $('.profile').removeClass('fullscreen');
