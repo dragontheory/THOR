@@ -106,7 +106,7 @@
 /*  Open PROFILE loading animation (existing) 
     Except when .loaded is added to <body>
 */
-.show-profile.loading .results .open-profile::after {
+.show-profile.loading .results table tbody tr.selected .open-profile::after {
     content:'LOADING Existing Profile';
     position: absolute;
     opacity: 1.0;
@@ -115,7 +115,7 @@
     -o-transition: opacity 250ms ease;
     transition: opacity 250ms ease;
 }
-.show-profile.loading.loaded .results .open-profile::after {opacity: 0.0;}
+.show-profile.loading.loaded .results table tbody tr.selected .open-profile::after {opacity: 0.0;}
 
 /*  Open PROFILE loading animation (new profile)
     Except when .loaded is added to <body>
@@ -140,8 +140,8 @@
     -o-transition: all 250ms ease;
     transition: all 250ms ease;
 }
-/* Add .show-profile to <body> to open */
-.show-profile .splitter {
+.show-profile.loading-new.loaded .splitter,
+.show-profile.loading.loaded .splitter {
     /* flex-basis px for IE11 */
     -ms-flex: 0 0 10px;
     /* Originally 0 0 10px from Rick Strahl's support.west.wind.com F12 source code 2019.11.03 */
@@ -171,7 +171,7 @@
 
 
 /*  PROFILE
-    Offsreen by default
+    Offscreen by default
 */
 .profile {
     -ms-flex: 0 0 auto;
