@@ -42,7 +42,7 @@ $('.profile').resizable({
 //  Adding .show-profile to <body> enables loading animation
 //  Adding .loaded to <body> disables loading animation
 $('.open-profile').click(function(){
-    $('body').addClass('show-profile loaded');
+    $('body').addClass('show-profile loading loaded'); // add loaded to open
     $('body').removeClass('show-details');
     $('.results').removeClass('fullscreen');
     $('.profile').removeClass('fullscreen');
@@ -51,7 +51,7 @@ $('.open-profile').click(function(){
 
 //  Open PROFILE (new)
 $('.open-new').click(function(){
-    $('body').addClass('show-profile loading-new');
+    $('body').addClass('show-profile loading-new'); // add loaded to open
     $('body').removeClass('show-details');
     $('.results').removeClass('fullscreen');
     $('.profile').removeClass('fullscreen');
@@ -63,7 +63,7 @@ $('.results table tbody tr .open-profile').click(function(){
     // Remove classes from rows
     $('.results table tbody tr').removeClass('selected');
     // Open PROFILE
-    $('body').addClass('show-profile loaded');
+    $('body').addClass('show-profile loading loaded'); // add loaded to open
     // Highlight selected row
     $(this).closest('tr').addClass('selected');
     $('body').removeClass('show-details');
