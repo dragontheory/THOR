@@ -106,7 +106,7 @@
 /*  Open PROFILE loading animation (existing) 
     Except when .loaded is added to <body>
 */
-.show-profile.loading .results .open-new::after {
+.show-profile.loading .results .open-profile::after {
     content:'LOADING Existing Profile';
     position: absolute;
     opacity: 1.0;
@@ -115,7 +115,7 @@
     -o-transition: opacity 250ms ease;
     transition: opacity 250ms ease;
 }
-.show-profile.loading.loaded .results .open-new::after {opacity: 0.0;}
+.show-profile.loading.loaded .results .open-profile::after {opacity: 0.0;}
 
 /*  Open PROFILE loading animation (new profile)
     Except when .loaded is added to <body>
