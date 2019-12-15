@@ -123,6 +123,7 @@ a:hover {color: rgba(102,204,255,1.0);}
     background-color: rgba(102,175,233,0.1);
     border-color: rgba(102,175,233,1.0);
 }
+.show-profile.loading-new .open-new.btn-outline-primary:not(:disabled):not(.disabled),
 .btn-outline-primary:not(:disabled):not(.disabled).active,
 .btn-outline-primary:not(:disabled):not(.disabled):active,
 .show>.btn-outline-primary.dropdown-toggle {

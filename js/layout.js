@@ -41,18 +41,18 @@ $('.profile').resizable({
 //  Open PROFILE
 //  Adding .show-profile to <body> enables loading animation
 //  Adding .loaded to <body> disables loading animation
-$('.open-profile').click(function(){
-    $('body').addClass('show-profile loading'); // add loaded to open
-    $('body').removeClass('show-details');
+//  Open PROFILE (new)
+$('.open-new').click(function(){
+    $('body').addClass('show-profile loading-new'); // add loaded to open
+    $('body').removeClass('show-details loading');
     $('.results').removeClass('fullscreen');
     $('.profile').removeClass('fullscreen');
     $('.details').removeClass('fullscreen');
 });
 
-//  Open PROFILE (new)
-$('.open-new').click(function(){
-    $('body').addClass('show-profile loading-new'); // add loaded to open
-    $('body').removeClass('show-details');
+$('.open-profile').click(function(){
+    $('body').addClass('show-profile loading'); // add loaded to open
+    $('body').removeClass('show-details loading-new');
     $('.results').removeClass('fullscreen');
     $('.profile').removeClass('fullscreen');
     $('.details').removeClass('fullscreen');
