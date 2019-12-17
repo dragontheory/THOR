@@ -11,7 +11,7 @@ $('.toggle-filter').click(function(){
 // Toggle FILTER and RESULTS (button in .home)
 $('.toggle-filter-results').click(function(){
     $('body').toggleClass('show-filter show-results');
-    $('body').removeClass('show-profile show-details');
+    $('body').removeClass('show-profile show-details loading loaded');
 });
 
 // Resizer
