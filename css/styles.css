@@ -714,6 +714,11 @@ button:focus {
 .badge.badge-outlined-default {border-color: #343A40;}
 
 
+/*  NEW ITEM MESSAGE
+*/
+.new-item-message .arrow {color: rgba(102,175,233,1.0;}
+
+
 /*  THEMES
 */
 /*
