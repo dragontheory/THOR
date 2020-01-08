@@ -19,6 +19,7 @@
         <link rel="stylesheet" type="text/css" href="css/themes/dark.css" disabled="true" id="lightsOut" />
         <link rel="stylesheet" type="text/css" href="css/animations.css"  /><!-- temp required for plug-in -->
         <link rel="stylesheet" type="text/css" href="css/click-effects.css" /><!-- temp required for plug-in -->
+        <link rel="stylesheet/css-polyfills" type="text/css" href="styles.css" />
         <script src="https://kit.fontawesome.com/e628637c5b.js" crossorigin="anonymous"></script>
         <noscript>
             <style>
@@ -1098,7 +1099,7 @@
                         <!-- END NAV -->
                     </nav>
                     <!-- END NAVBAR -->
-                    <p class="px-3 pt-3">Results content</p>
+                    <!--<p class="px-3 pt-3">Results content</p>-->
                     <!-- BEGIN TABLE-EDITABLE -->
                     <div id="table" class="h-100 table-editable" data-simplebar>
                         <span class="table-add glyphicon glyphicon-plus"></span>
@@ -1946,40 +1947,40 @@
                             </tfoot>
                         </table>
                         <!-- END TABLE -->
-			<!-- BEGIN NEW ITEM MESSAGE -->
-			    <div class="new-item-message">
-				<!-- <span class="arrow bounce fa fa-arrow-up fa-3x glow"></span> -->
-				<span class="arrow bounce fa fa-chevron-up fa-3x glow"></span>
-			        <h4>
-				    <span class="text-muted font-italic">Click the </span> 
-			            <span class="font-italic"> ADD PROFILE </span>
-				    <span class="text-muted font-italic">button to begin . . .</span>
-			        </h4
-			        <br />
-			        <br />
-			        <br />
-			        <br />
-			        <br />
-			        <h5>Welcom to <span class="font-weight-bold">THOR</span>
-				    <span class="text-muted">[ Triage/HUD/Operational/Resources ]</span>
-			        </h5>
-			        <p>
-				    <span class="font-weight-bold">THOR</span><span class="font-italic text-muted"> | long tag line...</span>
-			        </p>
-			        <p>The <span class="font-weight-bold">THOR</span> system enables blah blah blah...</p>
-			        <br />
-			        <h6>CORE CAPABILITIES <span class="text-muted">: : </span></h6>
-			        <ul>
-				    <li>Provides...</li>
-				    <li>Provides...</li>
-				    <li>Provides...</li>
-				    <li>Provides...</li>
-				    <li>Provides...</li>
-			         </ul>
-			    </div>
-			<!-- END NEW ITEM MESSAGE -->
                     </div>
                     <!-- END TABLE-EDITABLE -->
+                    <!-- BEGIN NEW ITEM MESSAGE -->
+                    <div class="new-item-message">
+                        <!-- <span class="arrow bounce fa fa-arrow-up fa-3x glow"></span> -->
+                        <span class="arrow bounce fa fa-chevron-up fa-3x glow"></span>
+                        <h4>
+                            <span class="text-muted font-italic">Click the </span>
+                            <span class="font-italic"> ADD PROFILE </span>
+                            <span class="text-muted font-italic">button to begin . . .</span>
+                        </h4>
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <h5>Welcome to <span class="font-weight-bold">THOR</span>
+                            <span class="text-muted">[ Triage/HUD/Operational/Resources ]</span>
+                        </h5>
+                        <p>
+                            <span class="font-weight-bold">THOR</span><span class="font-italic text-muted"> | long tag line...</span>
+                        </p>
+                        <p>The <span class="font-weight-bold">THOR</span> system enables blah blah blah...</p>
+                        <br />
+                        <h6>CORE CAPABILITIES <span class="text-muted">: : </span></h6>
+                        <ul>
+                            <li>Provides...</li>
+                            <li>Provides...</li>
+                            <li>Provides...</li>
+                            <li>Provides...</li>
+                            <li>Provides...</li>
+                        </ul>
+                    </div>
+                    <!-- END NEW ITEM MESSAGE -->
                 </div>
                 <!-- END RESULTS -->
                 <!-- BEGIN SPLITTER -->
@@ -2743,14 +2744,7 @@
         <script type="text/javascript" src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
         <script type="text/javascript" src="https://viralpatel.net/blogs/demo/jquery.textarearesizer.compressed.js"></script>
         <script type="text/javascript" src="https://rawgit.com/RickStrahl/jquery-resizable/master/src/jquery-resizable.js"></script>
-        <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/eqcss/1.9.2/EQCSS.min.js"></script>-->
-        <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/eqcss/1.9.2/EQCSS-polyfills.min.js"></script>-->
+        <script type="text/javascript" src="assets/vendors/css-polyfills.js-master/"></script>
         <script type="text/javascript" src="js/layout.js"></script>
-        <!-- <script type="text/eqcss">
-        /* EQCSS */
-            @element ".show-results" {
-            eval("if (document.querySelector('.profile .loaded')) { '$this' }") .results {width: 50%; background-color: red !important;}
-        }
-        </script> -->
     </body>
 </html>
