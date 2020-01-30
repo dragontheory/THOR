@@ -290,3 +290,44 @@
    40% {-webkit-transform: translateY(30px); transform: translateY(30px);}
    60% {-webkit-transform: translateY(15px); transform: translateY(15px);}
 }
+
+
+/*  BRACKETED LINKS
+    https://tympanus.net/codrops/2013/08/06/creative-link-effects/
+*/
+a[data-hover='brackets']::before,
+a[data-hover='brackets']::after {
+    display: inline-block;
+    opacity: 0;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+    -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+    transition: transform 0.3s, opacity 0.2s;
+}
+a[data-hover='brackets'] {
+    text-decoration: none;
+}
+a[data-hover='brackets']::before {
+    margin-right: 5px;
+    content: '[';
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    transform: translateX(10px);
+}
+
+a[data-hover='brackets']::after {
+    margin-left: 5px;
+    content: ']';
+    -webkit-transform: translateX(-10px);
+    -moz-transform: translateX(-10px);
+    transform: translateX(-10px);
+}
+
+a[data-hover='brackets']:hover::before,
+a[data-hover='brackets']:hover::after,
+a[data-hover='brackets']:focus::before,
+a[data-hover='brackets']:focus::after {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    transform: translateX(0px);
+}
