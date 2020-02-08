@@ -4,12 +4,12 @@
 [ O ] perational  
 [ R ] esources  
 ---
-##SUMMARY : :
+## SUMMARY : :
 THOR combines a master/detail workflow, with a Holy Grail layout pattern, and a "reactive" CSS GUI to achieve a simple, optimized, minimal, lightweight, scalable, "unopinionated" (compatible with any JavaScript framework), HTML/CSS scaffolding framework.
 
 ---
 
-##Load/Render Testing  
+## Load/Render Testing  
 2019.12.07 : :  
 **Chrome** Version 78.0.3904.108 (Official Build) (64-bit)  
 Loading 58ms  
@@ -23,7 +23,7 @@ Total 3976ms
 
 ---
 
-##THOR is : :
+## THOR is : :
 * A [professional Front-end HTML/CSS Framework](#professional) for search and triage UI requirements
 * [Master/detail](#master) workflow
 * [Holy Grail](#holy) layout
