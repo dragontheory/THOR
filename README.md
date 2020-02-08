@@ -35,7 +35,7 @@ Total 3976ms
 * [Angular and Vue.js integrations](#integrations) coming soon.
 * [User configurable](#configurable) 
 ---
-#### <a id="professional"></a>Professional Front-end HTML/CSS Framework
+### <a id="professional"></a>Professional Front-end HTML/CSS Framework
 A professional front-end template for building fast, robust, and adaptable web applications and web sites.  
 Fast Triage Workflow UX
 A better way for users and developers.
@@ -44,13 +44,13 @@ Front to back development
 Roadmap for developers  
 Agile (iterative) roadmap for clients/shareholders  
 
-#####BASIC : :  
+###BASIC : :  
 * Classic Holy Grail layout
 * Four panels total
 * Two panels resizable
 * https://dragontheory.com/holygrail09
 
-#####FULL : :  
+###FULL : :  
 * Classic Holy Grail layout + **DASHBOARD**
 * Five layout panels total
 * Starts with **DASHBOARD** (Click on "Go somewhere" button)
