@@ -1,5 +1,5 @@
 # THOR
-[ T ]  riage  
+[ T ] riage  
 [ H ] UD  
 [ O ] perational  
 [ R ] esources  
