@@ -44,20 +44,20 @@ Front to back development
 Roadmap for developers  
 Agile (iterative) roadmap for clients/shareholders  
 
-###BASIC : :  
+### BASIC : :  
 * Classic Holy Grail layout
 * Four panels total
 * Two panels resizable
 * https://dragontheory.com/holygrail09
 
-###FULL : :  
+### FULL : :  
 * Classic Holy Grail layout + **DASHBOARD**
 * Five layout panels total
 * Starts with **DASHBOARD** (Click on "Go somewhere" button)
 * Four panels resizable (WIP)
 * https://dragontheory.com/holygrail10
 
-FULL : :
+### FULL : :
 Default State
 ```
                                                                         :
@@ -90,7 +90,7 @@ Default State
 ```
 ---
 
-#####PURPOSE : :  
+### PURPOSE : :  
 To support analysts by providing a faster, more efficient, and intuitive workflow and user interface (UI) triage tool.
 
 To save time and money by reducing duplicative, redundant (unnecessary), rework efforts and "time to market" with pre-made search/profile/details workflow and UI that satisfied search/triage requirements "out-of-the-box".
@@ -111,7 +111,7 @@ FOR EXAMPLE : :
 
 ---
 
-#####END-USER FEATURES : : "Kitchen Sink"   
+### END-USER FEATURES : : "Kitchen Sink"   
 * W3C Standards Compliant
 * Cross/backward browser compatible and tested - FF60.530esr, IE11, Edge, Chrome65
 * Fully documented (Bootstrap + intuitive naming convention + commented)
@@ -146,7 +146,7 @@ FOR EXAMPLE : :
 
 ---
 
-#####TECH STACK : :  
+### TECH STACK : :  
 * HTML5 (current major version of the HTML standard and subsumes XHTML)
 * HTML5 Routing (with options) allows for browser back/forward buttons and bookmarking/sharing links of full UI layout and customization and data.
 * HTML5 User storage allows for user preferences to be saved cross browser session.
@@ -159,7 +159,7 @@ FOR EXAMPLE : :
 
 ---
 
-#####DEVELOPMENT : :  
+### DEVELOPMENT : :  
 The Bootstrap spec is followed without exception to preserve : :
 * Full Bootstrap documentation
 * Easy/fast copy/paste development
@@ -170,7 +170,7 @@ The Bootstrap spec is followed without exception to preserve : :
 
 ---
 
-#####HTML/CSS Files : :  
+### HTML/CSS Files : :  
 * index.html
 * assets/css/styles.css
 * assets/css/layout.css
@@ -183,12 +183,12 @@ The Bootstrap spec is followed without exception to preserve : :
 
 ---
 
-#####Bootstrap Documentation : :  
+### Bootstrap Documentation : :  
 The latest online Bootstrap documentation can be found here: https://getbootstrap.com/docs/
 
 ---
 
-#####FAQ : :  
+### FAQ : :  
 
 QUESTION : : Why Bootstrap?  
 ANSWER : : I spent months attempting to create this app without Bootstrap or any other dependency and found myself rewriting Bootstrap since Bootstrap is standards compliant. So to save time/effort/money I decided to leverage what they had already successfully done. Turns out they have done much better than I could have ever done. Bootstrap is vetted by thousands of commercially competitive developers building tens of thousands of websites and web applications.  
@@ -246,7 +246,7 @@ ANSWER : : Padding/spacing or "Display Density" is configurable via the end-user
 
 ---
 
-#####LAYOUT : :  
+### LAYOUT : :  
 WARNING : : As opposed to a seed or start-up Minimum Viable Product (MVP) application, this is a live client-side framework with working functionality already built in! **Just "mucking around with it" will most likely break or severely limit both obvious and non-obvious functionality/features!** Such as: (but not limited to)  
 * responsiveness, 
 * browser compatibility, 
@@ -298,7 +298,7 @@ In Flex-box CSS, every HTML node is a box. Each box relies on the other. If one 
 
 ---
 
-#####ANGULAR/VUE INTEGRATION : :  
+### ANGULAR/VUE INTEGRATION : :  
 
 NESTING : :   
 The CSS Flex-box spec requires a direct relationship between a parent Flex-box element and it's children. Only directly nested children elements of a parent CSS Flex-box element will inherit flex attributes. This means that there cannot be HTML elements (dynamic or otherwise) between the parent and the child. The application layout **WILL FAIL** if this parent/child relationship is broken.  
@@ -389,7 +389,7 @@ LAYOUT EXAMPLE : :
 ```
 ---
 
-#####TODO : :  
+### TODO : :  
 - [X] ~~Add toggle for light/dark theme~~
 - [ ] Add script for Bootstrap Toastr alerts
 - [ ] Add script for Bootstrap right click context menus
@@ -412,16 +412,16 @@ LAYOUT EXAMPLE : :
 
 ---
 
-####REFERENCES : :  
-#####COMPONENTS : :  
+### REFERENCES : :  
+### COMPONENTS : :  
 Angular : : [https://angular.io/guide/architecture-components](https://angular.io/guide/architecture-components)  
 Vue.js : : [https://vuejs.org/v2/guide/components.html#ad](https://https://vuejs.org/v2/guide/components.html#ad)  
 React.js : : [https://reactjs.org/docs/components-and-props.html](https://reactjs.org/docs/components-and-props.html)
 
-#####USABILITY : :  
+### USABILITY : :  
 Usability.gov : : [https://usability.gov](https://usability.gov)
 
-#####FLEXBOX LAYOUT DESIGN : :  
+### FLEXBOX LAYOUT DESIGN : :  
 [https://codepen.io/dragontheory/pen/PVwGgp](https://codepen.io/dragontheory/pen/PVwGgp)  
 [https://stackoverflow.com/questions/21515042/scrolling-a-flexbox-with-overflow-content](https://stackoverflow.com/questions/21515042/scrolling-a-flexbox-with-overflow-content)  
 [https://webdesign.tutsplus.com/tutorials/how-to-make-responsive-panels-with-flexbox-cms-23269](https://webdesign.tutsplus.com/tutorials/how-to-make-responsive-panels-with-flexbox-cms-23269)  
@@ -430,12 +430,12 @@ Usability.gov : : [https://usability.gov](https://usability.gov)
 
 ---
 
-#####BACKGROUND : :  
+### BACKGROUND : :  
 The term "Holy Grail" is a client side design term in reference to the type of layout which, in it's simplest form, is three independent scrolling full-screen panels of content with a header and footer.
 
 ---
 
-#####HISTORY : :  
+### HISTORY : :  
 The "Holy Grail" layout may seem basic and easy to implement but since the 1990's, when it was introduced, front-end designers/developers have been attempting and failing to solve how to adequately code it without the assistance of JavaScript. It has become an infamous ongoing challenge.  
 
 The standard requirements for solving the "Holy Grail" layout puzzle are : :   
@@ -454,7 +454,7 @@ So the label "Holy Grail" is well deserved. No one has been able to do it, as fa
 
 ---
 
-#####EXTENSIBLE BENEFITS : :  
+### EXTENSIBLE BENEFITS : :  
 Bootstrap components are pre-built thus developers can simply copy/paste them into place, hook them up and they are ready to go! This also reduces design/development LoE by up to 50%.  
 
 Bootstrap components are conventional thus end-users are already familiar with how to use them out-of-the-box (minimal training)!  
@@ -515,7 +515,7 @@ A new, better, faster way to do web development.
 
 ---
 
-#####DEVELOPMENT LAYERS : :  
+### DEVELOPMENT LAYERS : :  
 Front-End (FE)
 * Front-Front-End (FFE) - HTML/CSS/JS - what end-users actually see on the screen
 * Front-Back-End (FBE) - Vue.js - hooks services and or data into the FFE
@@ -525,7 +525,7 @@ Back-End (BE)
 
 ---
 
-#####TERMINOLOGY : :  
+### TERMINOLOGY : :  
 Separation of Concerns  
 https://en.wikipedia.org/wiki/Separation_of_concerns  
 https://almanac.httparchive.org/en/2019/
