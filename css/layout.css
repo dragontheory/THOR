@@ -106,16 +106,52 @@
 /*  Open PROFILE loading animation (existing) 
     Except when .loaded is added to <body>
 */
-.show-profile.loading .results table tbody tr.selected .open-profile::after {
-    content:'LOADING Existing Profile';
-    position: absolute;
-    opacity: 1.0;
-    pointer-events: none;
-    -webkit-transition: opacity 250ms ease;
-    -o-transition: opacity 250ms ease;
-    transition: opacity 250ms ease;
+.show-profile.loading .results table tbody tr.selected .open-profile {
+    background:
+    /*        https://css-tricks.com/drawing-images-with-css-gradients/
+              Three identical 6x1 linear gradient shapes
+    */        linear-gradient(#DDD, #DDD) left bottom / 6px 1px no-repeat,
+    /*        Solid underline wraps with text
+    */        linear-gradient(currentColor, currentColor) bottom / 100% 1px no-repeat;
+    /*        Stagerred delay https://css-tricks.com/snippets/css/keyframe-animation-syntax/  */
+    -webkit-animation: break01 2s infinite,
+                        break02 2s 0.5s infinite,
+                        break03 2s 1.0s infinite;
+    animation: break01 2s infinite,
+                break02 2s 0.5s infinite,
+                break03 2s 1.0s infinite;
+    -webkit-transition: background 250ms ease;
+    -o-transition: background 250ms ease;
+    transition: background 250ms ease;
 }
-.show-profile.loading.loaded .results table tbody tr.selected .open-profile::after {opacity: 0.0;}
+@-webkit-keyframes break01 {
+    from { background-position: left bottom; }
+    to { background-position: right bottom; }
+}
+@keyframes break01 {
+    from { background-position: left bottom; }
+    to { background-position: right bottom; }
+}
+@-webkit-keyframes break02 {
+    from { background-position: left bottom; }
+    to { background-position: right bottom; }
+}
+@keyframes break02 {
+    from { background-position: left bottom; }
+    to { background-position: right bottom; }
+}
+@-webkit-keyframes break03 {
+    from { background-position: left bottom; }
+    to { background-position: right bottom; }
+}
+@keyframes break03 {
+    from { background-position: left bottom; }
+    to { background-position: right bottom; }
+}
+.show-profile.loading.loaded .results table tbody tr.selected .open-profile {
+    background: linear-gradient(rgba(0,0,0,0.0), rgba(0,0,0,0.0)) left bottom / 6px 1px no-repeat,
+                linear-gradient(rgba(0,0,0,0.0), rgba(0,0,0,0.0)) bottom / 100% 1px no-repeat;
+}
 
 /*  Open PROFILE loading animation (new profile)
     Except when .loaded is added to <body>

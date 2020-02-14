@@ -259,5 +259,14 @@ a:hover {color: rgba(102,204,255,1.0);}
 }
 
 
+
+
+/* LOADING LINK ANIMATION */
+.loading .results a {
+    background: linear-gradient(#222, #222) left bottom / 6px 2px no-repeat,
+                linear-gradient(currentColor, currentColor) bottom / 100% 2px no-repeat;
+}
+
+
 /*  BADGES
 */
