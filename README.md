@@ -5,7 +5,22 @@
 [ R ] esources  
 ---
 ### SUMMARY : :
+THOR is an all-in-one optimized, streamlined, and future proofed GUI, codebase, and DevOps. 
+
+Searching for something? Who isn't? 
+THOR is **data agnostic** meaning it can handle all sorts of data types and is scalable to handle data volume. 
+
+THOR is usable GUIs in a third of the time.
+
+THOR is not just a pretty face but an optimized and streamlined codebase and development operations. 
+
 THOR combines a master/detail workflow, with a Holy Grail layout pattern, and a "reactive" CSS GUI to achieve a simple, optimized, minimal, lightweight, scalable, "unopinionated" (compatible with any JavaScript framework), HTML/CSS scaffolding framework.
+
+Optimized GUI Workflow
+
+Optimized DEV
+
+Optimized DevOps
 
 ---
 
