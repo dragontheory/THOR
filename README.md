@@ -158,6 +158,7 @@ FOR EXAMPLE : :
 * Less motion
 * Favorite a profile
 * Watch a profile
+* System status page similar to https://www.githubstatus.com/
 
 ---
 
