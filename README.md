@@ -73,7 +73,7 @@ Agile (iterative) roadmap for clients/shareholders
 * https://dragontheory.com/holygrail10
 
 ### GUI : :
-Per JAMstack configuration rules, the GUI scaffolding (HTML) and functionality (pure CSS) is rendered up front. This ensures super fast content throughout the application. 
+Per JAMstack configuration, the GUI scaffolding (HTML) and functionality (pure CSS) is rendered up front. This ensures super fast content and functionality throughout the application. 
 
 THOR is controlled by adding/removing classes in the <body> tag.
 
