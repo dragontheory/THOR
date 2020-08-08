@@ -73,11 +73,11 @@ Agile (iterative) roadmap for clients/shareholders
 * https://dragontheory.com/holygrail10
 
 ### FULL : :
+THOR is simply controlled by adding/removing classes in the <body> tag.
 
-
-Default State
+HOME [ Default ] State
 ```
-                                                                            :
+<body id="thor" class=".show-home">                                                                            :
                                                               [ on screen ] : [ off screen ]
 <body id="thor">____________________________________________________________:______________________________________________________________________________________________
 | <header>________________________________________________________________  :                                                                                              |
@@ -87,7 +87,7 @@ Default State
 | |                                                                         :                  <div>_______________(wrapper for resizer)_________________                | |
 | | .home_________________________________________________________________  : .filter________  | .results______________________________  .profile_______  | .details___  | |
 | | |                                                                     | : |              | | |                                     | |              | | |          | | |
-| | |    Welcome {{ user.name }}                                            | : |              | | |                                     | |              | | |          | | |
+| | |    Welcome {{ user.name }}                                          | : |              | | |                                     | |              | | |          | | |
 | | |                                                                     | : |              | | |                                     | |              | | |          | | |
 | | | .news__________  .history_______  .favorites_____  .watching______  | : |              | | |                                     | |              | | |          | | |
 | | | | rearrangable | | rearrangable | | rearrangable | | rearrangable | | : |              | | |                                     | |              | | |          | | |
@@ -115,7 +115,7 @@ Default State
 ---
 
 
-Default State
+Search Results State
 ```
                                                                                 :
                                                                   [ on screen ] : [ off screen ]
