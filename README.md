@@ -72,12 +72,14 @@ Agile (iterative) roadmap for clients/shareholders
 * Four panels resizable (WIP)
 * https://dragontheory.com/holygrail10
 
-### FULL : :
-THOR is simply controlled by adding/removing classes in the <body> tag.
+### GUI : :
+Per JAMstack configuration rules, the GUI scaffolding (HTML) and functionality (pure CSS) is rendered up front. This ensures super fast content throughout the application. 
+
+THOR is controlled by adding/removing classes in the <body> tag.
 
 HOME [ Default ] State
 ```
-<body id="thor" class=".show-home">                                                                            :
+<body id="thor" class=".show-home">                                         :
                                                               [ on screen ] : [ off screen ]
 <body id="thor">____________________________________________________________:______________________________________________________________________________________________
 | <header>________________________________________________________________  :                                                                                              |
