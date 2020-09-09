@@ -18,11 +18,11 @@
     outline: none;
     /* color: #3c8ddc; */
 }
-
+/*
 .cbutton__icon {
-    /* display: block; */
+     display: block; 
 }
-
+*/
 .cbutton__text {
     position: absolute;
     opacity: 0;

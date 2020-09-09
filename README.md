@@ -1,30 +1,140 @@
-# THOR
-[ T ] riage  
-[ H ] UD  
-[ O ] perational  
-[ R ] esources  
+<div style="text-align: center; /* border: solid 1px red; */">
+   <a href="https://github.com/othneildrew/Best-README-Template">
+      <img src="images/THOR3D256x256a_transparent.png" alt="Logo" width="100" height="100">
+   </a>
+  <br />
+  <ul style="display: inline-block; text-align: left; list-style-type: none;">
+    <li>[ T ] riage</li>
+    <li>[ H ] UD</li>
+    <li>[ O ] perational</li>
+    <li>[ R ] esources</li>
+  </ul>
+  <br />
+   Next generation super smooth search/triage/analysis/action GUI - *without leaving the page*.
+</div>
+<br />
+<br />
+
+
+# FEATURES : :
+### FOR MANAGEMENT : :
 ---
-### SUMMARY : :
-THOR is an all-in-one optimized, streamlined, and future proofed GUI, codebase, and DevOps. 
+* Fully operational professional CMS to triage your data in a third of the time to build it yourself
+* Double your analyst's production in half the time 
+* Ready to connect to your data 
+* Future proofed
+  * No upgrade coordination conflicts/dead-ends
+  * 
+* Works with all current major JS frameworks or completely on its own 
+* System status page similar to https://www.githubstatus.com/
+* Data ingest handles multiple large and small data sets 
+* Customizable user metrics dashboard 
+* Customizable data metrics dashboard 
+* At a glance data up/down time indicators 
+<br /> 
+<br /> 
 
-Searching for something? Who isn't? 
-THOR is **data agnostic** meaning it can handle all sorts of data types and is scalable to handle data volume. 
-
-THOR is usable GUIs in a third of the time.
-
-THOR is not just a pretty face but an optimized and streamlined codebase and development operations. 
-
-THOR combines a master/detail workflow, with a Holy Grail layout pattern, and a "reactive" CSS GUI to achieve a simple, optimized, minimal, lightweight, scalable, "unopinionated" (compatible with any JavaScript framework), HTML/CSS scaffolding framework.
-
-Optimized GUI Workflow
-
-Optimized DEV
-
-Optimized DevOps
-
+### FOR USERS : : 
 ---
+* Works in all major browsers
+* Minimal, professional look/feel
+* Works with any data set or type
+* Works with all current major JS frameworks or completely on its own
+* Works with all screen sizes and media platforms
+* Fast and responsive UI 
+* Intuitive workflow
+* Role based access 
+* Customizable (work the way you want to work)
+  * Save and share custom templates
+  * Drag/drop rearrange-able panels
+  * Adjustable/resizable panels
+  * display density (Roomy/medium/compact/No Fluff! Just Stuff!)
+  * Motion options
+* Keyboard navigable 
+* Right click context menus with feature/component shortcuts
+* Duplicate results indicators
+* Light/dark themes (optional: adapts to device settings)
+* Independent full-screen mode for each panel
+* Independent scrolling for each panel
+* "Scroll to top" for each panel
+* With-in application alerting
+* Push notifications
+* Sweep (keep the latest but delete the rest)
+* Favorite a profile(s) 
+* Watch/follow profile(s) 
+* Share profile(s) 
+* Application/connectivity status 
+* Help system 
+* Tour system 
+* Take notes 
+* Share notes 
+* Data ingest handles multiple large and small data sets 
+<br /> 
+<br /> 
 
-### Load/Render Testing  
+### FOR DEVELOPERS : : 
+---
+DESCRIPTION : : Combines a master/detail workflow, with a Holy Grail layout pattern and a "reactive" CSS GUI to achieve a simple, optimized, minimal, lightweight, scalable, "unopinionated" (compatible with any JavaScript framework), HTML/CSS scaffolding framework.
+* [W3C](https://w3.org)/[WHATWG](https://whatwg.org/) Standards Compliant 
+* Cross/backward browser compatible and tested - FF60.530esr, IE11, Edge, Chrome65
+* Fully documented (Bootstrap + intuitive naming convention + commented)
+* HTML/CSS first paradigm 
+* GPU accelerated CSS (100 to 1000 times faster than equivalent JS solutions) 
+* NEW loading data paradigm (reactive CSS live data detection)
+* Separation of concerns between data and UI logic
+* HTML5 Routing (with options) allows for bookmarking/sharing links of full layouts and data
+* HTML5 User Storage allows for preferences to be saved cross browser session
+* Data agnostic
+* Framework agnostic - Web Components works with all major JS frameworks or completely on its own
+* Resolution agnostic - (Responsive - works with any screen resolution)
+* Fast loading/lightweight (up to 50% less markup)
+* Minimal dependencies (none if possible) 
+* "Holy Grail" layout leverages full browser width/height for maximum data visibility
+* Toasts
+* Web push notifications
+* Customize-able display density 
+* Optimized and streamlined codebase 
+* Defines and separate developer swim lanes
+* User metrics system 
+* Data metrics system 
+* Robust
+* Scalable 
+<br />
+<br />
+
+## REVIEWS : :
+---
+>"Searching for something? Who isn't... You need this. Increased analysis workflow production by 50% in a fraction of the time it would have take us to build the same. Time is money. We saved so much money on this one." 
+
+>"Stuck in upgrade limbo? We were too. This application GUI has no dependencies so the developers don't have to wait on third party vendors to make changes and or upgrade! We are moving forward getting things done while the next department is stuck in incompatibility land." 
+
+>"Ever told by your developers you MUST upgrade because other software/hardware upgraded and broke your data feed? that's the only version that work the other software/hardware that upgraded six months ago? We got new developers..."
+
+<br /> 
+
+## LOAD/RENDER TESTING : :
+---
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
+![](https://img.shields.io/badge/stars-%E2%98%85%E2%98%85%E2%98%85%E2%98%85%E2%98%85-brightgreen)
+
+![](https://img.shields.io/badge/-HTML5-000000?style=flat&logo=HTML5)
+![](https://img.shields.io/badge/-JavaScript-000000?style=flat&logo=javascript)
+![](https://img.shields.io/badge/-Git-000000?style=flat&logo=git&logoColor=F05032)
+![](https://img.shields.io/badge/-GitHub-000000?style=flat&logo=github&logoColor=FFFFFF)
+![](https://img.shields.io/badge/-jQuery-000000?style=flat&logo=jQuery&logoColor=0769AD)
+![](https://img.shields.io/badge/-Node.js-000000?style=flat&logo=node.js&logoColor=339933)
+![](https://img.shields.io/badge/-VSCode-000000?style=flat&logo=visual-studio-code&logoColor=007ACC)
+![](https://img.shields.io/badge/-Jira-000000?style=flat&logo=jira-software&logoColor=white&logoColor=0052CC)
+
+
+
+
+
 2019.12.07 : :  
 **Chrome** Version 78.0.3904.108 (Official Build) (64-bit)  
 Loading 58ms  
@@ -34,23 +144,28 @@ Painting 67ms
 System 247ms   
 Idle 2582ms   
 Total 3976ms     
-#####Without Idle = 1,147ms
+Without Idle = 1,147ms
+<br />
+<br />
 
+
+## THOR IS : :
 ---
-
-### THOR is : :
-* A [professional Front-end HTML/CSS Framework](#professional) for search and triage UI requirements
+* A [Front-end HTML/CSS Framework](#front-end) for search and triage UI requirements
 * [Master/detail](#master) workflow
 * [Holy Grail](#holy) layout
 * [Reactive CSS](#reactive) (no JS framework necessary)
 * [Optimized and minimal for the end-user](#optimized-user) (clean and simple UX)
 * [Optimized and minimal for the developer](#optimized-developer) (minimal nesting, obfuscation, complication, dependencies, and bloat)
-* [Fast, robust, and scalable](#fast) (single scratch to IC wide enterprise level CMS)
+* [Fast, robust, and scalable](#fast) (single scratch to IC wide enterprise level CMS itch) 
 * [Agile friendly](#agile) (road map allows for accurate/predictable iterative sprint planning and dissemination)
 * [Angular and Vue.js integrations](#integrations) coming soon.
 * [User configurable](#configurable) 
+<br />
+<br />
+
+## <a id="front-end"></a>Front-end HTML/CSS Framework
 ---
-### <a id="professional"></a>Professional Front-end HTML/CSS Framework
 A professional front-end template for building fast, robust, and adaptable web applications and web sites.  
 Fast Triage Workflow UX
 A better way for users and developers.
@@ -183,7 +298,7 @@ FOR EXAMPLE : :
 * Fully documented (Bootstrap + intuitive naming convention + commented)
 * **NEW GUI PARADIGM : :** Is actually the old paradigm that has been lost with the advent of ubiquitous JS frameworks
 * **NEW GUI PARADIGM : : THOR** is an "HTML/CSS first" (GPU accelerated) paradigm vise the current ubiquitous slower scripting first paradigm (see FAQ for details)
-* **NEW GUI PARADIGM : :** CSS live deta detection (helps separate data logic from UI logic)
+* **NEW GUI PARADIGM : :** CSS live data detection (helps separate data logic from UI logic)
 * HTML5 Routing (with options) allows for bookmarking/sharing links of full layouts and data
 * HTML5 User Storage allows for preferences to be saved cross browser session
 * Non-cluttered, minimal, professional look and feel
@@ -194,7 +309,7 @@ FOR EXAMPLE : :
 * Minimal dependencies (minimizes upgrade coordination conflicts/dead-ends)
 * "Holy Grail" layout leverages full browser width/height for maximum data visibility
 * Independent scrolling panels
-* Light/dark themes
+* Light/dark themes (ties in with OS)
 * Keyboard navigable
 * Duplicate results indicators
 * Independent Full-screen mode for each panel
@@ -287,12 +402,12 @@ QUESTION : : If you don't use scripting to manipulate the UI, what do you use?
 SHORT ANSWER : : Cascading Style Sheets (CSS)  
 LONG ANSWER : : UI behavior is purposely repetitive and predictable (read intuitive/conventional). Most UI features such as buttons, menus, panels, accordions, etc. have two states. Open/close, hide/show, on/off, in/out, down/up, true/false, checked/unchecked, etc. That's all they do regardless of the data they contain.  
 
-CSS rules are LIVE states of layered/cascading, boolean logic. When a CSS state changes, the rule is executed **instantaniously** and the UI is changed. No resource hungry script processing is necessary.  
+CSS rules are LIVE states of layered/cascading, boolean logic. When a CSS state changes, the rule is executed **instantaneously** and the UI is changed. No resource hungry script processing is necessary.  
 FOR EXAMPLE : : When a result item is clicked, the class `.open-profile` is added to the `<body>`. A CSS rule already exists that says, when `.open-profile` is in the `<body>` slide in the `.profile` panel.  
 
 All scaffolding/layout UI logic is handled in this manner. All we need is a single class or combination of classes in the `<body>` to change anything in the UI. This simple technique extends the intuitive/conventional UI to the development side. Not only is the UI repetitive and predictable for the end-user but the technique is old-school familiar for the developers as well. 
 
-This simple technique eliminates the need for third party plug-ins that sometimes add complication and obfuscation, to the development process and bloat to the code base, thus shortening the application developement LoE while promoting application performance. Since this technique is executed only in the browser, network traffic is minimized. 
+This simple technique eliminates the need for third party plug-ins that sometimes add complication and obfuscation, to the development process and bloat to the code base, thus shortening the application development LoE while promoting application performance. Since this technique is executed only in the browser, network traffic is minimized. 
 
 As long as the UI logic is separate from the data logic, scripting is rarely necessary. 
 
@@ -300,7 +415,7 @@ QUESTION : : What about loading dynamic data? How does the UI know when to show 
 ANSWER : : Given the above technique, pre-written CSS rules can check for any combination of classes and or conditions. CSS can LIVE detect anything from a generic `:notEmpty{}` to specific classes and conditions that are only true when the data is completely loaded.0 
 
 Additionally, CSS rules can be added to check end-user roles and permissions.  
-FOR EXAMPLE : : The profile section will remain closed until a pre-written CSS rule that requires the `<body>` to contain `open-profile` AND a class that only is loaded with the dynamica data `data-loaded` is true. Then and only then will the PROFILE panel slide in and reveal its content. The dynamic data that is loaded is the only way to make the CSS rule true. 
+FOR EXAMPLE : : The profile section will remain closed until a pre-written CSS rule that requires the `<body>` to contain `open-profile` AND a class that only is loaded with the dynamic data `data-loaded` is true. Then and only then will the PROFILE panel slide in and reveal its content. The dynamic data that is loaded is the only way to make the CSS rule true. 
 
 QUESTION : : This sounds complicated. Is it custom?  
 ANSWER : : Depends on your definition of custom but no. To maintain ease of use for developers to integrate, end-users to use, and to preserve for the future, every effort has been made to keep THOR as generic, conventional, and standard as possible. JS frameworks, for the most part, prefer slower but automated scripting over CSS simplicity and speed. 
@@ -384,7 +499,7 @@ INCORRECT NESTING : :
 
 CORRECT NESTING : :  
 ```html
-<app-restults class="d-flex results">  <--- Angular/Vue custom component wrapper element is combined with the Bootstrap classes preserving the required CSS Flexbox parent/child relationship
+<app-results class="d-flex results">  <--- Angular/Vue custom component wrapper element is combined with the Bootstrap classes preserving the required CSS Flexbox parent/child relationship
     <div class=""></div>
     <div class=""></div>
     <div class=""></div>
@@ -596,3 +711,19 @@ Back-End (BE)
 Separation of Concerns  
 https://en.wikipedia.org/wiki/Separation_of_concerns  
 https://almanac.httparchive.org/en/2019/
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=flat-square
+[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=flat-square
+[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
+[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=flat-square
+[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
+[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=flat-square
+[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
+[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=flat-square
+[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/othneildrew
+[product-screenshot]: images/screenshot.png
