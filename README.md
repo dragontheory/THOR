@@ -1,3 +1,18 @@
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
+![](https://img.shields.io/badge/stars-%E2%98%85%E2%98%85%E2%98%85%E2%98%85%E2%98%85-brightgreen)
+![](https://img.shields.io/badge/-HTML5-000000?style=flat&logo=HTML5)
+![](https://img.shields.io/badge/-JavaScript-000000?style=flat&logo=javascript)
+![](https://img.shields.io/badge/-Git-000000?style=flat&logo=git&logoColor=F05032)
+![](https://img.shields.io/badge/-GitHub-000000?style=flat&logo=github&logoColor=FFFFFF)
+![](https://img.shields.io/badge/-jQuery-000000?style=flat&logo=jQuery&logoColor=0769AD)
+![](https://img.shields.io/badge/-Node.js-000000?style=flat&logo=node.js&logoColor=339933)
+![](https://img.shields.io/badge/-VSCode-000000?style=flat&logo=visual-studio-code&logoColor=007ACC)
+![](https://img.shields.io/badge/-Jira-000000?style=flat&logo=jira-software&logoColor=white&logoColor=0052CC)
 <div style="text-align: center; /* border: solid 1px red; */">
    <a href="https://github.com/othneildrew/Best-README-Template">
       <img src="images/THOR3D256x256a_transparent.png" alt="Logo" width="100" height="100">
@@ -114,27 +129,6 @@ DESCRIPTION : : Combines a master/detail workflow, with a Holy Grail layout patt
 
 ## LOAD/RENDER TESTING : :
 ---
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-![](https://img.shields.io/badge/stars-%E2%98%85%E2%98%85%E2%98%85%E2%98%85%E2%98%85-brightgreen)
-
-![](https://img.shields.io/badge/-HTML5-000000?style=flat&logo=HTML5)
-![](https://img.shields.io/badge/-JavaScript-000000?style=flat&logo=javascript)
-![](https://img.shields.io/badge/-Git-000000?style=flat&logo=git&logoColor=F05032)
-![](https://img.shields.io/badge/-GitHub-000000?style=flat&logo=github&logoColor=FFFFFF)
-![](https://img.shields.io/badge/-jQuery-000000?style=flat&logo=jQuery&logoColor=0769AD)
-![](https://img.shields.io/badge/-Node.js-000000?style=flat&logo=node.js&logoColor=339933)
-![](https://img.shields.io/badge/-VSCode-000000?style=flat&logo=visual-studio-code&logoColor=007ACC)
-![](https://img.shields.io/badge/-Jira-000000?style=flat&logo=jira-software&logoColor=white&logoColor=0052CC)
-
-
-
-
-
 2019.12.07 : :  
 **Chrome** Version 78.0.3904.108 (Official Build) (64-bit)  
 Loading 58ms  
