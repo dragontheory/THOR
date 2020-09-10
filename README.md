@@ -15,7 +15,7 @@
 ![](https://img.shields.io/badge/-Jira-000000?style=flat&logo=jira-software&logoColor=white&logoColor=0052CC)
 <div style="text-align: center; /* border: solid 1px red; */">
    <a href="https://github.com/othneildrew/Best-README-Template">
-      <img src="images/THOR3D256x256a_transparent.png" alt="Logo" width="100" height="100">
+      <img src="images/THOR02c.png" alt="Logo" width="" height="">
    </a>
   <br />
   <ul style="display: inline-block; text-align: left; list-style-type: none;">
@@ -39,7 +39,11 @@
 * Ready to connect to your data 
 * Future proofed
   * No upgrade coordination conflicts/dead-ends
-  * 
+  * Minimal code obfuscation = less ramp-up time for future developers 
+  * [W3C](https://w3.org)/[WHATWG](https://whatwg.org/) Standards Compliant = works in all standards compliant browsers
+  * Separation of concerns = defined developer swim lanes
+  * Web Components enables decoupling and hot-swappable future JS frameworks 
+  * Fully documented 
 * Works with all current major JS frameworks or completely on its own 
 * System status page similar to https://www.githubstatus.com/
 * Data ingest handles multiple large and small data sets 
@@ -51,6 +55,7 @@
 
 ### FOR USERS : : 
 ---
+* Utilizes established usability best practices/conventions
 * Works in all major browsers
 * Minimal, professional look/feel
 * Works with any data set or type
@@ -63,8 +68,9 @@
   * Save and share custom templates
   * Drag/drop rearrange-able panels
   * Adjustable/resizable panels
-  * display density (Roomy/medium/compact/No Fluff! Just Stuff!)
+  * Display density (Roomy/medium/compact/No Fluff! Just Stuff!)
   * Motion options
+  * Sweep functionality 
 * Keyboard navigable 
 * Right click context menus with feature/component shortcuts
 * Duplicate results indicators
@@ -93,7 +99,7 @@ DESCRIPTION : : Combines a master/detail workflow, with a Holy Grail layout patt
 * [W3C](https://w3.org)/[WHATWG](https://whatwg.org/) Standards Compliant 
 * Cross/backward browser compatible and tested - FF60.530esr, IE11, Edge, Chrome65
 * Fully documented (Bootstrap + intuitive naming convention + commented)
-* HTML/CSS first paradigm 
+* CSS first Initiative  
 * GPU accelerated CSS (100 to 1000 times faster than equivalent JS solutions) 
 * NEW loading data paradigm (reactive CSS live data detection)
 * Separation of concerns between data and UI logic
