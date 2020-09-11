@@ -25,21 +25,31 @@
     <li>[ R ] esources</li>
   </ul>
   <br />
-   Next generation super smooth search/triage/analysis/action GUI - *without leaving the page*.
+   Next generation search/triage/analysis/action - without leaving the page - GUI.
 </div>
 <br />
 <br />
 
+# INTRO : :
+Why we are reinventing the GUI wheel every time we get a new client with a different data set? We use templated variations of virtually every other part of the web application development process, why not for the GUI? 
+
+THOR represents an aggregation and consolidation of 25+ years of web application development best practices and the most common requirements. All in one data, resolution, and JS framework agnostic, single page GUI template. 
+<br />
+<br />
 
 # FEATURES : :
-### FOR MANAGEMENT : :
+### MANAGEMENT : :
 ---
-* Fully operational professional CMS to triage your data in a third of the time to build it yourself
+* Fully operational professional CMS to triage your data in a third of the time to build it yourself 
+* Having the GUI up front (before the project begins) allows clients and  management to more accurately negotiate priorities and features over limited time frames (AKA Agile friendly) 
+* Having the GUI up front (before the project begins) allows management to easily divvy up and plan out iterative development blocks with customer 
+* Seeing the GUI up front minimizes "communication and interpretation gaps" between clients, management, and developers. Never have to "go back to the drawing board".
+* "Road map" helps focus on and define features and functionality and PREVENT scope creep. 
 * Double your analyst's production in half the time 
 * Ready to connect to your data 
 * Future proofed
   * No upgrade coordination conflicts/dead-ends
-  * Minimal code obfuscation = less ramp-up time for future developers 
+  * Simplified code base and minimal code nesting and obfuscation = less ramp-up time for future developers 
   * [W3C](https://w3.org)/[WHATWG](https://whatwg.org/) Standards Compliant = works in all standards compliant browsers
   * Separation of concerns = defined developer swim lanes
   * Web Components enables decoupling and hot-swappable future JS frameworks 
@@ -53,11 +63,12 @@
 <br /> 
 <br /> 
 
-### FOR USERS : : 
+### USERS : : 
 ---
 * Utilizes established usability best practices/conventions
+* Fast triage - no navigating back and forth between item list and details (ping-pong effect) - everything is on one page
+* Minimal, professional look/feel 
 * Works in all major browsers
-* Minimal, professional look/feel
 * Works with any data set or type
 * Works with all current major JS frameworks or completely on its own
 * Works with all screen sizes and media platforms
@@ -93,7 +104,7 @@
 <br /> 
 <br /> 
 
-### FOR DEVELOPERS : : 
+### DEVELOPERS : : 
 ---
 DESCRIPTION : : Combines a master/detail workflow, with a Holy Grail layout pattern and a "reactive" CSS GUI to achieve a simple, optimized, minimal, lightweight, scalable, "unopinionated" (compatible with any JavaScript framework), HTML/CSS scaffolding framework.
 * [W3C](https://w3.org)/[WHATWG](https://whatwg.org/) Standards Compliant 
@@ -112,6 +123,8 @@ DESCRIPTION : : Combines a master/detail workflow, with a Holy Grail layout patt
 * Minimal dependencies (none if possible) 
 * "Holy Grail" layout leverages full browser width/height for maximum data visibility
 * Toasts
+* Flex-box used for all elements 
+* No absolutely positioned elements 
 * Web push notifications
 * Customize-able display density 
 * Optimized and streamlined codebase 
@@ -125,11 +138,11 @@ DESCRIPTION : : Combines a master/detail workflow, with a Holy Grail layout patt
 
 ## REVIEWS : :
 ---
->"Searching for something? Who isn't... You need this. Increased analysis workflow production by 50% in a fraction of the time it would have take us to build the same. Time is money. We saved so much money on this one." 
+>"Searching for something? Who isn't... You need this. Increased analysis workflow production by 65% in a fraction of the time it would have taken us to build it ourselves. Time is money. We saved so much money on this one." 
 
->"Stuck in upgrade limbo? We were too. This application GUI has no dependencies so the developers don't have to wait on third party vendors to make changes and or upgrade! We are moving forward getting things done while the next department is stuck in incompatibility land." 
+>"Is your project stuck in upgrade limbo? We were too. This application GUI has no dependencies so the developers don't have to wait on third party vendors to make changes and or upgrade! We are moving forward getting things done while the next department is stuck in incompatibility land." 
 
->"Ever told by your developers you MUST upgrade because other software/hardware upgraded and broke your data feed? that's the only version that work the other software/hardware that upgraded six months ago? We got new developers..."
+>"Ever been told that your data stream is down because systems upstream upgraded their hardware/software last month and if you want to play, you have to upgrade too?"
 
 <br /> 
 
