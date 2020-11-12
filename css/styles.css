@@ -1,11 +1,11 @@
 /*  GENERAL
 */
 body {font: 0.9rem Calibri, Sans Serif;}
-a {
+/* a {
     -webkit-transition: all 250ms;
     -o-transition: all 250ms;
     transition: all 250ms;
-}
+} */
 [contenteditable='true'] {cursor: pointer;}
 [contenteditable='true']:hover {background-color: rgba(0,0,0,0.05);}
 

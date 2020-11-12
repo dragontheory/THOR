@@ -38,6 +38,13 @@ $('.profile').resizable({
     touchActionNone: true
 });
 
+/*  LOADING DATA
+    * BUTTON LOADING VISUAL QUE - proof of concept (WIP)
+    * Objective: Show LOADING only between when end-user clicks item and PROFILE slides in.
+    * Next step: Narrow LOADING to appear only on clicked element (focus or active?).
+    * Turn off LOADING by default
+*/
+
 //  Open PROFILE
 //  Adding .show-profile to <body> enables loading animation
 //  Adding .loaded to <body> disables loading animation
@@ -48,6 +55,9 @@ $('.open-new').click(function(){
     $('.results').removeClass('fullscreen');
     $('.profile').removeClass('fullscreen');
     $('.details').removeClass('fullscreen');
+    setTimeout(function() {
+        $('body').addClass('loaded');
+    }, 5000);
 });
 
 $('.open-profile').click(function(){
@@ -56,6 +66,9 @@ $('.open-profile').click(function(){
     $('.results').removeClass('fullscreen');
     $('.profile').removeClass('fullscreen');
     $('.details').removeClass('fullscreen');
+    setTimeout(function() {
+        $('body').addClass('loaded');
+    }, 5000);
 });
 
 // Open PROFILE (in RESULTS table)

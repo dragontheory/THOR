@@ -106,6 +106,15 @@
 /*  Open PROFILE loading animation (existing) 
     Except when .loaded is added to <body>
 */
+
+a {text-decoration: none;
+    -webkit-transition: all 250ms;
+    -o-transition: all 250ms;
+    transition: all 250ms;
+    background: linear-gradient(transparent, transparent) bottom / 100% 1px no-repeat;}
+a:hover {text-decoration: none;}
+.show-profile.loading .results table tbody tr .open-profile:hover {color: rgba(102,204,255,1.0);
+    background: linear-gradient(currentColor, currentColor) bottom / 100% 1px no-repeat;}
 .show-profile.loading .results table tbody tr.selected .open-profile {
     background:
     /*        https://css-tricks.com/drawing-images-with-css-gradients/
@@ -113,7 +122,7 @@
     */        linear-gradient(#DDD, #DDD) left bottom / 6px 1px no-repeat,
     /*        Solid underline wraps with text
     */        linear-gradient(currentColor, currentColor) bottom / 100% 1px no-repeat;
-    /*        Stagerred delay https://css-tricks.com/snippets/css/keyframe-animation-syntax/  */
+    /*        Staggered delay https://css-tricks.com/snippets/css/keyframe-animation-syntax/  */
     -webkit-animation: break01 2s infinite,
                         break02 2s 0.5s infinite,
                         break03 2s 1.0s infinite;
@@ -331,7 +340,7 @@
 /*  BRACKETED LINKS
     https://tympanus.net/codrops/2013/08/06/creative-link-effects/
 */
-a[data-hover='brackets']::before,
+/* a[data-hover='brackets']::before,
 a[data-hover='brackets']::after {
     display: inline-block;
     opacity: 0;
@@ -339,9 +348,7 @@ a[data-hover='brackets']::after {
     -moz-transition: -moz-transform 0.3s, opacity 0.2s;
     transition: transform 0.3s, opacity 0.2s;
 }
-a[data-hover='brackets'] {
-    text-decoration: none;
-}
+a[data-hover='brackets'] {text-decoration: none;}
 a[data-hover='brackets']::before {
     margin-right: 5px;
     content: '[';
@@ -366,4 +373,4 @@ a[data-hover='brackets']:focus::after {
     -webkit-transform: translateX(0px);
     -moz-transform: translateX(0px);
     transform: translateX(0px);
-}
+} */

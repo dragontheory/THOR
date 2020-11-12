@@ -25,7 +25,7 @@
     <li>[ R ] esources</li>
   </ul>
   <br />
-   Next generation search/triage/analysis/action - without leaving the page - GUI.
+   Next generation search/triage/analysis/action (without leaving the page) GUI.
 </div>
 <br />
 <br />
