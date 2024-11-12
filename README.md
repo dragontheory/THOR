@@ -19,7 +19,7 @@
 
 -->
 <a href="https://github.com/othneildrew/Best-README-Template">
-   <img src="images/app/THOR02c.png" alt="THOR Logo" width="" height="">
+   <img src="assets/images/app/THOR02c.png" alt="THOR Logo" width="" height="">
 </a>
 
 
