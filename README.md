@@ -13,18 +13,21 @@
 ![](https://img.shields.io/badge/-Node.js-000000?style=flat&logo=node.js&logoColor=339933)
 ![](https://img.shields.io/badge/-VSCode-000000?style=flat&logo=visual-studio-code&logoColor=007ACC)
 ![](https://img.shields.io/badge/-Jira-000000?style=flat&logo=jira-software&logoColor=white&logoColor=0052CC)
-<div style="text-align: center; /* border: solid 1px red; */">
-   <a href="https://github.com/othneildrew/Best-README-Template">
-      <img src="images/THOR02c.png" alt="Logo" width="" height="">
-   </a>
-  <br /><br />
-   [ T ] emplate-driven<br />
-   [ H ] euristic<br />
-   [ O ] mni-design<br />
-   [ R ] esource
-  <br />
-</div>
+
+
 <br />
+
+
+<a href="https://github.com/othneildrew/Best-README-Template">
+   <img src="images/THOR02c.png" alt="THOR Logo" width="" height="">
+</a>
+
+
+<br />
+
+
+# [ T ] emplate-driven<br />[ H ] euristic<br />[ O ] mni-design<br />[ R ] esource
+
 
 ## Overview
 **THOR** is a powerful, flexible HTML and CSS template designed and built to revolutionize web development. It provides a versatile foundation that supports a wide variety of projects, bringing consistency, best practices, adaptability, Interoperability, and accessibility into a single, reusable package. With THOR, developers can quickly create efficient, scalable web applications without having to worry about adhering to modern standards and principles.
