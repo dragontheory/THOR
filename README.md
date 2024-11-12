@@ -25,7 +25,6 @@
   <br />
 </div>
 <br />
-<br />
 
 ## Overview
 **THOR** is a powerful, flexible HTML and CSS template designed and built to revolutionize web development. It provides a versatile foundation that supports a wide variety of projects, bringing consistency, best practices, adaptability, Interoperability, and accessibility into a single, reusable package. With THOR, developers can quickly create efficient, scalable web applications without having to worry about adhering to modern standards and principles.
@@ -72,7 +71,8 @@ We welcome contributions to improve THOR! Whether it’s a bug fix, a new featur
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Contact
-For questions, suggestions, or feedback, feel free to reach out via GitHub issues or directly contact the maintainer at [email@example.com].
+For questions, suggestions, or feedback, feel free to reach out via GitHub issues or directly contact the maintainer at [dragon@dragontheory.com].
+
 
 **THOR**: More than a template—a revolution in how we build for the web.
 
@@ -81,7 +81,7 @@ For questions, suggestions, or feedback, feel free to reach out via GitHub issue
 
 
 
-# INTRO : :
+<!-- # INTRO : :
 Why are we reinventing the GUI wheel every time there's a new client with a different data set? We use templated variations for virtually every other part of the web application development process, why not for the GUI? 
 
 THOR represents 25+ years of web application development, convention, and usability best practices. THOR is an aggregation and consolidation of the most common requirements and features. THOR is an all in one data, resolution, and JS framework agnostic, single page GUI template.
@@ -227,7 +227,7 @@ Without Idle = 1,147ms
 * [Angular and Vue.js integrations](#integrations) coming soon.
 * [User configurable](#configurable) 
 <br />
-<br />
+<br /> -->
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
