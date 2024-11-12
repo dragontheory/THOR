@@ -19,10 +19,10 @@
    </a>
   <br />
   <ul style="display: inline-block; text-align: left; list-style-type: none;">
-    <li>[ T ] riage</li>
-    <li>[ H ] UD</li>
-    <li>[ O ] perational</li>
-    <li>[ R ] esources</li>
+    <li>[ T ] emplate-driven</li>
+    <li>[ H ] euristic</li>
+    <li>[ O ] mni-design</li>
+    <li>[ R ] esource</li>
   </ul>
   <br />
    Next generation search/triage/analysis/action (without leaving the page) GUI.
