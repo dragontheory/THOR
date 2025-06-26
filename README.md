@@ -19,7 +19,7 @@
 
 -->
 
-<img src="assets/images/app/THOR02c.png" alt="THOR Logo" width="" height="">
+<img src="assets/images/app/THOR_logo.svg" alt="THOR Logo" width="" height="">
 
 
 <br />
