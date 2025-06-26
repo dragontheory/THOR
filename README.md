@@ -24,8 +24,10 @@
 
 <br />
 
-
-# [ T ] emplate-driven<br />[ H ] euristic<br />[ O ] mni-design<br />[ R ] esource
+# [ T ] rusted<br />
+[ H ] euristic<br />
+[ O ] pen-standard<br />
+[ R ] esource
 
 <br />
 
