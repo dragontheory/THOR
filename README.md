@@ -24,7 +24,7 @@
 
 <br />
 
-# [ T ] rusted<br />[ H ] euristic<br />[ O ] pen-standard<br />[ R ] esource
+# [ T ] actical<br />[ H ] euristic<br />[ O ] pen-standard<br />[ R ] esource
 
 <br />
 
